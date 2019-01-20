@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* Some mixins */
 /* Basic style for some HTML elements */
+* {
+  direction: rtl;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
