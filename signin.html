@@ -8,41 +8,42 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords" />
     <meta content="PPType" name="author" />
     <meta content="#ffffff" name="theme-color" />
-    <title>Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI.</title>
+    <title>ورود</title>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css" />
     <!--<link href="./static/stylesheets/default.css" rel="stylesheet" type="text/css" />-->
     <!--<link href="./static/stylesheets/pandoc-code-highlight.css" rel="stylesheet" type="text/css" />-->
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css" />
     <script src="./static/files/js/jquery.min.js"></script>
   </head>
   <body>
     <div class="ui center aligned grid">
       <div class="ui container">
         <h1 class="ui huge header">
-          Please sign in 
+          لطفا ثبت نام کنید
         </h1>
         <form class="ui large form">
           <div class="field">
             <div class="ui left icon input">
-              <i class="user icon"></i><input name="email" placeholder="E-mail address" type="text" />
+              <i class="user icon"></i><input name="email" placeholder="آدرس ایمیل" type="text" />
             </div>
           </div>
           <div class="field">
             <div class="ui left icon input">
-              <i class="lock icon"></i><input name="password" placeholder="Password" type="password" />
+              <i class="lock icon"></i><input name="password" placeholder="رمز ورود" type="password" />
             </div>
           </div>
           <div class="field">
             <div class="ui checkbox">
-              <input class="hidden" tabindex="0" type="checkbox" /><label>Remember me</label>
+              <input class="hidden" tabindex="0" type="checkbox"/><label>مرا به خاطر داشته باش</label>
             </div>
           </div>
           <div class="ui fluid large primary submit button">
-            Sign in
+            ورود
           </div>
         </form>
       </div>
     </div>
-    <script src="../../static/dist/semantic-ui/semantic.min.js"></script>
+    <script src="./static/files/semantic/semantic.min.js"></script>
     <style type="text/css">
       body {
         background-color: #eee;
@@ -65,11 +66,11 @@
                   rules: [
                     {
                       type   : 'empty',
-                      prompt : 'Please enter your e-mail'
+                      prompt : 'لطفا آدرس ایمیل خود را وارد نمائید'
                     },
                     {
                       type   : 'email',
-                      prompt : 'Please enter a valid e-mail'
+                      prompt : 'لطفا یک آدرس ایمیل معتبر وارد نمائید'
                     }
                   ]
                 },
@@ -78,11 +79,11 @@
                   rules: [
                     {
                       type   : 'empty',
-                      prompt : 'Please enter your password'
+                      prompt : 'لطفا رمز عبور خود را وارد نمائید'
                     },
                     {
                       type   : 'length[6]',
-                      prompt : 'Your password must be at least 6 characters'
+                      prompt : 'رمز عبور باید حاوی حداقل ۶ کاراکتر باشد'
                     }
                   ]
                 }
