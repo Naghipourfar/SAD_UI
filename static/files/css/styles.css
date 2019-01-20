@@ -72,7 +72,7 @@ This set of fonts are used in this project under the license: RC4QT
     }
 
     .ui.form {
-        width: 50%;
+        /*width: 50%;*/
         margin-right: auto;
         margin-left: auto;
     }
