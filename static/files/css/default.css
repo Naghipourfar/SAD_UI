@@ -5,6 +5,10 @@
   direction: rtl;
 }
 
+.ui.form {
+  width: 1000px;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

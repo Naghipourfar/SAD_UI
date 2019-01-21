@@ -1,37 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
-    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
-    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
-    <meta content="PPType" name="author"/>
-    <meta content="#ffffff" name="theme-color"/>
-    <title>مدیریت نیکوکار</title>
-    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
-    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
-    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
-    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
-    <script src="./static/files/js/jquery.min.js"></script>
-</head>
-<body>
-<div class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت نیکوکار</a>
-    <div class="left menu">
-        <div class="item">
-            <div class="ui small input">
-                <input placeholder="جست و جو..."/>
-            </div>
-        </div>
-        <a class="item">Dashboard</a><a class="item">Settings</a><a class="item">Profile</a><a class="item">Help</a>
-    </div>
-</div>
+       <meta charset="utf-8" />
+       <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+       <script>
+           $(document).ready(function(){
+               $("head").load("head.html")});
+       </script>
+    </head><body>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu">
-                <a class="item">داشبورد</a>
+                <a class="item" href="BenefactorDashboard.html">داشبورد</a>
                 <a class="active item">پروفایل</a>
                 <a class="item">نیازهای نقدی</a>
                 <a class="item">نیازهای غیرنقدی</a>
