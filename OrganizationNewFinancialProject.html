@@ -16,12 +16,12 @@
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu">
                 <a class="item" href="OrganizationDashboard.html">داشبورد</a>
-                <a class="active item" href="OrganizationProfile.html">پروفایل</a>
+                <a class="item" href="OrganizationProfile.html">پروفایل</a>
                 <a class="item">نیازهای نقدی</a>
                 <a class="item">نیازهای غیرنقدی</a>
                 <a class="item">درخواست‌های من</a>
                 <a class="item">پروژه‌های انجام شده</a>
-                <a class="item" href="OrganizationNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
+                <a class="active item" href="OrganizationNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
                 <a class="item" href="OrganizationNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
             </div>
         </div>
@@ -29,48 +29,32 @@
             <div class="ui grid">
                 <div class="ui hidden section divider"></div>
                 <div class="row">
-                    <h1 class="ui huge header">مشخصات فردی</h1>
+                    <h1 class="ui huge header">مشخصات نیاز نقدی</h1>
                 </div>
                 <div class="ui divider"></div>
                 <div class="row">
                     <div class="ui form segment">
                         <div class="two fields">
-                            <div class="field">
-                                <label>شناسه کاربری</label><input disabled="disabled" placeholder="Naghipourfar"
-                                                                  type="text">
-
-                                <div class="required field">
-                                    <label>نام موسسه</label>
-                                    <input class="required" placeholder="نام"/>
-                                </div>
-                                <div class="required field">
-                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه"/>
-                                </div>
-
+                            <div class="required field">
+                                <label>نام نیازمندی نقدی</label><input class="required" placeholder="نام نیازمندی" type="text">
                             </div>
-                            <div class="field">
-                                <div class="required field">
-                                    <label>رمز عبور</label>
-                                    <div class="ui left icon input">
-                                        <i class="lock icon"></i><input type="password">
-                                    </div>
-                                </div>
-                                <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت">
-                                </div>
-
+                            <div class="required field">
+                                <label>مبلغ مورد نیاز برای نیازمندی</label><input class="required" placeholder="مبلغ مورد نیاز" type="text">
                             </div>
                         </div>
-                        <div class="field">
-                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته"></textarea>
+                        <div class="two fields">
+
                         </div>
+                        <div class="two fields">
+                            <div class="required field">
+                                <label>زمان مورد نیاز</label><input class="required" placeholder="زمان مورد نیاز" type="text">
+                            </div>
 
-
+                        </div>
                         <div class="ui submit button">
-                            ذخیره
+                            <a href="OrganizationDashboard.html">اضافه کن!</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
