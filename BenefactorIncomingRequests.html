@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("head").load("head.html")});
+    </script>
+</head>
+<body>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div class="ui grid">
+    <div class="row">
+        <div class="column" id="sidebar">
+            <div class="ui secondary vertical fluid menu">
+                <a class="item" href="BenefactorDashboard.html">داشبورد</a>
+                <a class="item" href="BenefactorProfile.html">پروفایل</a>
+                <a class="item">نیازهای نقدی</a>
+                <a class="item">نیازهای غیرنقدی</a>
+                <a class="active item" href="BenefactorIncomingRequests.html">درخواست‌های من</a>
+                <a class="item">پروژه‌های انجام شده</a>
+            </div>
+        </div>
+        <div class="column" id="content">
+            <div class="ui menu">
+                <div class="item">
+                    <a href="OrgIncomingRequestsDashboard.html">
+                        <div class="ui active button">درخواست‌های دریافتی</div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="OrgSentRequestsStatusDashboard.html">
+                        <div class="ui button">درخواست‌های ارسالی</div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="OrgSearchForBenefactor.html">
+                        <div class="ui button">ارسال درخواست</div>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <table class="ui fixed table">
+                    <thead>
+                    <tr><th> </th>
+                        <th> موسسه</th>
+                        <th>توانایی موردنیاز</th>
+                        <th>محدوده</th>
+                        <th>زمان</th>
+                        <th>توضیحات</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#">محک</a></td>
+                        <td>پرستاری</td>
+                        <td>آزادی</td>
+                        <td>آخر هفته</td>
+                        <td>توضیح موسسه</td>
+                        <td><button class="ui green button">قبول درخواست</button></td>
+                        <td><button class="ui red button">رد درخواست</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    body {
+        display: relative;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 51.8px;
+        right: 0;
+        bottom: 0;
+        width: 18%;
+        background-color: #f5f5f5;
+        padding: 0px;
+    }
+    #sidebar .ui.menu {
+        margin: 2em 0 0;
+        font-size: 16px;
+    }
+    #sidebar .ui.menu > a.item {
+        color: #337ab7;
+        border-radius: 0 !important;
+    }
+    #sidebar .ui.menu > a.item.active {
+        background-color: #337ab7;
+        color: white;
+        border: none !important;
+    }
+    #sidebar .ui.menu > a.item:hover {
+        background-color: #4f93ce;
+        color: white;
+    }
+
+    #content {
+        margin-right: 19%;
+        width: 81%;
+        margin-top: 3em;
+        padding-right: 3em;
+        float: right;
+    }
+    #content > .ui.grid {
+        padding-left: 4em;
+        padding-bottom: 3em;
+    }
+    #content h1 {
+        font-size: 36px;
+    }
+    #content .ui.divider:not(.hidden) {
+        margin: 0;
+    }
+    #content table.ui.table {
+        border: none;
+    }
+    #content table.ui.table thead th {
+        border-bottom: 2px solid #eee !important;
+    }
+</style>
+</body>
+</html>
