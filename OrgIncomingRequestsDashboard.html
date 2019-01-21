@@ -30,83 +30,63 @@
     <div class="row">
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu">
-                <a class="active item">داشبورد</a>
+                <a class="item">داشبورد</a>
                 <a class="item">پروفایل</a>
                 <a class="item">نیازهای نقدی</a>
                 <a class="item">نیازهای غیرنقدی</a>
-                <a class="item">درخواست‌های من</a>
+                <a class="active item">درخواست‌های من</a>
                 <a class="item">پروژه‌های انجام شده</a>
             </div>
         </div>
         <div class="column" id="content">
-            <div class="ui grid">
-                <div class="row">
-                    <div class="ui menu">
-                        <div class="item">
-                            <div class="ui primary active button">درخواست‌های دریافتی</div>
-                        </div>
-                        <div class="item">
-                            <div class="ui button">درخواست‌های ارسالی</div>
-                        </div>
-                    </div>
+            <div class="ui menu">
+                <div class="item">
+                    <a href="OrgIncomingRequestsDashboard.html">
+                        <div class="ui active button">درخواست‌های دریافتی</div>
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="active row" data-tab="1">
-                        <div class="ui middle aligned divided list">
-                            <div class="item">
-                                <div class="right floated content">
-                                    <div class="ui button" style="color: #ac0013">
-                                        رد
-                                    </div>
-                                </div>
-                                <div class="right floated content">
-                                    <div class="ui button" style="color: #0ea432">
-                                        قبول
-                                    </div>
-                                </div>
-                                <img class="ui avatar image" src="./pics/avatar.jpg">
-                                <div class="ui horizontal list divided content">
-                                    <div class="item">
-                                        <a href="#">محسن</a>
-                                    </div>
-                                    <div class="item">
-                                        توانمندی ارائه شده
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="right floated content">
-                                    <div class="ui button" style="color: #ac0013">
-                                        رد
-                                    </div>
-                                </div>
-                                <div class="right floated content">
-                                    <div class="ui button" style="color: #0ea432">
-                                        قبول
-                                    </div>
-                                </div>
-                                <img class="ui avatar image" src="./pics/avatar.jpg">
-                                <div class="ui horizontal list divided content">
-                                    <div class="item">
-                                        <a href="#">محسسیسین2</a>
-                                    </div>
-                                    <div class="item">
-                                        ناتوانمندی ارائه سیسیسییسیسیشده
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" data-tab="2">
-                        <div class="active row" data-tab="1">
-                            <div class="ui middle aligned divided list">
-                                <div class="item">
-                                    سیسیسیسی
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="item">
+                    <a href="OrgSentRequestsStatusDashboard.html">
+                        <div class="ui button">درخواست‌های ارسالی</div>
+                    </a>
                 </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <table class="ui fixed table">
+                    <thead>
+                    <tr><th> </th>
+                        <th> نیکوکار</th>
+                        <th>توانایی ارائه شده</th>
+                        <th>محدوده</th>
+                        <th>زمان</th>
+                        <th>توضیحات</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                        <td><img class="ui avatar image" src="./pics/avatar.jpg"></td>
+                        <td><a href="#"> محسن جان</a></td>
+                        <td>پرستاری</td>
+                        <td>آزادی</td>
+                        <td>آخر هفته</td>
+                        <td>توضیح محسن</td>
+                        <td><button class="ui green button">قبول درخواست</button></td>
+                        <td><button class="ui red button">رد درخواست</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="ui avatar image" src="./pics/avatar.jpg"></td>
+                        <td><a href="#"> محسن جان</a></td>
+                        <td>پرستاری</td>
+                        <td>آزادی</td>
+                        <td>آخر هفته</td>
+                        <td>توضیح محسن</td>
+                        <td><button class="ui green button">قبول درخواست</button></td>
+                        <td><button class="ui red button">رد درخواست</button></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
