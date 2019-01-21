@@ -8,7 +8,7 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
     <meta content="PPType" name="author"/>
     <meta content="#ffffff" name="theme-color"/>
-    <title>مدیریت موسسه</title>
+    <title>مدیریت نیکوکار</title>
     <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت موسسه</a>
+    <a class="header item">مدیریت نیکوکار</a>
     <div class="left menu">
         <div class="item">
             <div class="ui small input">
@@ -50,15 +50,14 @@
                     <div class="ui form segment">
                         <div class="two fields">
                             <div class="field">
-                                <label>شناسه کاربری</label><input disabled="disabled" placeholder="Naghipourfar"
+                                <label>شناسه کاربری</label><input placeholder="نام کاربری"
                                                                   type="text">
-
                                 <div class="required field">
-                                    <label>نام موسسه</label>
-                                    <input class="required" placeholder="نام"/>
+                                    <label>نام نیکوکار</label>
+                                    <input placeholder="نام"/>
                                 </div>
-                                <div class="required field">
-                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه"/>
+                                <div class="field">
+                                    <label>شماره همراه</label><input placeholder="شماره همراه"/>
                                 </div>
 
                             </div>
@@ -70,21 +69,55 @@
                                     </div>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت">
+                                    <label>نام خانوادگی نیکوکار</label>
+                                    <input placeholder="نام خانوادگی"/>
+                                </div>
+                                <div class="required field">
+                                    <label>شماره ثابت</label><input placeholder="شماره ثابت">
                                 </div>
 
                             </div>
                         </div>
                         <div class="field">
+                            <label>نشانی منزل</label><input placeholder="نشانی منزل">
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="two">
+                            <button class="ui icon button"><i class="x icon"></i></button> گلدوزی<br>
+                            <button class="ui icon button"><i class="x icon"></i></button> معلم فیزیک<br>
+                            <button class="ui icon button"><i class="x icon"></i></button> معلم ریاضی<br>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="two fields">
+                            <div class="ui compact menu">
+                                <div class="ui simple dropdown item">
+                                    توانایی‌ها
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <div class="item">گلدوزی</div>
+                                        <div class="item">معلم فیزیک</div>
+                                        <div class="item">پرستاری</div>
+                                        <div class="item">قالیبافی</div>
+                                        <div class="item">بازاریابی</div>
+                                        <div class="item">آشپزی</div>
+                                        <div class="item">معلم شیمی</div>
+                                        <div class="item">صنایع دستی</div>
+                                        <div class="item">معلم ریاضی</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="ui icon button"><i class="plus icon"></i></button>
+                        </div>
+                        <div class="field">
                             <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته"></textarea>
                         </div>
-
-
+                        <div class="field">
+                            <label>زمینه‌های مورد علاقه</label><textarea placeholder="فعالیت‌های گذشته"></textarea>
+                        </div>
                         <div class="ui submit button">
                             ذخیره
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
