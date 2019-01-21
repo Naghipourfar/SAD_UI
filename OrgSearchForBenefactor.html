@@ -18,25 +18,14 @@
                 <div class="row" style="text-align: center">
                     <div class="ui huge label">جست و جو</div>
                 </div>
-                <div class="ui hidden divider"></div>
                 <div class="row" style="text-align: center">
-                    <div class="ui compact menu">
-                        <div class="ui simple dropdown item">
-                            نوع جست‌و‌جو
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <div class="item">نیاز نقدی</div>
-                                <div class="item">نیاز غیر نقدی</div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="ui divider"></div>
-                    <div class="ui huge label">نیاز غیرنقدی</div>
+                    <div class="ui huge label">مشخصات نیکوکار</div>
                 </div>
                 <div class="row">
                     <h1 class="ui medium header">فیلترها</h1>
                 </div>
-                <div class="ui divider"></div>
+                <div class="ui hidden divider"></div>
                 <div class="two fields">
                     <div class="field">
                         <input placeholder="شهر">
@@ -109,48 +98,59 @@
         </div>
         <div class="column" id="content">
           <div class="ui grid">
-            <div class="row">
-              <h1 class="ui huge header">نیازهای غیر نقدی</h1>
-            </div>
+              <div class="row">
+                  <div class="ui menu">
+                      <div class="item">
+                          <a href="OrgIncomingRequestsDashboard.html">
+                              <div class="ui button">درخواست‌های دریافتی</div>
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a href="OrgSentRequestsStatusDashboard.html">
+                              <div class="ui button">درخواست‌های ارسالی</div>
+                          </a>
+                      </div>
+                      <div class="item">
+                          <a href="OrgSearchForBenefactor.html">
+                              <div class="ui active button">ارسال درخواست</div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <h1 class="ui huge header">نیکوکاران</h1>
+              </div>
               <div class="ui hidden divider"></div>
-            <div class="row">
+              <div class="row">
                 <table class="ui fixed table">
                     <thead>
-                    <tr><th>شماره</th>
-                    <th>موسسه</th>
-                    <th>نیازمندی</th>
-                        <th>محدوده</th>
+                    <tr>
+                        <th> </th>
+                        <th>نیکوکار</th>
+                        <th>توانایی</th>
+                        <th>شهر</th>
                         <th>زمان</th>
-                        <th>توضیحات</th>
-                        <th>درخواست</th>
+                        <th> </th>
+                        <th> </th>
                     </tr></thead>
                     <tbody>
                         <tr>
-                          <td>۱</td>
-                          <td>محک</td>
-                          <td>پرستاری</td>
+                          <td><img class="ui avatar image" src="./pics/avatar.jpg"></td>
+                          <td>محسن</td>
+                          <td>گلدوزی</td>
                           <td>آزادی</td>
-                          <td>شنبه ۸ تا ۲۰</td>
-                          <td><button class="ui violet button">مشاهده پروفایل</button></td>
+                          <td>آزاد</td>
+                          <td><button class="ui violet button"> مشاهده پروفایل</button></td>
                           <td><button class="ui green button">ارسال درخواست</button></td>
                         </tr>
                         <tr>
-                          <td>۱</td>
-                          <td>محک</td>
-                          <td>پرستاری</td>
-                          <td>آزادی</td>
-                          <td>شنبه ۸ تا ۲۰</td>
-                          <td><button class="ui violet button">مشاهده پروفایل</button></td>
-                          <td><button class="ui green button">ارسال درخواست</button></td>
-                        </tr>
-                        <tr>
-                          <td>۱</td>
-                          <td>محک</td>
-                          <td>پرستاری</td>
-                          <td>آزادی</td>
-                          <td>شنبه ۸ تا ۲۰</td>
-                          <td><button class="ui violet button">مشاهده پروفایل</button></td>
-                          <td><button class="ui green button">ارسال درخواست</button></td>
+                            <td><img class="ui avatar image" src="./pics/avatar.jpg"></td>
+                            <td>محسن</td>
+                            <td>گلدوزی</td>
+                            <td>آزادی</td>
+                            <td>تقریبا آزاد</td>
+                            <td><button class="ui violet button"> مشاهده پروفایل</button></td>
+                            <td><button class="ui green button">ارسال درخواست</button></td>
                         </tr>
                     </tbody>
                 </table>

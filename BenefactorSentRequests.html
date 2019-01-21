@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <meta charset="utf-8" />
-       <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-       <script>
-           $(document).ready(function(){
-               $("head").load("head.html")});
-       </script>
-    </head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("head").load("head.html")});
+    </script>
+</head>
 <body>
 <div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu">
-                <a class="item" href="OrgDashboard.html">داشبورد</a>
-                <a class="item" href="OrgProfile.html">پروفایل</a>
+                <a class="item" href="BenefactorDashboard.html">داشبورد</a>
+                <a class="item" href="BenefactorProfile.html">پروفایل</a>
                 <a class="item">نیازهای نقدی</a>
                 <a class="item">نیازهای غیرنقدی</a>
-                <a class="active item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
-                <a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
-                <a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
-                <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
+                <a class="active item" href="BenefactorIncomingRequests.html">درخواست‌های من</a>
+                <a class="item">پروژه‌های انجام شده</a>
             </div>
         </div>
         <div class="column" id="content">
             <div class="ui menu">
                 <div class="item">
                     <a href="OrgIncomingRequestsDashboard.html">
-                        <div class="ui active button">درخواست‌های دریافتی</div>
+                        <div class="ui button">درخواست‌های دریافتی</div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="OrgSentRequestsStatusDashboard.html">
-                        <div class="ui button">درخواست‌های ارسالی</div>
+                        <div class="ui active button">درخواست‌های ارسالی</div>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="OrgSearchForBenefactor.html">
+                    <a href="BenefactorSendRequest.html">
                         <div class="ui button">ارسال درخواست</div>
                     </a>
                 </div>
@@ -47,34 +45,44 @@
                 <table class="ui fixed table">
                     <thead>
                     <tr><th> </th>
-                        <th> نیکوکار</th>
+                        <th> موسسه</th>
                         <th>توانایی ارائه شده</th>
                         <th>محدوده</th>
                         <th>زمان</th>
-                        <th>توضیحات</th>
+                        <th> </th>
                         <th> </th>
                         <th> </th>
                     </tr></thead>
                     <tbody>
                     <tr>
-                        <td><img class="ui avatar image" src="./pics/avatar.jpg"></td>
-                        <td><a href="#"> محسن جان</a></td>
+                        <td>1</td>
+                        <td>محک</td>
                         <td>پرستاری</td>
                         <td>آزادی</td>
                         <td>آخر هفته</td>
-                        <td>توضیح محسن</td>
-                        <td><button class="ui green button">قبول درخواست</button></td>
-                        <td><button class="ui red button">رد درخواست</button></td>
+                        <td><button class="ui violet button">مشاهده پروفایل</button></td>
+                        <td><button class="ui green disabled button">قبول شده</button></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td><img class="ui avatar image" src="./pics/avatar.jpg"></td>
-                        <td><a href="#"> محسن جان</a></td>
+                        <td>1</td>
+                        <td>محک</td>
                         <td>پرستاری</td>
                         <td>آزادی</td>
                         <td>آخر هفته</td>
-                        <td>توضیح محسن</td>
-                        <td><button class="ui green button">قبول درخواست</button></td>
-                        <td><button class="ui red button">رد درخواست</button></td>
+                        <td><button class="ui violet button">مشاهده پروفایل</button></td>
+                        <td><button class="ui red disabled button">رد شده</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>محک</td>
+                        <td>پرستاری</td>
+                        <td>آزادی</td>
+                        <td>آخر هفته</td>
+                        <td><button class="ui violet button">مشاهده پروفایل</button></td>
+                        <td><button class="ui grey disabled button">درحال بررسی</button></td>
+                        <td><button class="ui orange button">انصراف</button></td>
                     </tr>
                     </tbody>
                 </table>
