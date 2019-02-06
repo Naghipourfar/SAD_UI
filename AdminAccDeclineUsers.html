@@ -31,92 +31,54 @@
     <div class="row">
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu">
-                <a class="active item" href="AdminDashboard.html">داشبورد</a>
-                <a class="item" href="AdminAccDeclineUsers.html">مشاهده کاربران منتظر تایید</a>
+                <a class="item" href="AdminDashboard.html">داشبورد</a>
+                <a class="active item" href="AdminAccDeclineUsers.html">مشاهده کاربران منتظر تایید</a>
                 <a class="item" href="AdminManageAbilities.html">مدیریت توانایی‌ها</a>
                 <a class="item" href="AdminManageFeedbacks.html">مدیریت نظرات</a>
                 <a class="item" href="AdminManageBenefactors.html">مدیریت نیکوکاران</a>
                 <a class="item" href="AdminManageOrgs.html">مدیریت سازمان‌ها</a>
                 <a class="item" href="AdminRegisterNewUser.html">ایجاد کاربر جدید</a>
                 <a class="item" href="AdminGetLogReport.html">دریافت لاگ</a>
-
             </div>
         </div>
         <div class="column" id="content">
-            <div class="ui three column grid">
-                <div class="column">
-                    <div class="ui segment">
-                        <a href="" class="ui fluid medium image">
-                            <div class="ui blue ribbon label">
-                                مشاهده کاربران منتظر تایید
-                            </div>
-                            <img src="static/files/images/waiting-users.png">
-                        </a>
-
-
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image">
-                            <div class="ui blue ribbon label">
-                                مدیریت توانایی‌ها
-                            </div>
-                            <img src="./static/files/images/skill-manage.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image">
-                            <div class="ui blue ribbon label">
-                                مدیریت نظرات
-                            </div>
-                            <img src="./static/files/images/comment-manage.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image">
-                            <div class="ui blue ribbon label">
-                                مدیریت نیکوکاران
-                            </div>
-                            <img src="./static/files/images/ben-manage.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image">
-                            <div class="ui blue ribbon label">
-                                مدیریت سازمان‌ها
-                            </div>
-                            <img src="./static/files/images/organ-manage.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image" href="AdminRegisterNewUser.html">
-                            <div class="ui blue ribbon label">
-                                ایجاد کاربر جدید
-                            </div>
-                            <img src="./static/files/images/new-user.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image">
-                            <div class="ui blue ribbon label">
-                                دریافت لاگ
-                            </div>
-                            <img src="./static/files/images/log.png" >
-                        </a>
-                    </div>
-                </div>
-
+            <div class="row">
+                <table class="ui fixed table">
+                    <thead>
+                    <tr>
+                        <th> </th>
+                        <th> نوع کاربر</th>
+                        <th>نام کاربر</th>
+                        <th> مشخصات</th>
+                        <th>توضیحات</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr></thead>
+                    <tbody>
+                    <tr>
+                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
+                        <td> نیکوکار</td>
+                        <td>محسن</td>
+                        <td><button class="ui violet button">مشاهده پروفایل</button></td>
+                        <td>خوبه</td>
+                        <td><button class="ui green button">تایید کاربر</button></td>
+                        <td><button class="ui red button">رد کاربر</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="ui avatar image" src="static/files/pics/Mahak.jpg"></td>
+                        <td> موسسه</td>
+                        <td>محک</td>
+                        <td><button class="ui violet button">مشاهده پروفایل</button></td>
+                        <td>خوب است</td>
+                        <td><button class="ui green button">تایید کاربر</button></td>
+                        <td><button class="ui red button">رد کاربر</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <style type="text/css">
                     body {
