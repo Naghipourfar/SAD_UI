@@ -1,20 +1,22 @@
-function sendBenefactorInformation() {
+$(function () {
     var request = {
-        uesrname: "For later", //TODO
         request_name: "non financial ongoing projects",
-        is_done: "False"
+        uesrname: "For later", //TODO
     };
 
     $('#target').html('refreshing..');
 
     $.ajax({
-        url: '/test/PersonSubmit', //TODO
+        url: 'http://127.0.0.1:8000/projects/benefactor/ehsan/?type=financial&status=not_started', //TODO
         type: 'post',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
-            $('').html(data.msg);
+            if (data.is_valid){
+
+            }
         },
         data: JSON.stringify(request)
     });
+
 }

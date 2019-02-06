@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script type="javascript" src="./static/files/js/OrgOnGoingFinancial.js"></script>
     <script>
         $(document).ready(function(){
             $("head").load("head.html")});
@@ -30,38 +31,24 @@
             </div>
             <div class="divider"></div>
             <div class="row">
-                <table class="ui fixed table">
+                <table class="ui fixed table" id="org_ongoing_financial_table">
                     <thead>
                     <tr><th>نام پروژه </th>
-                        <th> میزان هزینه مورد نیاز </th>
-                        <th>میزان تامین شده </th>
-                        <th>زمان شروع</th>
-                        <th>توضیحات</th>
+                        <th> مکان </th>
+                        <th>زمان پایان </th>
+                        <th> هزینه تامین شده</th>
+                        <th>هزینه مورد نیاز</th>
                     </tr></thead>
                     <tbody>
-                    <tr>
-                        <td>ساخت مدرسه</td>
-                        <td>ده میلیون تومان</td>
-                        <td>
-                            <div class="ui orange active indicating progress">
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
-                            </div>
-                        </td>
-                        <td>1394</td>
-                        <td>ایزی </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
-</div>
 <style type="text/css">
     body {
-        display: relative;
+        /*display: "relative";*/
     }
 
     #sidebar {
