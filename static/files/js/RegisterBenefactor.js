@@ -10,8 +10,8 @@ function sendBenefactorInformation() {
         password1: $("#password1").val(),
         name: $("#name").val(),
         lastname: $("#lastname").val(),
-        phoneNumber: $("#phoneNumber").val(),
-        homeNumber: $("#homeNumber").val(),
+        phoneNumber: $("#phone_number").val(),
+        homeNumber: $("#home_number").val(),
         address: $("#address").val(),
         skills: skills,
         activities: $("#activities").val(),
@@ -24,7 +24,7 @@ function sendBenefactorInformation() {
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
-            if (data.){
+            if (data.status === 0){
 
             }
         },

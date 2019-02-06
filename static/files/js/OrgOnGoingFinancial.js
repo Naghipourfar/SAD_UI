@@ -1,11 +1,8 @@
 $(function () {
-    alert("salam");
-    var user_name = ""; //TODO
-
-    $('#target').html('refreshing..');
+    var user_name = "ehsan"; //TODO
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/benefactor/'+user_name+'/?type=financial&status=not_started', //TODO
+        url: 'http://localhost:8000/projects/benefactor/'+user_name+'/?type=financial&status=not_started', //TODO
         type: 'post',
         dataType: 'json',
         contentType: 'application/json',
@@ -37,4 +34,4 @@ $(function () {
         data: JSON.stringify(request)
     });
 
-}
+})
