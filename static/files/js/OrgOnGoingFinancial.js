@@ -1,12 +1,13 @@
 $(function () {
-    alert("salam");
+    alert("salam5");
     var user_name = "ehsan"; //TODO
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/benefactor/' + user_name + '/',
-        data: "type=financial" +
-            "&status=in_progress/",
+        url: 'http://127.0.0.1:8000/projects/benefactor/' + user_name + '/?type=financial&status=in_progress/',
+        // data: "type=financial" +
+        //     "&status=in_progress/",
         type: 'GET',
         dataType: 'json',
+        // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             alert("success");
@@ -50,7 +51,6 @@ $(function () {
             }
             alert(msg)
             // message_div.innerText = msg;
-
         }
 
     });
