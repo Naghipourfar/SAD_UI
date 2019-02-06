@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <meta charset="utf-8" />
-       <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-       <script>
-           $(document).ready(function(){
-               $("head").load("head.html")});
-       </script>
-    </head>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/moment.min.js"></script>
+    <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
+    <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/RegisterBenefactor.js"></script>
+
+    <!--<script>-->
+    <!--$(document).ready(function(){-->
+    <!--$("head").load("head.html")});-->
+    <!--</script>-->
+</head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
     <a class="header item">سامانه ثبت‌نام</a>
@@ -34,41 +53,55 @@
                         <div class="two fields">
                             <div class="field">
                                 <label>شناسه کاربری</label><input placeholder="Naghipourfar"
-                                                                  type="text">
+                                                                  type="text" id="username">
                                 <div class="required field">
-                                    <label>نام نیکوکار</label>
-                                    <input class="required" placeholder="نام"/>
+                                    <label>رمز عبور</label>
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i><input type="password" id="password1">
+                                    </div>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه"/>
+                                    <label>نام نیکوکار</label>
+                                    <input class="required" placeholder="نام" id="name"/>
+                                </div>
+                                <div class="required field">
+                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه" id="phoneNumber"/>
                                 </div>
 
                             </div>
                             <div class="field">
                                 <div class="required field">
-                                    <label>رمز عبور</label>
+                                    <label>ایمیل</label>
                                     <div class="ui left icon input">
-                                        <i class="lock icon"></i><input type="password">
+                                        <i class="icon"></i><input id="email"/>
+                                    </div>
+                                </div>
+                                <div class="required field">
+                                    <label>تکرار رمز عبور</label>
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i><input type="password" id="password2">
                                     </div>
                                 </div>
                                 <div class="required field">
                                     <label>نام خانوادگی نیکوکار</label>
-                                    <input class="required" placeholder="نام"/>
+                                    <input class="required" placeholder="نام خانوادگی" id="lastname"/>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت">
+                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت" id="homeNumber">
                                 </div>
-
                             </div>
                         </div>
                         <div class="required field">
-                            <label>نشانی منزل</label><input class="required" placeholder="نشانی منزل">
+                            <label>نشانی منزل</label><input class="required" placeholder="نشانی منزل" id="address">
                         </div>
                         <div class="ui divider"></div>
-                        <div class="two">
-                            <button class="ui icon button"><i class="x icon"></i></button> گلدوزی<br>
-                            <button class="ui icon button"><i class="x icon"></i></button> معلم فیزیک<br>
-                            <button class="ui icon button"><i class="x icon"></i></button> معلم ریاضی<br>
+                        <div class="two" id="skills">
+                            <button class="ui icon button" id="گلدوزی"><i class="x icon"></i></button>
+                            <label>گلدوزی</label><br>
+                            <button class="ui icon button"><i class="x icon"></i></button>
+                            <label>معلم فیزیک</label><br>
+                            <button class="ui icon button"><i class="x icon"></i></button>
+                            <label>معلم ریاضی</label><br>
                         </div>
                         <div class="ui divider"></div>
                         <div class="two fields">
@@ -93,14 +126,14 @@
                         </div>
                         <div class="ui divider"></div>
                         <div class="field">
-                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته"></textarea>
+                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته" id="activities"></textarea>
                         </div>
                         <div class="ui divider"></div>
                         <div class="field">
-                            <label>زمینه‌های مورد علاقه</label><textarea placeholder="فعالیت‌های گذشته"></textarea>
+                            <label>زمینه‌های مورد علاقه</label><textarea placeholder="زمینه‌های مورد علاقه" id="interests"></textarea>
                         </div>
-                        <div class="ui submit button">
-                            <a href="ThankYouForRegistration.html">ثبت‌نام</a>
+                        <div class="ui submit button" onclick="sendBenefactorInformation()">
+                            <a>ثبت‌نام</a>
                         </div>
                     </div>
 
