@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script type="javascript" src="/static/files/js/BenefactorOnGoingNonFinancial.js"></script>
     <script>
         $(document).ready(function(){
             $("head").load("head.html")});
@@ -25,10 +26,13 @@
         <div class="column" id="content">
             <div class="row">
                 <h1 class="ui huge header">پروژه‌های غیر نقدی</h1>
+                <a href="BenefactorOnGoingNonFinancial.html">
+                    <button class="ui button">refresh</button>
+                </a>
             </div>
             <div class="divider"></div>
             <div class="row">
-                <table class="ui fixed table">
+                <table class="ui fixed table" id="on_going_non_financial_table">
                     <thead>
                     <tr>
                         <th>نام پروژه </th>
