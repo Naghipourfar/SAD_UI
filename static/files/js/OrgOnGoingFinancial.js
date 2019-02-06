@@ -11,7 +11,10 @@ $(function () {
         contentType: 'application/json',
         success: function (data) {
             alert("success");
-            if (data.status === 0) {
+            // data = $.parseJSON(data);
+            alert(data);
+
+            if (data.status == 0) {
                 alert("status is 0");
                 projects = data.projects;
                 for (var project in projects) {
