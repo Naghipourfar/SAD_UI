@@ -4,7 +4,7 @@ function sendBenefactorInformation() {
     $("#skills").find("button").each(function () {
          skills[i++] = $(this).html();
     });
-    alert(skills);
+
     var person = {
         username: $("#username").val(),
         password1: $("#password1").val(),
@@ -18,14 +18,15 @@ function sendBenefactorInformation() {
         interests: $("#interests").val()
     };
 
-    $('#target').html('sending..');
     $.ajax({
-        url: '/Benefactor/' + person.username,
+        url: '/benefactor/' + person.username,
         type: 'post',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
-            $('#target').html(data.msg);
+            if (data.){
+
+            }
         },
         data: JSON.stringify(person)
     });

@@ -37,35 +37,40 @@
                         <div class="two fields">
                             <div class="field">
                                 <label>شناسه کاربری</label><input disabled="disabled" placeholder="Naghipourfar"
-                                                                  type="text">
-
-                                <div class="required field">
-                                    <label>نام موسسه</label>
-                                    <input class="required" placeholder="نام"/>
-                                </div>
-                                <div class="required field">
-                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه"/>
-                                </div>
-
-                            </div>
-                            <div class="field">
+                                                                  type="text" id="username">
                                 <div class="required field">
                                     <label>رمز عبور</label>
                                     <div class="ui left icon input">
-                                        <i class="lock icon"></i><input type="password">
+                                        <i class="lock icon"></i><input type="password" id="password1">
                                     </div>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت">
+                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه" id="phone_number"/>
+                                </div>
+                                <div class="field">
+                                    <label>آدرس ایمیل</label><input placeholder="آدرس ایمیل" id="email">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field">
+                                    <label>نام موسسه</label>
+                                    <input class="required" placeholder=" نام موسسه" disabled="disabled" id="name"/>
+                                </div>
+                                <div class="required field">
+                                    <label>تکرار رمز عبور</label>
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i><input type="password" id="password2">
+                                    </div>
+                                </div>
+                                <div class="required field">
+                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت" id="home_number">
                                 </div>
 
                             </div>
                         </div>
                         <div class="field">
-                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته"></textarea>
+                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته" id="activities"></textarea>
                         </div>
-
-
                         <div class="ui submit button">
                             ذخیره
                         </div>
