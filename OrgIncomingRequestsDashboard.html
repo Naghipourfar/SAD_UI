@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <meta charset="utf-8" />
-       <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-       <script>
-           $(document).ready(function(){
-               $("head").load("head.html")});
-       </script>
-    </head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/moment.min.js"></script>
+    <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
+    <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/OrgIncomingRequests.js"></script>
+
+</head>
 <body>
 <div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
 <div class="ui grid">
@@ -27,55 +41,37 @@
         <div class="column" id="content">
             <div class="ui menu">
                 <div class="item">
-                    <a href="OrgIncomingRequestsDashboard.html">
+                    <a href="BenefactorIncomingRequests.html">
                         <div class="ui active button">درخواست‌های دریافتی</div>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="OrgSentRequestsStatusDashboard.html">
+                    <a href="BenefactorSentRequests.html">
                         <div class="ui button">درخواست‌های ارسالی</div>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="OrgSearchForBenefactor.html">
+                    <a href="BenefactorSendRequest.html">
                         <div class="ui button">ارسال درخواست</div>
                     </a>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="row">
-                <table class="ui fixed table">
+                <table class="ui fixed table" id="benefactor_incoming_requests">
                     <thead>
                     <tr><th> </th>
-                        <th> نیکوکار</th>
-                        <th>توانایی ارائه شده</th>
-                        <th>محدوده</th>
-                        <th>زمان</th>
-                        <th>توضیحات</th>
+                        <th> درخواست</th>
+                        <th>جواب شما</th>
+                        <th>نوع خدمت</th>
+                        <th>عنوان خدمت</th>
+                        <th>مکان </th>
+                        <th>وضعیت درخواست</th>
+                        <th> درخواست کننده</th>
                         <th> </th>
                         <th> </th>
                     </tr></thead>
                     <tbody>
-                    <tr>
-                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
-                        <td><a href="#"> محسن جان</a></td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>توضیح محسن</td>
-                        <td><button class="ui green button">قبول درخواست</button></td>
-                        <td><button class="ui red button">رد درخواست</button></td>
-                    </tr>
-                    <tr>
-                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
-                        <td><a href="#"> محسن جان</a></td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>توضیح محسن</td>
-                        <td><button class="ui green button">قبول درخواست</button></td>
-                        <td><button class="ui red button">رد درخواست</button></td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -84,7 +80,7 @@
 </div>
 <style type="text/css">
     body {
-        display: relative;
+        /*display: relative;*/
     }
 
     #sidebar {

@@ -1,9 +1,9 @@
 $(function () {
-    var user_name = "ehsan"; //TODO
-
+    var user_name = "org"; //TODO
+    alert("hi")
     $.ajax({
-        url: 'http://localhost:8000/projects/benefactor/'+user_name+'/?type=financial&status=not_started', //TODO
-        type: 'post',
+        url: 'http://localhost:8000/projects/organization/'+user_name+'/?type=non_financial&status=not_started', //TODO
+        type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
@@ -13,19 +13,18 @@ $(function () {
                 projects = data.projects;
                 for (var project in projects){
                     var row='<tr>';
-                    row += '<td>'+project.name+'</td>';
-                    row+='</tr>';
-
                     row += '<td>'+project.location+'</td>';
                     row+='</tr>';
 
-                    row += '<td>'+project.deadline+'</td>';
+                    row += '<td>'+project.category+'</td>';
                     row+='</tr>';
 
-                    row += '<td>'+project.money_needed+'</td>';
+                    row += '<td>'+project.name+'</td>';
                     row+='</tr>';
 
-                    row += '<td>'+project.money_donated+'</td>';
+                    row += '<td>'+project.username+'</td>';
+                    row+='</tr>';
+
                     row+='</tr>';
                     $('#org_ongoing_non_financial_table').append(row)
                 }
