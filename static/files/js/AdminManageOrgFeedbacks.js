@@ -1,8 +1,8 @@
 $(function () {
     alert("hi");
-    var user_name = "ehsan"; //TODO
+    var user_name = "org"; //TODO
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/feedbacks/benefactor/' + user_name + '/?type=receive',
+        url: 'http://127.0.0.1:8000/projects/feedbacks/organization/' + user_name + '/?type=receive',
         // data: "type=financial" +
         //     "&status=in_progress/",
         type: 'GET',
