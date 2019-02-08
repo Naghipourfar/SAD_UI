@@ -18,5 +18,4 @@ $(function () {
         },
         data: JSON.stringify(request)
     });
-
 }

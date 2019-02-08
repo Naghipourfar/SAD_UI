@@ -1,7 +1,7 @@
 $(function () {
-    var user_name = "ehsan"; //TODO
+    var user_name = "org"; //TODO
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/benefactor/' + user_name + '/?type=financial&status=not_started',
+        url: 'http://127.0.0.1:8000/projects/organization/' + user_name + '/?type=financial&status=not_started',
         // data: "type=financial" +
         //     "&status=in_progress/",
         type: 'GET',
@@ -12,13 +12,12 @@ $(function () {
             if (data.status == 0) {
                 alert("success");
                 projects = data.projects;
-                alert(projects);
                 for (var i = 0; i < projects.length;i++) {
                     project = projects[i];
                     var row = '<tr>';
-                    row += '<td>' + project.name + '</td>';
-
                     row += '<td>' + project.location + '</td>';
+
+                    row += '<td>' + project.name + '</td>';
 
                     row += '<td>' + project.deadline + '</td>';
 
