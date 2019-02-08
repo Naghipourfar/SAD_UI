@@ -1,24 +1,29 @@
-$(function() {
-    $("#save").click(function(){
+$(function () {
+    $("#save").click(function () {
+        // benefactor = localStorage.getItem("account");
+        benefactor = {
+            username: "ehsan",
+            password: "mahak12345"
 
+        };
         benefactorPassword = {
             old_password: $("#old_password").val(),
             new_password1: $("#new_password1").val(),
             new_password2: $("#new_password2").val()
-        }
+        };
 
         $.ajax({
-            url: "http://localhost:8000/benefactor/profile/",
+            url: "http://localhost:8000/accounts/change_password/" + benefactor.username + "/",
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify(benefactorPassword),
-            success: function(data) {
-                if (data.status == 0){
+            success: function (data) {
+                if (data.status == 0) {
                     alert("The password has been changed Successfully.");
                     window.location.replace("BenefactorDashboard.html")
-                } else{
-                    for (var key in data.message){
+                } else {
+                    for (var key in data.message) {
                         alert(data.message[key]);
                     }
                 }
