@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <meta charset="utf-8" />
-       <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-       <script>
-           $(document).ready(function(){
-               $("head").load("head.html")});
-       </script>
-    </head>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/moment.min.js"></script>
+    <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
+    <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/Signin.js"></script>
+</head>
 <body>
 <div class="ui center aligned grid">
     <div class="ui container">
@@ -17,12 +31,13 @@
         <form class="ui large form">
             <div class="field">
                 <div class="ui right icon input" style="width: 150%;">
-                    <i class="user icon"></i><input name="email" placeholder="آدرس ایمیل" type="text"/>
+                    <i class="user icon"></i><input id="username" name="username" placeholder="شناسه کاربری" type="text"/>
                 </div>
             </div>
             <div class="field">
                 <div class="ui right icon input" style="width: 150%">
-                    <i class="lock icon"></i><input name="password" placeholder="رمز ورود" type="password"/>
+                    <i class="lock icon"></i><input id="password" name="password" placeholder="رمز ورود"
+                                                    type="password"/>
                 </div>
             </div>
             <div class="field">
@@ -31,13 +46,13 @@
                 </div>
             </div>
             <div class="ui grid">
-                <div class="eight wide column">
-                    <a class="ui fluid wide submit primary button large" href="Homepage.html">
+                <div class="eight wide column" onclick="signin()">
+                    <a class="ui fluid wide submit primary button large">
                         ورود
                     </a>
                 </div>
                 <div class="eight wide column">
-                    <a class="ui fluid wide submit primary button large " href="Signup.html">
+                    <a class="ui fluid wide submit primary button large">
                         ثبت‌نام
                     </a>
                 </div>
