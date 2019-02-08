@@ -14,6 +14,7 @@
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
     <script src="./static/files/js/jquery.min.js"></script>
+    <script type="javascript" src="/static/files/js/AdminManageBenefactorFeedbacks.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -43,7 +44,27 @@
             </div>
         </div>
         <div class="column" id="content">
-
+            <div class="ui grid">
+                <div class="row">
+                    <h1 class="ui huge header">نظرات درباره نیکوکاران</h1>
+                </div>
+                <div class="ui divider"></div>
+                <div class="row">
+                    <table class="ui fixed table" id = "feedbacks_about_benefactors">
+                        <thead>
+                        <tr>
+                            <th>امتیاز</th>
+                            <th>نظر</th>
+                            <th>نوع خدمت</th>
+                            <th>عنوان خدمت</th>
+                            <th>صاحب نظر </th>
+                            <th>مشاهده پروفایل صاحب نظر </th>
+                        </tr></thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
