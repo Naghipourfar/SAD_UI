@@ -71,10 +71,11 @@ function getSelectedSkills() {
         skill = $(this).attr("id");
         var category = skill.split("-")[0];
         var name = skill.split("-")[1];
-        skills[i++] = {
+        skill = {
             category: category,
             name: name
         };
+        skills.push(skill);
     });
     return skills;
 }

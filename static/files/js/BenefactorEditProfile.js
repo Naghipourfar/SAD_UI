@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/benefactor/profile/',
+        url: 'http://127.0.0.1:8000/accounts/benefactor/profile/',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
@@ -36,7 +36,7 @@ $(document).ready(function () {
                     alert(data.message[key]);
                 }
             }
-        }
+        }F
     });
     $("#save").click(function () { // TODO it must run after retriving data
         var newBenefactor = benefactor;
@@ -50,7 +50,7 @@ $(document).ready(function () {
             }
         }
         $.ajax({
-            url: 'http://127.0.0.1:8000/benefactor/profile/' + benefactor.username + "/",
+            url: 'http://127.0.0.1:8000/accounts/benefactor/profile/' + benefactor.username + "/",
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',
