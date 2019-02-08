@@ -3,11 +3,26 @@
 <head>
     <meta charset="utf-8"/>
     <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("head").load("head.html")
-        });
-    </script>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/moment.min.js"></script>
+    <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
+    <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="static/files/js/OrgSignup.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -34,7 +49,7 @@
                     <div class="ui form segment">
                         <div class="two fields">
                             <div class="required field">
-                                <label>شناسه کاربری</label><input class="required" placeholder="Naghipourfar"
+                                <label>شناسه کاربری</label><input class="required" placeholder="نام کاربری"
                                                                   type="text" id="username">
                                 <div class="required field">
                                     <label>رمز عبور</label>
@@ -47,38 +62,45 @@
                                                                      id="phone_number"/>
                                 </div>
                                 <div class="required field">
-                                    <label>آدرس ایمیل</label><input class="required" placeholder="آدرس ایمیل" id="email">
+                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت"
+                                                                    id="tel_number">
                                 </div>
+
                             </div>
                             <div class="field">
                                 <div class="required field">
-                                    <label>نام موسسه</label>
-                                    <input class="required" placeholder=" نام موسسه" id="name"/>
+                                    <label>آدرس ایمیل</label><input class="required" placeholder="آدرس ایمیل"
+                                                                    id="email">
                                 </div>
                                 <div class="required field">
                                     <label>تکرار رمز عبور</label>
                                     <div class="ui left icon input">
-                                        <i class="lock icon"></i><input class="required" type="password" id="password2">
+                                        <i class="lock icon"></i><input class="required" type="password"
+                                                                        id="password2">
                                     </div>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت"
-                                                                    id="home_number">
+                                    <label>نام موسسه</label><input class="required" placeholder=" نام موسسه"
+                                                                   id="name"/>
                                 </div>
-
+                                <div class="required field">
+                                    <label>سن موسسه</label><input class="required" placeholder=" سن موسسه"
+                                                                  id="age"/>
+                                </div>
                             </div>
+                        </div>
+                        <div class="required field">
+                            <label>نشانی موسسه</label><input class="required" placeholder="نشانی موسسه"
+                                                             id="address">
                         </div>
                         <div class="field">
                             <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته"
                                                                      id="activities"></textarea>
                         </div>
-
-
-                        <div class="ui submit button">
-                            <a href="ThankYouForRegistration.html">ثبت‌نام</a>
+                        <div class="ui submit button" onclick="sendOrgInformation()">
+                            <a>ثبت‌نام</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

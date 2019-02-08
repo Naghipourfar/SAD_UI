@@ -20,7 +20,7 @@
     <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="./static/files/js/RegisterBenefactor.js"></script>
+    <script type="text/javascript" src="static/files/js/BenefactorSignup.js"></script>
 
     <!--<script>-->
     <!--$(document).ready(function(){-->
@@ -51,29 +51,32 @@
                 <div class="row">
                     <div class="ui form segment">
                         <div class="two fields">
-                            <div class="field">
-                                <label>شناسه کاربری</label><input placeholder="Naghipourfar"
+                            <div class="required field">
+                                <label>شناسه کاربری</label><input class="required" placeholder="نام کاربری"
                                                                   type="text" id="username">
                                 <div class="required field">
                                     <label>رمز عبور</label>
                                     <div class="ui left icon input">
-                                        <i class="lock icon"></i><input type="password" id="password1">
+                                        <i class="lock icon"></i><input class="required" type="password" id="password1">
                                     </div>
                                 </div>
                                 <div class="required field">
-                                    <label>نام نیکوکار</label>
-                                    <input class="required" placeholder="نام" id="name"/>
+                                    <label>نام نیکوکار</label><input class="required" placeholder="نام"
+                                                                     id="first_name"/>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه" id="phoneNumber"/>
+                                    <label>شماره همراه</label><input class="required" placeholder="شماره همراه"
+                                                                     id="phone_number"/>
                                 </div>
-
+                                <div class="required field">
+                                    <label>سن</label><input class="required" placeholder="سن" id="age"/>
+                                </div>
                             </div>
                             <div class="field">
                                 <div class="required field">
                                     <label>ایمیل</label>
                                     <div class="ui left icon input">
-                                        <i class="icon"></i><input id="email"/>
+                                        <i class="icon"></i><input class="required" id="email" placeholder="ایمیل"/>
                                     </div>
                                 </div>
                                 <div class="required field">
@@ -84,10 +87,11 @@
                                 </div>
                                 <div class="required field">
                                     <label>نام خانوادگی نیکوکار</label>
-                                    <input class="required" placeholder="نام خانوادگی" id="lastname"/>
+                                    <input class="required" placeholder="نام خانوادگی" id="last_name"/>
                                 </div>
                                 <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت" id="homeNumber">
+                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت"
+                                                                    id="tel_number">
                                 </div>
                             </div>
                         </div>
@@ -95,21 +99,20 @@
                             <label>نشانی منزل</label><input class="required" placeholder="نشانی منزل" id="address">
                         </div>
                         <div class="ui divider"></div>
+                        <label><b> لیست توانایی‌ها</b></label>
                         <div class="two" id="skills">
-                            <button class="ui icon button" id="گلدوزی"><i class="x icon"></i></button>
-                            <label>گلدوزی</label><br>
-                            <button class="ui icon button"><i class="x icon"></i></button>
-                            <label>معلم فیزیک</label><br>
-                            <button class="ui icon button"><i class="x icon"></i></button>
-                            <label>معلم ریاضی</label><br>
+                            <div class="one" id="معلم-فیزیک">
+                                <button class="ui icon button"><i class="x icon"></i></button>
+                                <label>معلم-فیزیک</label><br>
+                            </div>
                         </div>
                         <div class="ui divider"></div>
                         <div class="two fields">
                             <div class="ui compact menu">
-                                <div class="ui simple dropdown item">
-                                    توانایی‌ها
+                                <div class="ui simple dropdown item" id="skills_div">
+                                    <label id="last_selected_skill">توانایی‌ها</label>
                                     <i class="dropdown icon"></i>
-                                    <div class="menu">
+                                    <div class="menu" id="skills_menu">
                                         <div class="item">گلدوزی</div>
                                         <div class="item">معلم فیزیک</div>
                                         <div class="item">پرستاری</div>
@@ -122,15 +125,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="ui icon button"><i class="plus icon"></i></button>
+                            <button class="ui icon button" id="new_skill"><i class="plus icon"></i></button>
                         </div>
                         <div class="ui divider"></div>
                         <div class="field">
-                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته" id="activities"></textarea>
+                            <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته"
+                                                                     id="activities"></textarea>
                         </div>
                         <div class="ui divider"></div>
                         <div class="field">
-                            <label>زمینه‌های مورد علاقه</label><textarea placeholder="زمینه‌های مورد علاقه" id="interests"></textarea>
+                            <label>زمینه‌های مورد علاقه</label><textarea placeholder="زمینه‌های مورد علاقه"
+                                                                         id="desires"></textarea>
                         </div>
                         <div class="ui submit button" onclick="sendBenefactorInformation()">
                             <a>ثبت‌نام</a>
