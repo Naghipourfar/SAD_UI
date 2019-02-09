@@ -10,6 +10,7 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
     <meta content="PPType" name="author"/>
     <meta content="#ffffff" name="theme-color"/>
+    <title>مدیریت نیکوکار</title>
     <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
@@ -21,21 +22,27 @@
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
     <script type="text/javascript" src="static/files/js/BenefactorEditProfile.js"></script>
+    <script type="text/javascript" src="static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
 <div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div class="ui inverted huge border less fixed fluid menu">
+    <a class="header item">مدیریت نیکوکار</a>
+    <div class="left menu">
+        <div class="item">
+            <div class="ui small input">
+                <input placeholder="جست و جو..."/>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <div class="ui secondary vertical fluid menu">
-                    <a class="item" href="BenefactorDashboard.html">داشبورد</a>
-                    <a class="active item" href="BenefactorEditProfile.html">پروفایل</a>
-                    <a class="item" href="BenefactorOnGoingNonFinancial.html">پروژه‌های غیر نقدی در حال انجام</a>
-                    <a class="item" href="BenefactorIncomingRequests.html">درخواست‌های من</a>
-                    <a class="item" href="BenefactorDoneFinancial.html">پروژه‌های نقدی انجام شده</a>
-                    <a class="item" href="BenefactorDoneNonFinancial.html">پروژه‌های غیر نقدی انجام شده</a>
-                </div>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('EditProfile', 'Benefactor');
+                </script>
             </div>
         </div>
         <div class="column" id="content">

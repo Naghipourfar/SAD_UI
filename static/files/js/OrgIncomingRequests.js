@@ -40,7 +40,6 @@ $(function () {
             }
         },
         error: function (jqXHR, exception) {
-            alert("Goh!");
             if (jqXHR.status === 0) {
                 msg = 'Not connect. Verify Network. [0]';
             } else if (jqXHR.status === 404) {
