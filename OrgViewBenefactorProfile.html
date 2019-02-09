@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <title>مدیریت موسسه</title>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <script src="./static/files/js/jquery.min.js"></script>
+    <script src="./static/files/js/SidebarLoader.js"></script>
+</head>
+<body>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div class="ui inverted huge border less fixed fluid menu">
+    <a class="header item">مدیریت موسسه</a>
+    <div class="left menu">
+        <div class="item">
+            <div class="ui small input">
+                <input placeholder="جست و جو..."/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="row">
+        <div class="column" id="sidebar">
+            <div class="ui secondary vertical fluid menu">
+                <a class="item" href="OrgDashboard.html"> بازگشت به داشبورد</a>
+                <!--<a class="active item" href="OrgEditProfile.html">پروفایل</a>-->
+                <!--<a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>-->
+                <!--<a class="item" href="OrgOnGoingNonFinancial.html">نیازهای غیرنقدی در حال انجام</a>-->
+                <!--<a class="item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>-->
+                <!--<a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>-->
+                <!--<a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>-->
+                <!--<a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>-->
+            </div>
+        </div>
+        <div class="column" id="content">
+            <div class="ui grid">
+                <div class="ui hidden section divider"></div>
+                <div class="row">
+                    <h1 class="ui huge header">مشخصات نیکوکار</h1>
+                </div>
+                <div class="ui divider"></div>
+                <div class="row">
+                    <div class="ui form segment">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>شناسه کاربری</label><input disabled="disabled" placeholder="شناسه کاربری"
+                                                                  type="text" id="username">
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>نام نیکوکار</label><input disabled="disabled" placeholder="نام"
+                                                                  type="text" id="first_name">
+                            </div>
+                            <div class="field">
+                                <label>نام خانوادگی نیکوکار</label><input class="required" placeholder="نام خانوادگی"
+                                                                 disabled="disabled" id="last_name"/>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>شماره همراه</label>
+                                <input placeholder="شماره همراه" disabled="disabled" id="phone_number"/>
+                            </div>
+                            <div class="field">
+                                <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت"
+                                                                id="tel_number" disabled="disabled">
+                            </div>
+
+                        </div>
+                        <label><b> لیست توانایی‌ها</b></label>
+                        <div id="skills">
+                            <i class="left triangle icon"></i>
+                            <label>مهارت-گلدوزی</label><br>
+                            <i class="left triangle icon"></i>
+                            <label>معلم-فیزیک</label><br>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="field">
+                            <label>فعالیت‌های گذشته</label><textarea disabled="disabled" placeholder="فعالیت‌های گذشته"
+                                                                     id="activities"></textarea>
+                        </div>
+                        <div class="field">
+                            <label>زمینه‌های مورد علاقه</label><textarea id="desires" disabled="disabled" placeholder="زمینه های مورد علاقه"></textarea>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    body {
+        display: relative;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 51.8px;
+        right: 0;
+        bottom: 0;
+        width: 18%;
+        background-color: #f5f5f5;
+        padding: 0px;
+    }
+
+    #sidebar .ui.menu {
+        margin: 2em 0 0;
+        font-size: 16px;
+    }
+
+    #sidebar .ui.menu > a.item {
+        color: #337ab7;
+        border-radius: 0 !important;
+    }
+
+    #sidebar .ui.menu > a.item.active {
+        background-color: #337ab7;
+        color: white;
+        border: none !important;
+    }
+
+    #sidebar .ui.menu > a.item:hover {
+        background-color: #4f93ce;
+        color: white;
+    }
+
+    #content {
+        margin-right: 19%;
+        width: 81%;
+        margin-top: 3em;
+        padding-right: 3em;
+        float: right;
+    }
+
+    #content > .ui.grid {
+        padding-left: 4em;
+        padding-bottom: 3em;
+    }
+
+    #content h1 {
+        font-size: 36px;
+    }
+
+    #content .ui.divider:not(.hidden) {
+        margin: 0;
+    }
+
+    #content table.ui.table {
+        border: none;
+    }
+
+    #content table.ui.table thead th {
+        border-bottom: 2px solid #eee !important;
+    }
+</style>
+</body>
+</html>
