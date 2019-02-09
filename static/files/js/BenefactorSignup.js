@@ -8,6 +8,7 @@ $(function () {
             $("#last_selected_skill").text("توانایی‌ها")
         }
     });
+
     setClickListenersForCurrentSkills();
     saveLastSkillSelected();
 });
@@ -49,7 +50,6 @@ function sendBenefactorInformation() {
     });
 
 }
-
 function addSkill(id) {
     if (skillIDs.includes(id)) {
         alert("You have already added this skill!");

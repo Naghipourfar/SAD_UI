@@ -36,7 +36,7 @@ $(document).ready(function () {
                     alert(data.message[key]);
                 }
             }
-        }F
+        }
     });
     $("#save").click(function () { // TODO it must run after retriving data
         var newBenefactor = benefactor;

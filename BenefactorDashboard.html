@@ -17,7 +17,7 @@
     <script src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
-<div class="ui inverted huge borderless fixed fluid menu">
+<div class="ui inverted huge border less fixed fluid menu">
     <a class="header item">مدیریت نیکوکار</a>
     <div class="left menu">
         <div class="item">
@@ -25,19 +25,15 @@
                 <input placeholder="جست و جو..."/>
             </div>
         </div>
-        <!--<a class="item">Dashboard</a><a class="item">Settings</a><a class="item">Profile</a><a class="item">Help</a>-->
     </div>
 </div>
 <div class="ui grid">
     <div class="row">
-        <div class="column">
-            <div class="ui secondary vertical fluid menu" id="sidebar">
-                <!-- <a class="active item" href="BenefactorDashboard.html">داشبورد</a>
-                <a class="item" href="BenefactorEditProfile.html">پروفایل</a>
-                <a class="item" href="BenefactorOnGoingNonFinancial.html">پروژه‌های غیر نقدی در حال انجام</a>
-                <a class="item" href="BenefactorIncomingRequests.html">درخواست‌های من</a>
-                <a class="item" href="BenefactorDoneFinancial.html">پروژه‌های نقدی انجام شده</a>
-                <a class="item" href="BenefactorDoneNonFinancial.html">پروژه‌های غیر نقدی انجام شده</a> -->
+        <div class="column" id="sidebar">
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('Dashboard', 'Benefactor');
+                </script>
             </div>
         </div>
         <div class="column" id="content">
