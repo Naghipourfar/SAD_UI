@@ -13,16 +13,16 @@ $(function () {
                 for (var project in projects) {
                     project = JSON.parse(project);
                     var row = '<tr>';
-                    row += '<td>' + project.location + '</td>';
-                    row += '</tr>';
-
-                    row += '<td>' + project.category + '</td>';
-                    row += '</tr>';
-
-                    row += '<td>' + project.name + '</td>';
+                    row += '<td>' + project.project_name + '</td>';
                     row += '</tr>';
 
                     row += '<td>' + project.username + '</td>';
+                    row += '</tr>';
+
+                    row += '<td>' + project.category + "-" + project.skill_name + '</td>';
+                    row += '</tr>';
+
+                    row += '<td>' + project.location + '</td>';
                     row += '</tr>';
 
                     row += '</tr>';

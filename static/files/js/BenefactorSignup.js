@@ -32,13 +32,12 @@ function sendBenefactorInformation() {
     };
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/accounts/signup-benefactor/',
+        url: 'http://127.0.0.1:8000/accounts/benefactor/signup/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify(person),
         success: function (data) {
-            alert(data.status);
             if (data.status == 0) {
                 window.location.replace("ThankYouForRegistration.html");
             } else if (data.status == -1) {

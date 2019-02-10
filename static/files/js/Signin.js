@@ -1,9 +1,10 @@
 $(document).ready(function () {
-
+    $("#signin").click(function () {
+        signin();
+    })
 });
 
 function signin() {
-    alert("salam");
     var account = {
         username: $("#username").val(),
         password: $("#password").val()
@@ -14,9 +15,10 @@ function signin() {
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
-        data: JSON.stringify(account),
+
         success: function (data) {
             if (data.status == 0) {
+                alert("Welcome!");
                 var account = JSON.stringify(account);
                 localStorage.setItem('account', account);
                 window.location.replace("Homepage.html");
@@ -41,7 +43,8 @@ function signin() {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg);
-        }
+        },
+        data: JSON.stringify(account)
     });
 }
 
