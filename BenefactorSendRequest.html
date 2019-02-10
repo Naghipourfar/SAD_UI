@@ -13,13 +13,10 @@
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="item" href="BenefactorDashboard.html">داشبورد</a>
-                <a class="item" href="BenefactorEditProfile.html">پروفایل</a>
-                <a class="item" href="BenefactorOnGoingNonFinancial.html">پروژه‌های غیر نقدی در حال انجام</a>
-                <a class="active item" href="BenefactorIncomingRequests.html">درخواست‌های من</a>
-                <a class="item" href="BenefactorDoneFinancial.html">پروژه‌های نقدی انجام شده</a>
-                <a class="item" href="BenefactorDoneNonFinancial.html">پروژه‌های غیر نقدی انجام شده</a>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('IncomingRequests', 'Benefactor');
+                </script>
             </div>
         </div>
         <div class="column" id="content">

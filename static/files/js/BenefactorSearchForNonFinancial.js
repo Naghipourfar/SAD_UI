@@ -1,38 +1,34 @@
 $(function () {
     var user_name = JSON.parse(localStorage.getItem('account')).username;
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/requests/benefactor/' + user_name + '/?type=receive',
+        url: 'http://127.0.0.1:8000/projects/benefactor/' + user_name + '/?type=non_financial&status=not_started',
         type: 'GET',
         dataType: 'json',
-        // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                alert(data.requests);
-                requests = data.requests;
-                for (var i = 0; i < requests.length;i++) {
-                    request = requests[i];
+                alert("success");
+                projects = data.projects;
+                for (var i = 0; i < projects.length;i++) {
+                    project = projects[i];
                     var row = '<tr>';
-                    row += '<td>' + request.request_desc + '</td>';
+                    row += '<td>' + String(i) + '</td>';
+                    row += '<td>' + project.name + '</td>';
 
-                    row += '<td>' + request.answer_desc + '</td>';
+                    row += '<td>' + project.location + '</td>';
 
-                    row += '<td>' + request.category + '</td>';
+                    row += '<td>' + project.deadline + '</td>';
 
-                    row += '<td>' + request.name + '</td>';
+                    row += '<td>' + project.money_needed + '</td>';
 
-                    row += '<td>' + request.location+ '</td>';
+                    row += '<td>' + project.money_donated + '</td>';
 
-                    row += '<td>' + request.username+ '</td>';
+                    row += '<td>' + '<button class="ui violet button">مشاهده پروفایل موسسه</button>' + '</td>'; //TODO
 
-                    row += '<td>' + '<button class="ui green button">قبول درخواست</button>'
-                        + '</td>';  //TODO
-
-                    row += '<td>' + '<button class="ui red button">رد درخواست</button>'
-                        + '</td>'; //TODO
+                    row += '<td><button class="ui green button">اهدای کمک نقدی</button></td>'; //TODO
 
                     row += '</tr>';
-                    $('#benefactor_incoming_requests').append(row)
+                    $('#financial_needs').append(row)
                 }
             }
         },
