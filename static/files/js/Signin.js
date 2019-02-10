@@ -1,31 +1,33 @@
-$(document).ready(function () {
-    $("#signin").click(function () {
-        signin();
-    })
+$(function () {
+    // $("#signin").onclick(function () {
+    //     signin();
+    // })
 });
 
 function signin() {
     var account = {
         username: $("#username").val(),
-        password: $("#password").val()
+        password: $("#password").val(),
+        type: "benefactor"
     };
 
     $.ajax({
+        async: false,
         url: 'http://127.0.0.1:8000/accounts/login/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
-
         success: function (data) {
             if (data.status == 0) {
-                alert("Welcome!");
-                var account = JSON.stringify(account);
-                localStorage.setItem('account', account);
-                window.location.replace("Homepage.html");
-            } else if (data.status == -1) {
+                localStorage.setItem('account', JSON.stringify(account));
+                changeWebpage("Homepage.html");
+                return true;
+            } else {
+                alert(data.message);
                 for (var key in data.message) {
                     alert(data.message[key]);
                 }
+                return false;
             }
         },
         error: function (jqXHR, exception) {
@@ -48,3 +50,7 @@ function signin() {
     });
 }
 
+
+function changeWebpage(url_addr) {
+    window.location.href = 'http://localhost:63342/SAD_UI/' + url_addr;
+}

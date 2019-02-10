@@ -46,13 +46,13 @@
                 </div>
             </div>
             <div class="ui grid">
-                <div class="eight wide column" id="signin">
-                    <a class="ui fluid wide submit primary button large">
+                <div class="eight wide column" onclick="signin()">
+                    <a class="ui fluid wide primary button large">
                         ورود
                     </a>
                 </div>
                 <div class="eight wide column">
-                    <a class="ui fluid wide submit primary button large" href="Signup.html">
+                    <a class="ui fluid wide primary button large" href="Signup.html">
                         ثبت‌نام
                     </a>
                 </div>
@@ -79,15 +79,11 @@
                 .form({
                     fields: {
                         email: {
-                            identifier: 'email',
+                            identifier: 'username',
                             rules: [
                                 {
                                     type: 'empty',
-                                    prompt: 'لطفا آدرس ایمیل خود را وارد نمائید'
-                                },
-                                {
-                                    type: 'email',
-                                    prompt: 'لطفا یک آدرس ایمیل معتبر وارد نمائید'
+                                    prompt: 'لطفا شناسه کاربری خود را وارد نمائید'
                                 }
                             ]
                         },
