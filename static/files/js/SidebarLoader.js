@@ -5,7 +5,9 @@ var pageTypes = [
     "DoneFinancial",
     "DoneNonFinancial",
     "OnGoingNonFinancial",
-    "IncomingRequests"
+    "IncomingRequests",
+    "Feedbacks",
+    "FeedbacksOnMe"
 ];
 
 var pageTypeTexts = [
@@ -15,7 +17,9 @@ var pageTypeTexts = [
     "پروژه های نقدی انجام شده",
     "پروژه های غیر نقدی انجام شده",
     "پروژه های غیر نقدی در حال انجام",
-    "درخواست های من"
+    "درخواست های من",
+    "مشاهده نظرات داده شده",
+    "مشاهده نظرات دیگران درباره خود"
 ];
 
 function loadSidebar(currentPage, userType="Benefactor"){
