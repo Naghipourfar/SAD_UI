@@ -3,10 +3,6 @@ var skillIDs = [];
 
 $(document).ready(function () {
     var currentUser = JSON.parse(localStorage.getItem('account'));
-    // currentUser = {
-    //     username: "mahak",
-    //     password: "mahak12345"
-    // };
     var benefactor = {
         username: currentUser.username,
         password: currentUser.password,
@@ -36,30 +32,30 @@ $(document).ready(function () {
             }
         }
     });
-    $("#save").click(function () { // TODO it must run after retriving data
-        var newBenefactor = benefactor;
-        var dataToSend = {}
-        for (var key in benefactor) {
-            newBenefactor[key] = $("#" + key).val()
-        }
-        for (var key in benefactor) {
-            if (newBenefactor[key] != "" && newBenefactor[key] != benefactor[key]) {
-                dataToSend[key] = newBenefactor[key];
-            }
-        }
+    $("#save").click(function () {
+        var newBenefactor = {
+            password: $("#password").val(),
+            age: $("#age").val(),
+            phone_number: $("#phone_number").val(),
+            tel_number: $("#tel_number").val(),
+            address: $("#address").val(),
+            skills: JSON.stringify(getSelectedSkills()),
+            activities: $("#activities").val(),
+            desires: $("#desires").val()
+        };
         $.ajax({
             url: 'http://127.0.0.1:8000/accounts/benefactor/profile/' + benefactor.username + "/",
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',
-            data: JSON.stringify(dataToSend),
+            data: JSON.stringify(newBenefactor),
             success: function (data) {
-                alert(data.status);
                 if (data.status == 0) {
-                    alert("Your profile has been updated successfully.")
+                    alert("Your profile has been updated successfully.");
+                    window.location.replace("BenefactorDashboard.html")
                 } else {
                     for (var key in data.message) {
-                        alert(data.message[key]);
+                        alert(key + ": " + data.message[key]);
                     }
                 }
             }
@@ -77,16 +73,32 @@ $(document).ready(function () {
     saveLastSkillSelected();
 });
 
+function getSelectedSkills() {
+    var skills = [];
+    $("#skills").find("div").each(function () {
+        skill = $(this).attr("id");
+        var category = skill.split("-")[0];
+        var name = skill.split("-")[1];
+        skill = {
+            category: category,
+            name: name
+        };
+        skills.push(skill);
+    });
+    return skills;
+}
+
 function fillBenefactor(benefactor, data) {
     benefactor.first_name = data.first_name;
     benefactor.last_name = data.last_name;
+    benefactor.age = data.age;
     benefactor.tel_number = data.tel_number;
     benefactor.phone_number = data.phone_number;
     benefactor.address = data.address;
     benefactor.activities = data.activities;
     benefactor.desires = data.desires;
     for (var i = 0; i < data.skills.length; i++) {
-        benefactor.skills[i] = data.skills[i];
+        benefactor.skills[i] = data.skills[i].category + "-" + data.skills[i].name;
     }
     return benefactor;
 }
@@ -95,6 +107,10 @@ function fillProfileFields(benefactor) {
     for (var key in benefactor) {
         if (key == "activities" || key == "desires"){
             $("#" + key.toString()).val(benefactor[key]);
+        } else if (key == "skills") {
+            for (var i = 0; i < benefactor.skills.length; i ++){
+                addSkill(benefactor.skills[i]);
+            }
         } else {
             $("#" + key.toString()).attr("value", benefactor[key]);
         }

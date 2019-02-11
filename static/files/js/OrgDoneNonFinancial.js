@@ -1,20 +1,18 @@
-projectIDs = [];
+var benIDs = []
 $(function () {
     var localData = JSON.parse(localStorage.getItem("account"));
     var username = localData.username;
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/benefactor/' + username + '/?type=non_financial&status=done',
+        url: 'http://127.0.0.1:8000/projects/organization/' + username + '/?type=non_financial&status=done',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
                 fillNonFinancialProjectTable(data.projects);
-                for (var projectID in projectIDs) {
-                    $("#" + projectID).click(function () {
-                        sendFeedbackToOrg(projectID);
-                    });
+                for (var benID in benIDs) {
+                    $("#" + benID).attr("onclick", sendFeedbackToOrg(benID));
                 }
             } else {
                 alert("not success");
@@ -52,24 +50,20 @@ function fillNonFinancialProjectTable(projects) {
 
 function addNonFinancialProject(project) {
     var row = '<tr>';
+    row += '<td>' + project.id + '</td>';
     row += '<td>' + project.project_name + '</td>';
-    row += '<td>' + project.username + '</td>';
     row += '<td>' + project.category + '-' + project.skill_name + '</td>';
-    row += '<td>' + project.gender + '</td>';
-    row += '<td>' + project.age + '</td>';
     row += '<td>' + project.location + '</td>';
-    row += '<td><a href="BenefactorFeedbackToOrg.html">';
-    row += '<button class="ui violet button" id=\"' + project.id + '\"> ' + 'ارسال نظر' + ' </button>';
+    row += '<td>' + project.username + '</td>';
+    row += '<td><a href="OrgFeedbackToBenefactor.html">';
+    row += '<button class="ui violet button" id=\"' + project.id + '\" onclick="sendFeedbackToOrg(' + project.username + ')"> ' + 'ارسال نظر' + ' </button>';
     row += '</a>';
     row += '</td>';
     row += '</tr>';
     $('#non_financial_projects_table').append(row);
-    projectIDs.push(project.id);
-    $("#" + project.id).click(function () {
-        sendFeedbackToOrg(project.id);
-    });
+    benIDs.push(project.username);
 }
 
 function sendFeedbackToOrg(id) {
-    localStorage.setItem('projectID', id);
+    localStorage.setItem('benID', id);
 }

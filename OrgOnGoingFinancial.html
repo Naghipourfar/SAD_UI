@@ -20,12 +20,15 @@
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
     <script type="text/javascript" src="./static/files/js/OrgOnGoingFinancial.js"></script>
 
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت موسسه</a>
+<div class="ui inverted huge borderless fixed fluid menu" id="header">
+    <script>
+        loadHeader("Org")
+    </script>
 </div>
 
 <div class="ui grid">
@@ -46,8 +49,7 @@
                 <table class="ui fixed table" id="org_ongoing_financial_table">
                     <thead>
                     <tr>
-                        <th> مکان </th>
-                        <th> عنوان </th>
+                        <th> نام پروژه </th>
                         <th> زمان پایان </th>
                         <th>هزینه مورد نیاز</th>
                         <th>هزینه پرداخت شده</th>

@@ -1,21 +1,15 @@
-projectIDs = [];
 $(function () {
     var localData = JSON.parse(localStorage.getItem("account"));
     var username = localData.username;
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/benefactor/' + username + '/?type=non_financial&status=done',
+        url: 'http://127.0.0.1:8000/projects/organization/' + username + '/?type=financial&status=done',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                fillNonFinancialProjectTable(data.projects);
-                for (var projectID in projectIDs) {
-                    $("#" + projectID).click(function () {
-                        sendFeedbackToOrg(projectID);
-                    });
-                }
+                fillFinancialProjectTable(data.projects);
             } else {
                 alert("not success");
             }
@@ -38,38 +32,31 @@ $(function () {
         }
 
     });
-
-
-
 });
 
-function fillNonFinancialProjectTable(projects) {
+function fillFinancialProjectTable(projects) {
     for (var i = 0; i < projects.length;i++) {
-        project = JSON.parse(projects[i]);
-        addNonFinancialProject(project);
+        project = projects[i];
+        addFinancialProject(project);
     }
 }
 
-function addNonFinancialProject(project) {
+function addFinancialProject(project) {
     var row = '<tr>';
     row += '<td>' + project.project_name + '</td>';
     row += '<td>' + project.username + '</td>';
-    row += '<td>' + project.category + '-' + project.skill_name + '</td>';
-    row += '<td>' + project.gender + '</td>';
-    row += '<td>' + project.age + '</td>';
-    row += '<td>' + project.location + '</td>';
-    row += '<td><a href="BenefactorFeedbackToOrg.html">';
-    row += '<button class="ui violet button" id=\"' + project.id + '\"> ' + 'ارسال نظر' + ' </button>';
-    row += '</a>';
-    row += '</td>';
+    row += '<td>' + project.money_needed + '</td>';
+    row += '<td>' + project.money_donated + '</td>';
+    row += '<td>' + project.deadline + '</td>';
     row += '</tr>';
-    $('#non_financial_projects_table').append(row);
-    projectIDs.push(project.id);
-    $("#" + project.id).click(function () {
-        sendFeedbackToOrg(project.id);
-    });
+    $('#financial_projects_table').append(row)
 }
 
-function sendFeedbackToOrg(id) {
-    localStorage.setItem('projectID', id);
-}
+/*<td><a href="BenefactorFeedbackToOrg.html">
+                                <button class="ui violet button">ارسال نظر</button>
+                            </a>
+                        </td>
+*
+*
+*
+* */

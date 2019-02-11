@@ -19,11 +19,16 @@
     <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/Skills.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/OrgNewNonFinancialProject.js"></script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت موسسه</a>
+<div class="ui inverted huge borderless fixed fluid menu" id="header">
+    <script>
+        loadHeader("Org")
+    </script>
 </div>
 <div class="ui grid">
     <div class="row">
@@ -45,10 +50,10 @@
                     <div class="ui form segment">
                         <div class="two fields">
                             <div class="required field">
-                                <label>نام نیازمندی غیر نقدی</label><input class="required" placeholder="نام نیازمندی" type="text">
+                                <label>نام نیازمندی غیر نقدی</label><input id="name" class="required" placeholder="نام نیازمندی" type="text">
                             </div>
                             <div class="required field">
-                                <label>سن نیکوکار</label><input class="required" placeholder="سن نیکوکار" type="text">
+                                <label>سن نیکوکار</label><input id="age" class="required" placeholder="سن نیکوکار" type="text">
                             </div>
 
                         </div>
@@ -56,9 +61,9 @@
                             <div class="field">
                                 <div class="ui compact menu">
                                     <div class="ui simple dropdown item">
-                                        جنسیت نیکوکار
+                                        <label id="gender">جنسیت نیکوکار</label>
                                         <i class="dropdown icon"></i>
-                                        <div class="menu">
+                                        <div class="menu" id="gender_menu">
                                             <div class="item">مرد</div>
                                             <div class="item">زن</div>
                                             <div class="item">اهمیتی ندارد</div>
@@ -67,46 +72,35 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <div class="ui compact menu">
-                                    <div class="ui simple dropdown item" id="org_nonproj_location">
+                                <!--<div class="ui compact menu">-->
+                                    <!--<div class="ui simple dropdown item" id="org_nonproj_location">-->
                                         <label>موقعیت جغرافیایی محل کمک</label>
-                                        <i class="dropdown icon"></i>
-                                        <div class="menu">
-                                            <div class="item">تهران</div>
-                                            <div class="item">اصفهان</div>
-                                            <div class="item">قم</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                        <input id="location" class="required" placeholder="موقعیت جغرافیایی" type="text">
+                                        <!--<i class="dropdown icon"></i>-->
+                                        <!--<div class="menu">-->
+                                            <!--<div class="item">تهران</div>-->
+                                            <!--<div class="item">اصفهان</div>-->
+                                            <!--<div class="item">قم</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
                             </div>
                         </div>
                         <div class="two fields">
-                            <div class="required field">
-                                <label>برنامه زمانی</label><input class="required" placeholder="برنامه زمانی" type="text">
-                            </div>
+                            <!--<div class="required field">-->
+                                <!--<label>برنامه زمانی</label><input class="required" placeholder="برنامه زمانی" type="text">-->
+                            <!--</div>-->
 
-                        </div>
-                        <div class="ui divider"></div>
-                        <div class="two">
-                            <button class="ui icon button"><i class="x icon"></i></button> گلدوزی<br>
-                            <button class="ui icon button"><i class="x icon"></i></button> معلم فیزیک<br>
-                            <button class="ui icon button"><i class="x icon"></i></button> معلم ریاضی<br>
                         </div>
                         <div class="two fields">
                             <div class="ui compact menu">
                                 <div class="ui simple dropdown item">
-                                    توانایی‌ها
+                                    <label id="selected_skill">توانایی مورد نظر</label>
                                     <i class="dropdown icon"></i>
-                                    <div class="menu">
-                                        <div class="item">گلدوزی</div>
-                                        <div class="item">معلم فیزیک</div>
-                                        <div class="item">پرستاری</div>
-                                        <div class="item">قالیبافی</div>
-                                        <div class="item">بازاریابی</div>
-                                        <div class="item">آشپزی</div>
-                                        <div class="item">معلم شیمی</div>
-                                        <div class="item">صنایع دستی</div>
-                                        <div class="item">معلم ریاضی</div>
+                                    <div class="menu" id="skills_menu">
+                                        <script>
+                                            loadSkills();
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -114,8 +108,8 @@
                         </div>
 
 
-                        <div class="ui submit button">
-                            <a href="OrgDashboard.html">اضافه کن!</a>
+                        <div class="ui button" onclick="submitNewNonFinancialProject()">
+                            <a>اضافه کن!</a>
                         </div>
                     </div>
                 </div>

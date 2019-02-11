@@ -1,22 +1,17 @@
 $(function () {
-    var user_name = "org"; //TODO
+    var user_name = JSON.parse(localStorage.getItem("account")).username;
+
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/organization/' + user_name + '/?type=financial&status=not_started',
-        // data: "type=financial" +
-        //     "&status=in_progress/",
+        url: 'http://127.0.0.1:8000/projects/organization/' + user_name + '/?type=financial&status=in_progress',
         type: 'GET',
         dataType: 'json',
-        // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                alert("success");
-                projects = data.projects;
+                var projects = data.projects;
                 for (var i = 0; i < projects.length;i++) {
-                    project = projects[i];
+                    var project = projects[i];
                     var row = '<tr>';
-                    row += '<td>' + project.location + '</td>';
-
                     row += '<td>' + project.name + '</td>';
 
                     row += '<td>' + project.deadline + '</td>';
@@ -44,7 +39,6 @@ $(function () {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg)
-            // message_div.innerText = msg;
         }
 
     });

@@ -1,15 +1,28 @@
-$(function () {
-    var benefactor = JSON.parse(localStorage.getItem("account"));
+$(document).ready(function () {
+
+});
+function submitNewFinancialProject() {
+    var username = JSON.parse(localStorage.getItem("account")).username;
+    var project = {
+        name: $("#name").val(),
+        money_needed: $("#money_needed").val(),
+        deadline: $("#deadline").val()
+    };
+
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/feedbacks/benefactor/' + benefactor.username + '/?type=send',
-        type: 'GET',
+        url: 'http://127.0.0.1:8000/projects/organization/add_financial/' + username + "/",
+        type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
+        data: JSON.stringify(project),
         success: function (data) {
             if (data.status == 0) {
-                fillFeedbackTable(data.feedbacks);
-            } else {
-                alert("not success");
+                alert("Project has been created Successfully.")
+                window.location.replace("OrgDashboard.html");
+            } else if (data.status == -1) {
+                for (var key in data.message) {
+                    alert(key + ": " + data.message[key]);
+                }
             }
         },
         error: function (jqXHR, exception) {
@@ -28,20 +41,5 @@ $(function () {
             }
             alert(msg);
         }
-
     });
-});
-
-function fillFeedbackTable(feedbacks) {
-    for (var feedback in feedbacks) {
-        feedback = JSON.parse(feedback);
-        var row = '<tr>';
-        row += '<td>' + feedback.name + '</td>';
-        row += '<td>' + feedback.username + '</td>';
-        row += '<td>' + feedback.rate + '</td>';
-        row += '<td>' + feedback.category + '</td>';
-        row += '<td>' + feedback.feedback + '</td>';
-        row += '</tr>';
-        $('#feedbacks_table').append(row);
-    }
 }

@@ -15,10 +15,14 @@
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
+    <script src="./static/files/js/HeaderLoader.js"></script>
+    <script src="./static/files/js/OrgFeedbacks.js"></script>
 </head>
 <body>
-<div class="ui inverted huge border less fixed fluid menu">
-    <a class="header item">مدیریت موسسه</a>
+<div class="ui inverted huge borderless fixed fluid menu" id="header">
+    <script>
+        loadHeader("Org")
+    </script>
 </div>
 <div class="ui grid">
     <div class="row">
@@ -39,20 +43,13 @@
                     <thead>
                     <tr>
                         <th>نام پروژه</th>
-                        <th>شناسه موسسه</th>
+                        <th>توانایی مورد نیاز</th>
                         <th>امتیاز (از ۵)</th>
-                        <th> توانایی مورد نیاز </th>
-                        <th> نظر </th>
+                        <th> نیکوکار نظر داده</th>
+                        <th> نظر داده شده </th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>ساخت مدرسه</td>
-                        <td>محک</td>
-                        <td>۳</td>
-                        <td>بنایی</td>
-                        <td>خوب بود!</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>

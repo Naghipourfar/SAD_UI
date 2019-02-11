@@ -14,7 +14,7 @@ $(function () {
 });
 
 function sendBenefactorInformation() {
-    skills = getSelectedSkills();
+    var skills = getSelectedSkills();
     var person = {
         first_name: $("#first_name").val(),
         last_name: $("#last_name").val(),

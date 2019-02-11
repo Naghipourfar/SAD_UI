@@ -21,6 +21,7 @@
     <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/Skills.js"></script>
     <script type="text/javascript" src="static/files/js/BenefactorEditProfile.js"></script>
     <script type="text/javascript" src="static/files/js/SidebarLoader.js"></script>
 </head>
@@ -65,6 +66,9 @@
                                 <div class="field">
                                     <label>شماره همراه</label><input id="phone_number" placeholder="شماره همراه"/>
                                 </div>
+                                <div class="field">
+                                    <label>سن</label><input id="age" placeholder="سن"/>
+                                </div>
                             </div>
                             <div class="field">
                                 <div class="required field">
@@ -89,14 +93,14 @@
                         <div class="ui divider"></div>
                         <label><b> لیست توانایی‌ها</b></label>
                         <div class="two" id="skills">
-                            <div class="one" id="مهارت-گلدوزی">
-                                <button class="ui icon button"><i class="x icon"></i></button>
-                                <label>مهارت-گلدوزی</label><br>
-                            </div>
-                            <div class="one" id="معلم-فیزیک">
-                                <button class="ui icon button"><i class="x icon"></i></button>
-                                <label>معلم-فیزیک</label><br>
-                            </div>
+                            <!--<div class="one" id="مهارت-گلدوزی">-->
+                                <!--<button class="ui icon button"><i class="x icon"></i></button>-->
+                                <!--<label>مهارت-گلدوزی</label><br>-->
+                            <!--</div>-->
+                            <!--<div class="one" id="معلم-فیزیک">-->
+                                <!--<button class="ui icon button"><i class="x icon"></i></button>-->
+                                <!--<label>معلم-فیزیک</label><br>-->
+                            <!--</div>-->
                         </div>
                         <div class="ui divider"></div>
                         <div class="two fields">
@@ -105,15 +109,9 @@
                                     <label id="last_selected_skill">توانایی‌ها</label>
                                     <i class="dropdown icon"></i>
                                     <div class="menu" id="skills_menu">
-                                        <div class="item">گلدوزی</div>
-                                        <div class="item">معلم فیزیک</div>
-                                        <div class="item">پرستاری</div>
-                                        <div class="item">قالیبافی</div>
-                                        <div class="item">بازاریابی</div>
-                                        <div class="item">آشپزی</div>
-                                        <div class="item">معلم شیمی</div>
-                                        <div class="item">صنایع دستی</div>
-                                        <div class="item">معلم ریاضی</div>
+                                        <script>
+                                            loadSkills();
+                                        </script>
                                     </div>
                                 </div>
                             </div>

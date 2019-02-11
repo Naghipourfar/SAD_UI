@@ -9,7 +9,7 @@ $(function () {
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                fillFinancialProjectTable(project);
+                fillFinancialProjectTable(data.projects);
             } else {
                 alert("not success");
             }
@@ -36,14 +36,14 @@ $(function () {
 
 function fillFinancialProjectTable(projects) {
     for (var i = 0; i < projects.length;i++) {
-        project = projects[i];
+        var project = projects[i];
         addFinancialProject(project);
     }
 }
 
 function addFinancialProject(project) {
     var row = '<tr>';
-    row += '<td>' + project.project_name + '</td>';
+    row += '<td>' + project.name + '</td>';
     row += '<td>' + project.username + '</td>';
     row += '<td>' + project.money_needed + '</td>';
     row += '<td>' + project.money_donated + '</td>';

@@ -4,7 +4,6 @@ $(function () {
         url: 'http://127.0.0.1:8000/projects/requests/organization/' + user_name + '/?type=receive',
         type: 'GET',
         dataType: 'json',
-        // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {

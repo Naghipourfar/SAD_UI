@@ -15,10 +15,13 @@
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
+    <script src="./static/files/js/HeaderLoader.js"></script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت موسسه</a>
+<div class="ui inverted huge borderless fixed fluid menu" id="header">
+    <script>
+        loadHeader("Org")
+    </script>
 </div>
 <div class="ui grid">
     <div class="row">
@@ -37,20 +40,17 @@
             <div class="row">
                 <table class="ui fixed table">
                     <thead>
-                    <tr><th>نام پروژه </th>
+                    <tr>
+                        <th>شناسه پروژه </th>
+                        <th>نام پروژه </th>
                         <th> توانایی موردنیاز </th>
-                        <th>توانایی تامین شده </th>
-                        <th>زمان شروع</th>
-                        <th>زمان پایان</th>
-                        <th>نیکوکاران شرکت کننده</th>
+                        <th>نیکوکار شرکت کننده</th>
+                        <th> مکان پروژه</th>
                     </tr></thead>
                     <tbody>
                     <tr>
                         <td>ساخت مدرسه</td>
-                        <td>کارگری، آشپزی</td>
                         <td> کارگری</td>
-                        <td>1394</td>
-                        <td>1395</td>
                         <td>
                             <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
                             <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
@@ -58,10 +58,7 @@
                     </tr>
                     <tr>
                         <td>کودکان کار</td>
-                        <td>معلمی، گلدوزی</td>
                         <td> معلمی</td>
-                        <td>1394</td>
-                        <td>1395</td>
                         <td>
                             <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
                             <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
