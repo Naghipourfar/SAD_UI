@@ -1,5 +1,5 @@
 $(function () {
-    var localData = localStorage.getItem("account");
+    var localData = JSON.parse(localStorage.getItem("account"));
     var username = localData.username;
 
     $.ajax({
@@ -9,7 +9,6 @@ $(function () {
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                alert("success");
                 fillFinancialProjectTable(project);
             } else {
                 alert("not success");

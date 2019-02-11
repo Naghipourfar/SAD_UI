@@ -9,7 +9,9 @@
     </script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
+    <a class="header item">مدیریت موسسه</a>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
@@ -18,7 +20,7 @@
                 <a class="item" href="OrgEditProfile.html">پروفایل</a>
                 <a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>
                 <a class="item" href="OrgOnGoingNonFinancial.html">نیازهای غیرنقدی در حال انجام</a>
-                <a class="active item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
+                <a class="active item" href="OrgIncomingRequests.html">درخواست‌های من</a>
                 <a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
                 <a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
                 <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
@@ -27,58 +29,22 @@
         <div class="column" id="content">
             <div class="ui menu">
                 <div class="item">
-                    <a href="OrgIncomingRequestsDashboard.html">
+                    <a href="OrgIncomingRequests.html">
                         <div class="ui active button">درخواست‌های دریافتی</div>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="OrgSentRequestsStatusDashboard.html">
+                    <a href="OrgSentRequestsStatus.html">
                         <div class="ui button">درخواست‌های ارسالی</div>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="OrgRequest.html">
+                    <a href="OrgSendRequest.html">
                         <div class="ui button">ارسال درخواست</div>
                     </a>
                 </div>
             </div>
             <div class="divider"></div>
-            <div class="row">
-                <table class="ui fixed table">
-                    <thead>
-                    <tr><th> </th>
-                        <th> نیکوکار</th>
-                        <th>توانایی ارائه شده</th>
-                        <th>محدوده</th>
-                        <th>زمان</th>
-                        <th>توضیحات</th>
-                        <th> </th>
-                        <th> </th>
-                    </tr></thead>
-                    <tbody>
-                    <tr>
-                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
-                        <td><a href="#"> محسن جان</a></td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>توضیح محسن</td>
-                        <td><button class="ui green button">قبول درخواست</button></td>
-                        <td><button class="ui red button">رد درخواست</button></td>
-                    </tr>
-                    <tr>
-                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
-                        <td><a href="#"> محسن جان</a></td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>توضیح محسن</td>
-                        <td><button class="ui green button">قبول درخواست</button></td>
-                        <td><button class="ui red button">رد درخواست</button></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
 </div>

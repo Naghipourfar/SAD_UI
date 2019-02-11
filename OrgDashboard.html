@@ -8,37 +8,32 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
     <meta content="PPType" name="author"/>
     <meta content="#ffffff" name="theme-color"/>
-    <title>مدیریت سازمان</title>
+    <title>مدیریت موسسه</title>
     <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
     <script src="./static/files/js/jquery.min.js"></script>
+    <script src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت سازمان</a>
+    <a class="header item">مدیریت موسسه</a>
     <div class="left menu">
         <div class="item">
             <div class="ui small input">
                 <input placeholder="جست و جو..."/>
             </div>
         </div>
-        <!--<a class="item">Dashboard</a><a class="item">Settings</a><a class="item">Profile</a><a class="item">Help</a>-->
     </div>
 </div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="active item" href="OrgDashboard.html">داشبورد</a>
-                <a class="item" href="OrgEditProfile.html">پروفایل</a>
-                <a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>
-                <a class="item" href="OrgOnGoingNonFinancial.html"> نیازهای غیرنقدی در حال انجام</a>
-                <a class="item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
-                <a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
-                <a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
-                <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('Dashboard', 'Org');
+                </script>
             </div>
         </div>
         <div class="column" id="content">
@@ -47,7 +42,7 @@
                     <div class="ui segment">
                         <a href="OrgEditProfile.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
-                                پروفایل
+                                ویرایش پروفایل
                             </div>
                             <img src="./static/files/images/org-profile.png" alt="پروفایل">
                         </a>
@@ -55,9 +50,19 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image" href="OrgOnGoingFinancial.html">
+                        <a href="OrgEditPassword.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
-                                نیاز‌های نقدی در حال انجام
+                                ویرایش رمز عبور
+                            </div>
+                            <img src="./static/files/images/org-profile.png" alt="پروفایل">
+                        </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <a class="ui fluid medium image" href="OrgOnGoingProjects.html">
+                            <div class="ui blue ribbon label">
+                                پروژه‌های در حال انجام
                             </div>
                             <img src="./static/files/images/Project-Financial.png" alt="نیاز‌های نقدی">
                         </a>
@@ -65,17 +70,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image" href="OrgOnGoingNonFinancial.html">
-                            <div class="ui blue ribbon label">
-                                نیاز‌های غیر نقدی در حال انجام
-                            </div>
-                            <img src="./static/files/images/Project-nonFinancial.png" alt="نیاز‌های غیر نقدی">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <a class="ui fluid medium image" href="OrgIncomingRequestsDashboard.html">
+                        <a class="ui fluid medium image" href="OrgMyRequests.html">
                             <div class="ui blue ribbon label">
                                 درخواست‌های من
                             </div>
@@ -95,9 +90,9 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image" href="OrgNewFinancialProject.html">
+                        <a class="ui fluid medium image" href="OrgNewProject.html">
                             <div class="ui blue ribbon label">
-                                اضافه کردن نیاز نقدی
+                                ایجاد پروژه جدید
                             </div>
                             <img src="./static/files/images/addnewfin.png" alt="اضافه کردن نیاز‌نقدی">
                         </a>
@@ -105,9 +100,19 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image" href="OrgNewNonFinancialProject.html">
+                        <a class="ui fluid medium image" href="OrgFeedbacks.html">
                             <div class="ui blue ribbon label">
-                                اضافه کردن نیاز غیرنقدی
+                                مشاهده نظرات داده شده
+                            </div>
+                            <img src="./static/files/images/addnewnonfin.png" alt="اضافه کردن نیاز غیر نقدی">
+                        </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <a class="ui fluid medium image" href="OrgFeedbacksOnMe.html">
+                            <div class="ui blue ribbon label">
+                                مشاهده نظرات دیگران درباره خود
                             </div>
                             <img src="./static/files/images/addnewnonfin.png" alt="اضافه کردن نیاز غیر نقدی">
                         </a>

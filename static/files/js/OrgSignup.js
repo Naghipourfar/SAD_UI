@@ -15,7 +15,7 @@ function sendOrgInformation() {
 
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/accounts/signup-org/',
+        url: 'http://127.0.0.1:8000/accounts/organization/signup/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',

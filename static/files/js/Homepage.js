@@ -16,9 +16,5 @@ $(function () {
 });
 
 function hasSignedIn() {
-    if (localStorage.getItem("account") != null) {
-        return true;
-    } else {
-        return false;
-    }
+    return localStorage.getItem("account") != null;
 }

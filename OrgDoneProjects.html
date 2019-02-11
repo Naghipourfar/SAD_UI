@@ -1,115 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("head").load("head.html")});
-    </script>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <title>مدیریت موسسه</title>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <script src="./static/files/js/jquery.min.js"></script>
+    <script src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
+    <a class="header item">مدیریت موسسه</a>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="item" href="OrgDashboard.html">داشبورد</a>
-                <a class="item" href="OrgEditProfile.html">پروفایل</a>
-                <a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>
-                <a class="item" href="OrgOnGoingNonFinancial.html">نیازهای غیرنقدی در حال انجام</a>
-                <a class="item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
-                <a class="active item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
-                <a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
-                <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('DoneProjects', 'Org');
+                </script>
             </div>
         </div>
         <div class="column" id="content">
-            <div class="row">
-                <h1 class="ui huge header">پروژه‌های نقدی</h1>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-                <table class="ui fixed table">
-                    <thead>
-                    <tr><th>نام پروژه </th>
-                        <th> میزان هزینه مورد نیاز </th>
-                        <th>میزان تامین شده </th>
-                        <th>زمان شروع</th>
-                        <th>زمان پایان</th>
-                        <th>توضیحات</th>
-                    </tr></thead>
-                    <tbody>
-                    <tr>
-                        <td>ساخت مدرسه</td>
-                        <td>ده میلیون تومان</td>
-                        <td>
-                            <div class="ui green progress success">
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
+            <div class="ui three column grid">
+                <div class="column">
+                    <div class="ui segment">
+                        <a href="OrgDoneFinancialProjects.html" class="ui fluid medium image">
+                            <div class="ui blue ribbon label">
+                                پروژه‌های نقدی انجام شده
                             </div>
-                        </td>
-                        <td>1394</td>
-                        <td>1395</td>
-                    </tr>
-                    <tr>
-                        <td>ساخت مدرسه</td>
-                        <td>ده میلیون تومان</td>
-                        <td>
-                            <div class="ui progress success">
-                                <div class="bar">
-                                    <div class="progress"></div>
-                                </div>
+                            <img src="./static/files/images/Project-Financial.png" alt="پروفایل">
+                        </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <a href="OrgDoneNonFinancialProjects.html" class="ui fluid medium image">
+                            <div class="ui blue ribbon label">
+                                پروژه‌های غیر نقدی انجام شده
                             </div>
-                        </td>
-                        <td>1394</td>
-                        <td>1395</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-                <h1 class="ui huge header">پروژه‌های غیر نقدی</h1>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-                <table class="ui fixed table">
-                    <thead>
-                    <tr><th>نام پروژه </th>
-                        <th> توانایی موردنیاز </th>
-                        <th>توانایی تامین شده </th>
-                        <th>زمان شروع</th>
-                        <th>زمان پایان</th>
-                        <th>نیکوکاران شرکت کننده</th>
-                    </tr></thead>
-                    <tbody>
-                    <tr>
-                        <td>ساخت مدرسه</td>
-                        <td>کارگری، آشپزی</td>
-                        <td> کارگری</td>
-                        <td>1394</td>
-                        <td>1395</td>
-                        <td>
-                            <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
-                            <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>کودکان کار</td>
-                        <td>معلمی، گلدوزی</td>
-                        <td> معلمی</td>
-                        <td>1394</td>
-                        <td>1395</td>
-                        <td>
-                            <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
-                            <a href="#"><img class="ui avatar image" src="static/files/pics/avatar.jpg"></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+                            <img src="./static/files/images/Project-nonFinancial.png" alt="پروفایل">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

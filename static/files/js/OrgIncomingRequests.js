@@ -1,17 +1,13 @@
 $(function () {
-    alert("hi");
-    var user_name = "org"; //TODO
+    var user_name = JSON.parse(localStorage.getItem("account")).username;
     $.ajax({
         url: 'http://127.0.0.1:8000/projects/requests/organization/' + user_name + '/?type=receive',
-        // data: "type=financial" +
-        //     "&status=in_progress/",`
         type: 'GET',
         dataType: 'json',
         // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                alert(data.requests);
                 requests = data.requests;
                 for (var i = 0; i < requests.length;i++) {
                     request = requests[i];

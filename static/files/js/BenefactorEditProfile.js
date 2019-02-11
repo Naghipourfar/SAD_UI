@@ -2,11 +2,11 @@ var lastSelectedSkill = "";
 var skillIDs = [];
 
 $(document).ready(function () {
-    // var currentUser = JSON.parse(localStorage.getItem('account'));
-    currentUser = {
-        username: "mahak",
-        password: "mahak12345"
-    };
+    var currentUser = JSON.parse(localStorage.getItem('account'));
+    // currentUser = {
+    //     username: "mahak",
+    //     password: "mahak12345"
+    // };
     var benefactor = {
         username: currentUser.username,
         password: currentUser.password,
@@ -21,15 +21,13 @@ $(document).ready(function () {
     };
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/accounts/benefactor/profile/',
+        url: 'http://127.0.0.1:8000/accounts/benefactor/profile/' + benefactor.username + "/",
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
-        data: benefactor.username + "/",
         success: function (data) {
-            alert(data.status);
             if (data.status == 0) {
-                fillBenefactor(data.message);
+                fillBenefactor(benefactor, data.data);
                 fillProfileFields(benefactor);
             } else {
                 for (var key in data.message) {
@@ -79,8 +77,7 @@ $(document).ready(function () {
     saveLastSkillSelected();
 });
 
-function fillBenefactor(data) {
-    data = JSON.parse(data);
+function fillBenefactor(benefactor, data) {
     benefactor.first_name = data.first_name;
     benefactor.last_name = data.last_name;
     benefactor.tel_number = data.tel_number;
@@ -89,13 +86,18 @@ function fillBenefactor(data) {
     benefactor.activities = data.activities;
     benefactor.desires = data.desires;
     for (var i = 0; i < data.skills.length; i++) {
-        benefactor.skills[i] = JSON.parse(data.skills[i]);
+        benefactor.skills[i] = data.skills[i];
     }
+    return benefactor;
 }
 
 function fillProfileFields(benefactor) {
     for (var key in benefactor) {
-        $("#" + key.toString()).attr("value", benefactor[key]);
+        if (key == "activities" || key == "desires"){
+            $("#" + key.toString()).val(benefactor[key]);
+        } else {
+            $("#" + key.toString()).attr("value", benefactor[key]);
+        }
     }
 }
 

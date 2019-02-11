@@ -8,7 +8,7 @@ function signin() {
     var account = {
         username: $("#username").val(),
         password: $("#password").val(),
-        type: "benefactor"
+        type: ""
     };
 
     $.ajax({
@@ -19,6 +19,7 @@ function signin() {
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
+                account.type = data.user;
                 localStorage.setItem('account', JSON.stringify(account));
                 changeWebpage("Homepage.html");
                 return true;

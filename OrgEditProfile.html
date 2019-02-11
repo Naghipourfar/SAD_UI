@@ -2,27 +2,33 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("head").load("head.html")
-        });
-    </script>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <title>مدیریت موسسه</title>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <script src="./static/files/js/jquery.min.js"></script>
+    <script src="./static/files/js/SidebarLoader.js"></script>
+    <script src="./static/files/js/OrgEditProfile.js"></script>
+
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
+    <a class="header item">مدیریت موسسه</a>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="item" href="OrgDashboard.html">داشبورد</a>
-                <a class="active item" href="OrgEditProfile.html">پروفایل</a>
-                <a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>
-                <a class="item" href="OrgOnGoingNonFinancial.html">نیازهای غیرنقدی در حال انجام</a>
-                <a class="item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
-                <a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
-                <a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
-                <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('EditProfile', 'Org');
+                </script>
             </div>
         </div>
         <div class="column" id="content">
@@ -36,34 +42,29 @@
                     <div class="ui form segment">
                         <div class="two fields">
                             <div class="field">
-                                <label>شناسه کاربری</label><input disabled="disabled" placeholder="Naghipourfar"
+                                <label>شناسه کاربری</label><input disabled="disabled" placeholder="شناسه کاربری"
                                                                   type="text" id="username">
                                 <div class="required field">
                                     <label>رمز عبور</label>
                                     <div class="ui left icon input">
-                                        <i class="lock icon"></i><input type="password" id="password1">
+                                        <i class="lock icon"></i><input type="password" id="password">
                                     </div>
                                 </div>
-                                <div class="required field">
+                                <div class="field">
                                     <label>شماره همراه</label><input class="required" placeholder="شماره همراه" id="phone_number"/>
                                 </div>
-                                <div class="field">
-                                    <label>آدرس ایمیل</label><input placeholder="آدرس ایمیل" id="email">
-                                </div>
+
                             </div>
                             <div class="field">
                                 <div class="field">
                                     <label>نام موسسه</label>
-                                    <input class="required" placeholder=" نام موسسه" disabled="disabled" id="name"/>
+                                    <input placeholder=" نام موسسه" disabled="disabled" id="name"/>
                                 </div>
-                                <div class="required field">
-                                    <label>تکرار رمز عبور</label>
-                                    <div class="ui left icon input">
-                                        <i class="lock icon"></i><input type="password" id="password2">
-                                    </div>
+                                <div class="field">
+                                    <label>آدرس ایمیل</label><input placeholder="آدرس ایمیل" id="email">
                                 </div>
-                                <div class="required field">
-                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت" id="home_number">
+                                <div class="field">
+                                    <label>شماره ثابت</label><input class="required" placeholder="شماره ثابت" id="tel_number">
                                 </div>
 
                             </div>
@@ -71,7 +72,7 @@
                         <div class="field">
                             <label>فعالیت‌های گذشته</label><textarea placeholder="فعالیت‌های گذشته" id="activities"></textarea>
                         </div>
-                        <div class="ui submit button">
+                        <div class="ui button" id="save">
                             ذخیره
                         </div>
                     </div>

@@ -8,7 +8,7 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
     <meta content="PPType" name="author"/>
     <meta content="#ffffff" name="theme-color"/>
-
+    <title>مدیریت موسسه</title>
     <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
@@ -20,41 +20,42 @@
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
-    <script type="text/javascript" src="./static/files/js/OrgOnGoingFinancial.js"></script>
-
 </head>
 <body>
 <div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
     <a class="header item">مدیریت موسسه</a>
 </div>
-
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu" id="sidebar_menu">
                 <script type="text/javascript">
-                    loadSidebar('OnGoingProjects', 'Org');
+                    loadSidebar('NewProject', 'Org');
                 </script>
             </div>
         </div>
         <div class="column" id="content">
-            <div class="row">
-                <h1 class="ui huge header">نیاز‌های نقدی در حال انجام</h1>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-                <table class="ui fixed table" id="org_ongoing_financial_table">
-                    <thead>
-                    <tr>
-                        <th> مکان </th>
-                        <th> عنوان </th>
-                        <th> زمان پایان </th>
-                        <th>هزینه مورد نیاز</th>
-                        <th>هزینه پرداخت شده</th>
-                    </tr></thead>
-                    <tbody>
-                    </tbody>
-                </table>
+            <div class="ui three column grid">
+                <div class="column">
+                    <div class="ui segment">
+                        <a href="OrgNewFinancialProject.html" class="ui fluid medium image">
+                            <div class="ui blue ribbon label">
+                                اضافه کردن پروژه نقدی
+                            </div>
+                            <img src="./static/files/images/Project-Financial.png" alt="پروفایل">
+                        </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui segment">
+                        <a href="OrgNewNonFinancialProject.html" class="ui fluid medium image">
+                            <div class="ui blue ribbon label">
+                                اضافه کردن پروژه غیر نقدی
+                            </div>
+                            <img src="./static/files/images/Project-nonFinancial.png" alt="پروفایل">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

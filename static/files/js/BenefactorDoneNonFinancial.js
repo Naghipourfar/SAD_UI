@@ -1,6 +1,6 @@
 projectIDs = [];
 $(function () {
-    var localData = localStorage.getItem("account");
+    var localData = JSON.parse(localStorage.getItem("account"));
     var username = localData.username;
 
     $.ajax({

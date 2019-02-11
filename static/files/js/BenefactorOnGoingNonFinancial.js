@@ -6,7 +6,6 @@ $(function () {
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
-            alert("success");
             if (data.status === 0) {
                 alert("status is 0");
                 projects = data.projects;

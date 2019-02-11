@@ -4,13 +4,11 @@ $(function () {
         url: 'http://127.0.0.1:8000/projects/requests/benefactor/' + user_name + '/?type=receive',
         type: 'GET',
         dataType: 'json',
-        // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                alert(data.requests);
                 requests = data.requests;
-                for (var i = 0; i < requests.length;i++) {
+                for (var i = 0; i < requests.length; i++) {
                     request = requests[i];
                     var row = '<tr>';
                     row += '<td>' + request.request_desc + '</td>';
@@ -21,15 +19,29 @@ $(function () {
 
                     row += '<td>' + request.name + '</td>';
 
-                    row += '<td>' + request.location+ '</td>';
+                    row += '<td>' + request.location + '</td>';
 
-                    row += '<td>' + request.username+ '</td>';
+                    row += '<td>' + request.username + '</td>';
 
-                    row += '<td>' + '<button class="ui green button">قبول درخواست</button>'
-                        + '</td>';  //TODO
+                    if (request.status == "in_progress") {
+                        row += '<td>' + '<button class="ui green button" onclick="acceptRequest()">قبول درخواست</button>'
+                            + '</td>';  //TODO
 
-                    row += '<td>' + '<button class="ui red button">رد درخواست</button>'
-                        + '</td>'; //TODO
+                        row += '<td>' + '<button class="ui red button" onclick="rejectRequest()">رد درخواست</button>'
+                            + '</td>'; //TODO
+                    } else if (request.status == "accepted") {
+                        row += '<td>' + '<button class="ui green button" onclick="acceptRequest()>قبول درخواست</button>'
+                            + '</td>';
+
+                        row += '<td>' + '<button class="ui red button disabled">رد درخواست</button>'
+                            + '</td>';
+                    } else if (request.status == "rejected") {
+                        row += '<td>' + '<button class="ui green button disabled">قبول درخواست</button>'
+                            + '</td>';
+
+                        row += '<td>' + '<button class="ui red button" onclick="rejectRequest()">رد درخواست</button>'
+                            + '</td>';
+                    }
 
                     row += '</tr>';
                     $('#benefactor_incoming_requests').append(row)
@@ -56,3 +68,11 @@ $(function () {
     });
 
 });
+
+function rejectRequest() {
+
+}
+
+function acceptRequest() {
+
+}

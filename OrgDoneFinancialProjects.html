@@ -8,60 +8,79 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
     <meta content="PPType" name="author"/>
     <meta content="#ffffff" name="theme-color"/>
-
+    <title>مدیریت موسسه</title>
     <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
-    <link href="./static/files/css/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-    <script type="text/javascript" src="./static/files/js/moment.min.js"></script>
-    <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
-    <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
-    <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
-    <script type="text/javascript" src="./static/files/js/OrgOnGoingFinancial.js"></script>
-
+    <script src="./static/files/js/jquery.min.js"></script>
+    <script src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
 <div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
     <a class="header item">مدیریت موسسه</a>
 </div>
-
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu" id="sidebar_menu">
                 <script type="text/javascript">
-                    loadSidebar('OnGoingProjects', 'Org');
+                    loadSidebar('DoneProjects', 'Org');
                 </script>
             </div>
         </div>
         <div class="column" id="content">
             <div class="row">
-                <h1 class="ui huge header">نیاز‌های نقدی در حال انجام</h1>
+                <h1 class="ui huge header">پروژه‌های نقدی</h1>
             </div>
             <div class="divider"></div>
             <div class="row">
-                <table class="ui fixed table" id="org_ongoing_financial_table">
+                <table class="ui fixed table">
                     <thead>
-                    <tr>
-                        <th> مکان </th>
-                        <th> عنوان </th>
-                        <th> زمان پایان </th>
-                        <th>هزینه مورد نیاز</th>
-                        <th>هزینه پرداخت شده</th>
+                    <tr><th>نام پروژه </th>
+                        <th> میزان هزینه مورد نیاز </th>
+                        <th>میزان تامین شده </th>
+                        <th>زمان شروع</th>
+                        <th>زمان پایان</th>
+                        <th>توضیحات</th>
                     </tr></thead>
                     <tbody>
+                    <tr>
+                        <td>ساخت مدرسه</td>
+                        <td>ده میلیون تومان</td>
+                        <td>
+                            <div class="ui green progress success">
+                                <div class="bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1394</td>
+                        <td>1395</td>
+                    </tr>
+                    <tr>
+                        <td>ساخت مدرسه</td>
+                        <td>ده میلیون تومان</td>
+                        <td>
+                            <div class="ui progress success">
+                                <div class="bar">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1394</td>
+                        <td>1395</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+</div>
 <style type="text/css">
     body {
-        /*display: "relative";*/
+        display: relative;
     }
 
     #sidebar {

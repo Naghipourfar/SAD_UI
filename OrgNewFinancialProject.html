@@ -2,27 +2,36 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" name="viewport"/>
+    <meta content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." name="description"/>
+    <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
+    <meta content="PPType" name="author"/>
+    <meta content="#ffffff" name="theme-color"/>
+    <title>مدیریت موسسه</title>
+    <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
+    <link href="./static/files/css/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="./static/files/js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("head").load("head.html")
-        });
-    </script>
+    <script type="text/javascript" src="./static/files/js/moment.min.js"></script>
+    <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
+    <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
+    <a class="header item">مدیریت موسسه</a>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="item" href="OrgDashboard.html">داشبورد</a>
-                <a class="item" href="OrgEditProfile.html">پروفایل</a>
-                <a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>
-                <a class="item" href="OrgOnGoingNonFinancial.html">نیازهای غیرنقدی در حال انجام</a>
-                <a class="item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
-                <a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
-                <a class="active item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
-                <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('NewProject', 'Org');
+                </script>
             </div>
         </div>
         <div class="column" id="content">

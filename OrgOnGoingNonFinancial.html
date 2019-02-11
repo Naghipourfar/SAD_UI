@@ -18,22 +18,20 @@
     <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
     <script type="text/javascript" src="./static/files/js/OrgOnGoingNonFinancial.js"></script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu">
+    <a class="header item">مدیریت موسسه</a>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="item" href="OrgDashboard.html">داشبورد</a>
-                <a class="item" href="OrgEditProfile.html">پروفایل</a>
-                <a class="item" href="OrgOnGoingFinancial.html">نیازهای نقدی در حال انجام</a>
-                <a class="active item" href="OrgOnGoingNonFinancial.html">نیازهای غیرنقدی در حال انجام</a>
-                <a class="item" href="OrgIncomingRequestsDashboard.html">درخواست‌های من</a>
-                <a class="item" href="OrgDoneProjects.html">پروژه‌های انجام شده</a>
-                <a class="item" href="OrgNewFinancialProject.html">اضافه کردن نیاز نقدی</a>
-                <a class="item" href="OrgNewNonFinancialProject.html">اضافه کردن نیاز غیر نقدی</a>
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('OnGoingProjects', 'Org');
+                </script>
             </div>
         </div>
         <div class="column" id="content">
