@@ -17,7 +17,9 @@ $(function () {
                     row += '<td>' + project.deadline + '</td>';
 
                     row += '<td>' + project.money_needed + '</td>';
-
+                    if (project.money_donated == null) {
+                        project.money_donated = "0";
+                    }
                     row += '<td>' + project.money_donated + '</td>';
                     row += '</tr>';
                     $('#org_ongoing_financial_table').append(row)

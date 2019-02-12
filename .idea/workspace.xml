@@ -2,45 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b764647e-0a5f-4f29-ba54-b140bcbfb97d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/files/js/HeaderLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/js/OrgFeedbacks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/js/OrgNewNonFinancialProject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/js/Skills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/js/OrgFeedbackToBenefactor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorDoneFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorDoneFinancial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorDoneNonFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorDoneNonFinancial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorEditPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorEditPassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BenefactorEditProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorEditProfile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BenefactorSignup.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorSignup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgDashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorFeedbackToOrg.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorFeedbackToOrg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorFeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorFeedbacks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorFeedbacksOnMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorFeedbacksOnMe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorIncomingRequests.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorIncomingRequests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorOnGoingNonFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorOnGoingNonFinancial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorSearchForFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorSearchForFinancial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorSearchForNonFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorSearchForNonFinancial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorSendRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorSendRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorSentRequests.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorSentRequests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BenefactorViewOrgProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/BenefactorViewOrgProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrgDoneFinancialProjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgDoneFinancialProjects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrgDoneNonFinancialProjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgDoneNonFinancialProjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgDoneProjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgDoneProjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgEditPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgEditPassword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgEditProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgEditProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrgFeedbackToBenefactor.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgFeedbackToBenefactor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgFeedbacks.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgFeedbacks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgFeedbacksOnMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgFeedbacksOnMe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgIncomingRequests.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgIncomingRequests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgMyRequests.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgMyRequests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgNewFinancialProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgNewFinancialProject.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrgNewNonFinancialProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgNewNonFinancialProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgNewProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgNewProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgOnGoingFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgOnGoingFinancial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgOnGoingNonFinancial.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgOnGoingNonFinancial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgOnGoingProjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgOnGoingProjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgSearchForBenefactor.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgSearchForBenefactor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgSendRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgSendRequest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgSentRequestsStatus.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgSentRequestsStatus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrgViewBenefactorProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/OrgViewBenefactorProfile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorDoneFinancial.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorDoneFinancial.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorDoneNonFinancial.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorDoneNonFinancial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorEditPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorEditPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorEditProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorEditProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorFeedbackToOrg.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorFeedbackToOrg.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorFeedbacks.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorFeedbacks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorSignup.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorSignup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/js/OrgIncomingRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgIncomingRequests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/js/BenefactorFeedbacksOnMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/BenefactorFeedbacksOnMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/js/OrgFeedbacks.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgFeedbacks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/files/js/OrgOnGoingFinancial.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgOnGoingFinancial.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/files/js/OrgOnGoingNonFinancial.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/js/OrgOnGoingNonFinancial.js" afterDir="false" />
     </list>
@@ -56,91 +47,87 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgNewFinancialProject.html">
+        <entry file="file://$PROJECT_DIR$/BenefactorFeedbacksOnMe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+            <state relative-caret-position="375">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgNewNonFinancialProject.html">
+        <entry file="file://$PROJECT_DIR$/BenefactorFeedbacks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+            <state relative-caret-position="375">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgNewProject.html">
+        <entry file="file://$PROJECT_DIR$/BenefactorEditProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <state relative-caret-position="510">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgOnGoingFinancial.html">
+        <entry file="file://$PROJECT_DIR$/BenefactorEditPassword.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="480">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgOnGoingNonFinancial.html">
+        <entry file="file://$PROJECT_DIR$/BenefactorDoneNonFinancial.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <state relative-caret-position="375">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgOnGoingProjects.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="6" lean-forward="true" selection-start-line="25" selection-end-line="29" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgSearchForBenefactor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgSendRequest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OrgSentRequestsStatus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/BenefactorSignup.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OrgViewBenefactorProfile.html">
+        <entry file="file://$PROJECT_DIR$/BenefactorViewOrgProfile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+            <state relative-caret-position="345">
+              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BenefactorDoneFinancial.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BenefactorSentRequests.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BenefactorSendRequest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="84" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="22" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -163,8 +150,8 @@
       <find>localStorage.getItem</find>
       <find>benefactor</find>
       <find>مدیریت سازمان</find>
-      <find>projectIDs</find>
       <find>console</find>
+      <find>projectIDs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,49 +160,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/files/js/BenefactorIncomingRequests.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgSignup.js" />
-        <option value="$PROJECT_DIR$/ThankYouForRegistration.html" />
-        <option value="$PROJECT_DIR$/static/files/js/ThankYouForRegistration.js" />
-        <option value="$PROJECT_DIR$/static/files/js/Signin.js" />
-        <option value="$PROJECT_DIR$/OrgRequests.html" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgEditPassword.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgEditProfile.js" />
-        <option value="$PROJECT_DIR$/OrgDoneFinancialProject.html" />
-        <option value="$PROJECT_DIR$/static/files/js/SidebarLoader.js" />
-        <option value="$PROJECT_DIR$/AdminDashboard.html" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js" />
-        <option value="$PROJECT_DIR$/static/files/js/BenefactorDoneNonFinancial.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgIncomingRequests.js" />
-        <option value="$PROJECT_DIR$/static/files/js/BenefactorSignup.js" />
-        <option value="$PROJECT_DIR$/BenefactorSignup.html" />
-        <option value="$PROJECT_DIR$/BenefactorEditProfile.html" />
-        <option value="$PROJECT_DIR$/static/files/js/Skills.js" />
-        <option value="$PROJECT_DIR$/static/files/js/BenefactorEditPassword.js" />
-        <option value="$PROJECT_DIR$/static/files/js/BenefactorEditProfile.js" />
-        <option value="$PROJECT_DIR$/static/files/js/BenefactorFeedbacks.js" />
         <option value="$PROJECT_DIR$/static/files/js/BenefactorDoneFinancial.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js" />
         <option value="$PROJECT_DIR$/static/files/js/OrgNewNonFinancialProject.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgFeedbacks.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgOnGoingNonFinancial.js" />
-        <option value="$PROJECT_DIR$/static/files/js/OrgOnGoingFinancial.js" />
         <option value="$PROJECT_DIR$/static/files/js/HeaderLoader.js" />
-        <option value="$PROJECT_DIR$/OrgDoneFinancialProjects.html" />
-        <option value="$PROJECT_DIR$/OrgDoneNonFinancialProjects.html" />
         <option value="$PROJECT_DIR$/OrgDoneProjects.html" />
         <option value="$PROJECT_DIR$/OrgEditPassword.html" />
         <option value="$PROJECT_DIR$/OrgEditProfile.html" />
         <option value="$PROJECT_DIR$/OrgFeedbacks.html" />
         <option value="$PROJECT_DIR$/OrgFeedbacksOnMe.html" />
-        <option value="$PROJECT_DIR$/OrgFeedbackToBenefactor.html" />
         <option value="$PROJECT_DIR$/static/files/js/HeadLoader.js" />
         <option value="$PROJECT_DIR$/OrgDashboard.html" />
         <option value="$PROJECT_DIR$/OrgMyRequests.html" />
         <option value="$PROJECT_DIR$/OrgIncomingRequests.html" />
         <option value="$PROJECT_DIR$/OrgNewFinancialProject.html" />
-        <option value="$PROJECT_DIR$/OrgNewNonFinancialProject.html" />
         <option value="$PROJECT_DIR$/OrgNewProject.html" />
         <option value="$PROJECT_DIR$/OrgOnGoingFinancial.html" />
         <option value="$PROJECT_DIR$/OrgOnGoingNonFinancial.html" />
@@ -224,6 +181,36 @@
         <option value="$PROJECT_DIR$/OrgSendRequest.html" />
         <option value="$PROJECT_DIR$/OrgSentRequestsStatus.html" />
         <option value="$PROJECT_DIR$/OrgViewBenefactorProfile.html" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgOnGoingFinancial.js" />
+        <option value="$PROJECT_DIR$/OrgDoneFinancialProjects.html" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js" />
+        <option value="$PROJECT_DIR$/OrgNewNonFinancialProject.html" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgOnGoingNonFinancial.js" />
+        <option value="$PROJECT_DIR$/OrgDoneNonFinancialProjects.html" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgFeedbackToBenefactor.js" />
+        <option value="$PROJECT_DIR$/OrgFeedbackToBenefactor.html" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgFeedbacks.js" />
+        <option value="$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js" />
+        <option value="$PROJECT_DIR$/static/files/js/BenefactorDoneNonFinancial.js" />
+        <option value="$PROJECT_DIR$/static/files/js/BenefactorFeedbackToOrg.js" />
+        <option value="$PROJECT_DIR$/static/files/js/BenefactorFeedbacks.js" />
+        <option value="$PROJECT_DIR$/static/files/js/BenefactorFeedbacksOnMe.js" />
+        <option value="$PROJECT_DIR$/BenefactorDashboard.html" />
+        <option value="$PROJECT_DIR$/BenefactorIncomingRequests.html" />
+        <option value="$PROJECT_DIR$/BenefactorSendRequest.html" />
+        <option value="$PROJECT_DIR$/BenefactorSearchForNonFinancial.html" />
+        <option value="$PROJECT_DIR$/BenefactorSearchForFinancial.html" />
+        <option value="$PROJECT_DIR$/BenefactorOnGoingNonFinancial.html" />
+        <option value="$PROJECT_DIR$/BenefactorFeedbackToOrg.html" />
+        <option value="$PROJECT_DIR$/BenefactorFeedbacksOnMe.html" />
+        <option value="$PROJECT_DIR$/BenefactorFeedbacks.html" />
+        <option value="$PROJECT_DIR$/BenefactorEditProfile.html" />
+        <option value="$PROJECT_DIR$/BenefactorEditPassword.html" />
+        <option value="$PROJECT_DIR$/BenefactorDoneNonFinancial.html" />
+        <option value="$PROJECT_DIR$/BenefactorDoneFinancial.html" />
+        <option value="$PROJECT_DIR$/BenefactorSentRequests.html" />
+        <option value="$PROJECT_DIR$/BenefactorViewOrgProfile.html" />
       </list>
     </option>
   </component>
@@ -233,8 +220,8 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -360,7 +347,7 @@
       <workItem from="1549728006901" duration="6425000" />
       <workItem from="1549736762414" duration="1335000" />
       <workItem from="1549738632718" duration="2284000" />
-      <workItem from="1549814516751" duration="31878000" />
+      <workItem from="1549814516751" duration="37845000" />
     </task>
     <task id="LOCAL-00001" summary="Consistency between benefactor pages">
       <created>1549729780610</created>
@@ -404,15 +391,21 @@
       <option name="project" value="LOCAL" />
       <updated>1549885941870</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update all Org pages">
+      <created>1549922391589</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549922391589</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62628000" />
+    <option name="totallyTimeSpent" value="68595000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21564482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -459,249 +452,10 @@
     <MESSAGE value="Add Verification code feature in UI" />
     <MESSAGE value="Successful Sign-in and Sign-up" />
     <MESSAGE value="Update in org/ben pages UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update in org/ben pages UI" />
+    <MESSAGE value="Update all Org pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update all Org pages" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgEditPassword.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BenefactorDoneNonFinancial.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorDoneNonFinancial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgIncomingRequests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/SidebarLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/Skills.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BenefactorEditPassword.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorEditProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="57" column="39" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorFeedbacks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorEditPassword.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdminDashboard.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BenefactorDashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="34" column="59" lean-forward="true" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signup.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgSignup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="23" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorDoneFinancial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorSignup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BenefactorSignup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="120" column="42" lean-forward="true" selection-start-line="116" selection-start-column="36" selection-end-line="120" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgFeedbacks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BenefactorFeedbackToOrg.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BenefactorEditProfile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="101" column="44" lean-forward="true" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgNewNonFinancialProject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgOnGoingNonFinancial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgDoneFinancialProjects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgDoneNonFinancialProjects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/HeaderLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgOnGoingFinancial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgEditProfile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgEditPassword.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="20" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgDoneProjects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgFeedbacks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgFeedbacksOnMe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgFeedbackToBenefactor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/files/js/HeadLoader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -716,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrgDashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="20" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OrgMyRequests.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -730,35 +477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrgNewFinancialProject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgNewNonFinancialProject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OrgNewProject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgOnGoingFinancial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrgOnGoingNonFinancial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
@@ -779,13 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrgSendRequest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OrgSignup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-33" />
@@ -798,10 +510,296 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sample Profile.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/OrgViewBenefactorProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="-91">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Signup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgOnGoingFinancial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgSendRequest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgDoneFinancialProjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgOnGoingFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="54" column="49" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="54" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgNewFinancialProject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgNewFinancialProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgOnGoingNonFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="54" column="28" lean-forward="true" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgNewNonFinancialProject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="106" column="30" lean-forward="true" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgOnGoingNonFinancial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgNewNonFinancialProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgDoneNonFinancialProjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgFeedbackToBenefactor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgFeedbackToBenefactor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgFeedbacks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgDoneFinancial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/OrgDoneNonFinancial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorFeedbackToOrg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorDoneNonFinancial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="54" column="65" lean-forward="true" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgDoneProjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorFeedbacksOnMe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/BenefactorFeedbacks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="36" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/files/js/HeaderLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorDashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorIncomingRequests.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrgDashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="20" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="22" column="78" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="22" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorSearchForNonFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorSearchForFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorOnGoingNonFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorFeedbackToOrg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorFeedbacksOnMe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorFeedbacks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorEditProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorEditPassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorDoneNonFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorDoneFinancial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorSendRequest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="84" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="22" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorSentRequests.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorSignup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BenefactorViewOrgProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 $(function () {
-    benefactor = JSON.parse(localStorage.getItem("account"));
+    var benefactor = JSON.parse(localStorage.getItem("account"));
     $.ajax({
         url: 'http://127.0.0.1:8000/projects/feedbacks/benefactor/' + benefactor.username + '/?type=receive',
         type: 'GET',
@@ -33,14 +33,14 @@ $(function () {
 });
 
 function fillFeedbackTable(feedbacks) {
-    for (var feedback in feedbacks) {
-        feedback = JSON.parse(feedback);
+    for (var i = 0; i < feedbacks.length; i++) {
+        var feedback = feedbacks[i];
         var row = '<tr>';
-        row += '<td>' + project.name + '</td>';
-        row += '<td>' + project.username + '</td>';
-        row += '<td>' + project.rate + '</td>';
-        row += '<td>' + project.category + '</td>';
-        row += '<td>' + project.feedback + '</td>';
+        row += '<td>' + feedback.project_name + '</td>';
+        row += '<td>' + feedback.username + '</td>';
+        row += '<td>' + feedback.rate + '</td>';
+        row += '<td>' + feedback.category + "-" + feedback.skill_name + '</td>';
+        row += '<td>' + feedback.feedback + '</td>';
         row += '</tr>';
         $('#feedbacks_table').append(row);
     }

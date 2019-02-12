@@ -8,6 +8,7 @@ $(function () {
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
+            alert("salam");
             if (data.status == 0) {
                 fillFinancialProjectTable(data.projects);
             } else {
@@ -44,10 +45,12 @@ function fillFinancialProjectTable(projects) {
 function addFinancialProject(project) {
     var row = '<tr>';
     row += '<td>' + project.project_name + '</td>';
-    row += '<td>' + project.username + '</td>';
-    row += '<td>' + project.money_needed + '</td>';
-    row += '<td>' + project.money_donated + '</td>';
     row += '<td>' + project.deadline + '</td>';
+    row += '<td>' + project.money_needed + '</td>';
+    if (project.money_donated == null) {
+        project.money_donated = 0;
+    }
+    row += '<td>' + project.money_donated + '</td>';
     row += '</tr>';
     $('#financial_projects_table').append(row)
 }

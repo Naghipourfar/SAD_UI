@@ -15,8 +15,10 @@ $(function () {
                     row += '<td>' + project.location + '</td>';
                     row += '<td>' + project.category + '</td>';
                     row += '<td>' + project.skill_name + '</td>';
+                    if (project.username == null) {
+                        project.username = "هنوز کسی انتخاب نشده است"
+                    }
                     row += '<td>' + project.username + '</td>';
-
                     row += '</tr>';
                     $('#org_ongoing_non_financial_table').append(row)
                 }

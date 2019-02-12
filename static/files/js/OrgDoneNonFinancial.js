@@ -1,4 +1,3 @@
-var benIDs = []
 $(function () {
     var localData = JSON.parse(localStorage.getItem("account"));
     var username = localData.username;
@@ -11,9 +10,6 @@ $(function () {
         success: function (data) {
             if (data.status == 0) {
                 fillNonFinancialProjectTable(data.projects);
-                for (var benID in benIDs) {
-                    $("#" + benID).attr("onclick", sendFeedbackToOrg(benID));
-                }
             } else {
                 alert("not success");
             }
@@ -43,27 +39,31 @@ $(function () {
 
 function fillNonFinancialProjectTable(projects) {
     for (var i = 0; i < projects.length;i++) {
-        project = JSON.parse(projects[i]);
+        var project = projects[i];
+        console.log(project);
         addNonFinancialProject(project);
     }
 }
 
 function addNonFinancialProject(project) {
     var row = '<tr>';
-    row += '<td>' + project.id + '</td>';
     row += '<td>' + project.project_name + '</td>';
-    row += '<td>' + project.category + '-' + project.skill_name + '</td>';
     row += '<td>' + project.location + '</td>';
+    row += '<td>' + project.category + '</td>';
+    row += '<td>' + project.skill_name + '</td>';
     row += '<td>' + project.username + '</td>';
-    row += '<td><a href="OrgFeedbackToBenefactor.html">';
-    row += '<button class="ui violet button" id=\"' + project.id + '\" onclick="sendFeedbackToOrg(' + project.username + ')"> ' + 'ارسال نظر' + ' </button>';
+    row += '<td><a>';
+    row += '<button class="ui violet button" id=\"' + project.id + '\"> ' + 'ارسال نظر' + ' </button>';
     row += '</a>';
     row += '</td>';
     row += '</tr>';
     $('#non_financial_projects_table').append(row);
-    benIDs.push(project.username);
+    $("#" + project.id).click(function () {
+        sendFeedbackToOrg(project.id);
+    });
 }
 
 function sendFeedbackToOrg(id) {
-    localStorage.setItem('benID', id);
+    localStorage.setItem('projectID', id);
+    window.location.replace("OrgFeedbackToBenefactor.html");
 }

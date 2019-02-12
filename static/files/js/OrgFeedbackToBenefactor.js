@@ -1,28 +1,48 @@
-$(document).ready(function () {
+$(function () {
+    var projectID = getProjectID();
+    $("#save").click(function () {
+        var feedback = {
+            feeder: JSON.parse(localStorage.getItem("account")).type,
+            feedback: $("#feedback").val(),
+            rate: getRate(),
+            id: projectID
+
+        };
+        console.log(feedback);
+        sendFeedback(feedback);
+    });
 
 });
-function submitNewFinancialProject() {
-    var username = JSON.parse(localStorage.getItem("account")).username;
-    var project = {
-        name: $("#name").val(),
-        money_needed: $("#money_needed").val(),
-        deadline: $("#deadline").val()
-    };
+
+function getProjectID() {
+    return localStorage.getItem('projectID');
+}
+
+function getRate() {
+    var rate = 0;
+    $("#rate").find('i').each(function () {
+        if ($(this).attr("class") == "icon active") {
+            rate++;
+        } else {
+        }
+    });
+    return rate;
+}
+
+function sendFeedback(feedback) {
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/organization/add_financial/' + username + "/",
+        url: 'http://127.0.0.1:8000/projects/feedbacks/send/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
-        data: JSON.stringify(project),
+        data: JSON.stringify(feedback),
         success: function (data) {
             if (data.status == 0) {
-                alert("Project has been created Successfully.");
+                alert(data.message);
                 window.location.replace("OrgDashboard.html");
-            } else if (data.status == -1) {
-                for (var key in data.message) {
-                    alert(key + ": " + data.message[key]);
-                }
+            } else {
+                alert("not success");
             }
         },
         error: function (jqXHR, exception) {
@@ -41,5 +61,7 @@ function submitNewFinancialProject() {
             }
             alert(msg);
         }
+
     });
+
 }

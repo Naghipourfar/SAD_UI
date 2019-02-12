@@ -1,4 +1,3 @@
-projectIDs = [];
 $(function () {
     var localData = JSON.parse(localStorage.getItem("account"));
     var username = localData.username;
@@ -11,11 +10,6 @@ $(function () {
         success: function (data) {
             if (data.status == 0) {
                 fillNonFinancialProjectTable(data.projects);
-                for (var projectID in projectIDs) {
-                    $("#" + projectID).click(function () {
-                        sendFeedbackToOrg(projectID);
-                    });
-                }
             } else {
                 alert("not success");
             }
@@ -40,12 +34,11 @@ $(function () {
     });
 
 
-
 });
 
 function fillNonFinancialProjectTable(projects) {
-    for (var i = 0; i < projects.length;i++) {
-        project = JSON.parse(projects[i]);
+    for (var i = 0; i < projects.length; i++) {
+        var project = projects[i];
         addNonFinancialProject(project);
     }
 }
@@ -58,13 +51,12 @@ function addNonFinancialProject(project) {
     row += '<td>' + project.gender + '</td>';
     row += '<td>' + project.age + '</td>';
     row += '<td>' + project.location + '</td>';
-    row += '<td><a href="BenefactorFeedbackToOrg.html">';
+    row += '<td><a>';
     row += '<button class="ui violet button" id=\"' + project.id + '\"> ' + 'ارسال نظر' + ' </button>';
     row += '</a>';
     row += '</td>';
     row += '</tr>';
     $('#non_financial_projects_table').append(row);
-    projectIDs.push(project.id);
     $("#" + project.id).click(function () {
         sendFeedbackToOrg(project.id);
     });
@@ -72,4 +64,5 @@ function addNonFinancialProject(project) {
 
 function sendFeedbackToOrg(id) {
     localStorage.setItem('projectID', id);
+    window.location.replace("BenefactorFeedbackToOrg.html");
 }

@@ -33,12 +33,14 @@ $(document).ready(function () {
 });
 
 function fillFeedbackTable(feedbacks) {
-    for (var feedback in feedbacks) {
+    for (var i = 0; i < feedbacks.length; i++) {
+        var feedback = feedbacks[i];
         var row = '<tr>';
-        row += '<td>' + feedback.username + '</td>';
+        row += '<td>' + feedback.project_name + '</td>';
         row += '<td>' + feedback.category + '-' + feedback.skill_name + '</td>';
-        row += '<td>' + project.rate + '</td>';
-        row += '<td>' + project.feedback + '</td>';
+        row += '<td>' + feedback.rate + '</td>';
+        row += '<td>' + feedback.username + '</td>';
+        row += '<td>' + feedback.feedback + '</td>';
         row += '</tr>';
         $('#feedbacks_table').append(row);
     }

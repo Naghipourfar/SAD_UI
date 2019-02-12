@@ -20,6 +20,7 @@
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
     <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/OrgFeedbackToBenefactor.js"></script>
     <script>
         $(document).ready(function () {
             $('.ui.rating').rating({
@@ -41,6 +42,11 @@
 </div>
 <div class="ui grid">
     <div class="row">
+        <div class="column" id="sidebar">
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <a class="item" href="OrgDoneNonFinancialProjects.html">بازگشت به صفحه قبل</a>
+            </div>
+        </div>
         <div class="column" id="content">
             <div class="row">
                 <h1 class="ui huge header">بازخورد به نیکوکار</h1>
@@ -49,13 +55,13 @@
             <div class="ui form segment">
                 <div class="ui grid">
                     <p>به عملکرد نیکوکار چه امتیازی می‌دهید؟</p>
-                    <div class="ui massive star rating" data-max-rating="5"></div>
+                    <div class="ui massive star rating" data-max-rating="5" id="rate"></div>
                 </div>
                 <p>بازخورد خود را نسبت به نیکوکار بنویسید.</p>
                 <div class="field">
-                    <textarea placeholder="بازخورد"></textarea>
+                    <textarea placeholder="بازخورد" id="feedback"></textarea>
                 </div>
-                <div class="ui huge submit button">
+                <div class="ui huge button" id="save">
                     ذخیره
                 </div>
             </div>

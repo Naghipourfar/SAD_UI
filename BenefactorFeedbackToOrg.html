@@ -19,6 +19,7 @@
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
     <script type="text/javascript" src="./static/files/js/BenefactorFeedbackToOrg.js"></script>
     <script>
         $(document).ready(function () {
@@ -34,7 +35,11 @@
     </script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
+<div class="ui inverted huge borderless fixed fluid menu" id="header">
+    <script>
+        loadHeader("Org")
+    </script>
+</div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
@@ -57,7 +62,7 @@
                 <div class="field">
                     <textarea placeholder="بازخورد" id="feedback"></textarea>
                 </div>
-                <div class="ui huge submit button" id="send_feedback">
+                <div class="ui huge button" id="save">
                     ذخیره
                 </div>
             </div>

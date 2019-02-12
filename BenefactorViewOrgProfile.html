@@ -17,8 +17,11 @@
     <script src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
-<div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
-<div class="ui inverted huge border less fixed fluid menu">
+<div class="ui inverted huge borderless fixed fluid menu" id="header">
+    <script>
+        loadHeader("Org")
+    </script>
+</div><div class="ui inverted huge border less fixed fluid menu">
     <a class="header item">مدیریت نیکوکار</a>
     <div class="left menu">
         <div class="item">

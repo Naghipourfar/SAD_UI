@@ -2,10 +2,10 @@ $(function () {
     var projectID = getProjectID();
     $("#save").click(function () {
         var feedback = {
-            feeder: JSON.parse(localStorage.getItem("account")).username,
+            feeder: JSON.parse(localStorage.getItem("account")).type,
             feedback: $("#feedback").val(),
             rate: getRate(),
-            project_id: projectID
+            id: projectID
 
         };
         sendFeedback(feedback);
@@ -39,6 +39,7 @@ function sendFeedback(feedback) {
         success: function (data) {
             if (data.status == 0) {
                 alert(data.message);
+                window.location.replace("BenefactorDashboard.html");
             } else {
                 alert("not success");
             }

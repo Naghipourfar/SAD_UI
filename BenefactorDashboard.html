@@ -15,16 +15,14 @@
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
+    <script src="./static/files/js/HeaderLoader.js"></script>
 </head>
 <body>
 <div class="ui inverted huge border less fixed fluid menu">
-    <a class="header item">مدیریت نیکوکار</a>
-    <div class="left menu">
-        <div class="item">
-            <div class="ui small input">
-                <input placeholder="جست و جو..."/>
-            </div>
-        </div>
+    <div class="ui inverted huge borderless fixed fluid menu" id="header">
+        <script>
+            loadHeader("Benefactor")
+        </script>
     </div>
 </div>
 <div class="ui grid">
