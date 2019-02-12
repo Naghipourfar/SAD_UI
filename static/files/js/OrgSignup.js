@@ -3,6 +3,7 @@ function sendOrgInformation() {
     var organization = {
         name: $("#name").val(),
         username: $("#username").val(),
+        city: $("#city").val(),
         password1: $("#password1").val(),
         password2: $("#password2").val(),
         email: $("#email").val(),

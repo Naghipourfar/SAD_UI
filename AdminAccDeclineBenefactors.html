@@ -16,6 +16,7 @@
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
     <script src="./static/files/js/HeaderLoader.js"></script>
+    <script src="./static/files/js/AdminAccDeclineBenefactors.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -30,31 +31,64 @@
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu" id="sidebar_menu">
                 <script type="text/javascript">
-                    loadSidebar('ManageFeedbacks', 'Admin');
+                    loadSidebar('AccDeclineUsers', 'Admin');
                 </script>
             </div>
         </div>
         <div class="column" id="content">
-            <div class="ui grid">
-                <div class="row">
-                    <h1 class="ui huge header">نظرات درباره موسسات</h1>
-                </div>
-                <div class="ui divider"></div>
-                <div class="row">
-                    <table class="ui fixed table" id = "feedbacks_about_benefactors">
-                        <thead>
-                        <tr>
-                            <th>امتیاز</th>
-                            <th>نظر</th>
-                            <th>نوع خدمت</th>
-                            <th>عنوان خدمت</th>
-                            <th>صاحب نظر </th>
-                            <th>مشاهده پروفایل صاحب نظر </th>
-                        </tr></thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="row">
+                <table class="ui fixed table">
+                    <thead>
+                    <tr>
+                        <th> شناسه کاربر</th>
+                        <th>نام</th>
+                        <th>نام خانوادگی</th>
+                        <th> ایمیل </th>
+                        <th>جنسیت</th>
+                        <th>شماره‌ موبایل</th>
+                        <th>شماره‌ تلفن</th>
+                        <th>آدرس</th>
+                        <th>سن</th>
+                        <th>علاقه‌مندی‌ها</th>
+                        <th>فعالیت‌ها</th>
+                        <th>توانایی‌ها</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
+                        <td> نیکوکار</td>
+                        <td>محسن</td>
+                        <td>
+                            <button class="ui violet button">مشاهده پروفایل</button>
+                        </td>
+                        <td>خوبه</td>
+                        <td>
+                            <button class="ui green button">تایید کاربر</button>
+                        </td>
+                        <td>
+                            <button class="ui red button">رد کاربر</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img class="ui avatar image" src="static/files/pics/Mahak.jpg"></td>
+                        <td> موسسه</td>
+                        <td>محک</td>
+                        <td>
+                            <button class="ui violet button">مشاهده پروفایل</button>
+                        </td>
+                        <td>خوب است</td>
+                        <td>
+                            <button class="ui green button">تایید کاربر</button>
+                        </td>
+                        <td>
+                            <button class="ui red button">رد کاربر</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -62,7 +96,7 @@
 
 <style type="text/css">
     body {
-        /*display: relative;*/
+        display: relative;
     }
 
     #sidebar {

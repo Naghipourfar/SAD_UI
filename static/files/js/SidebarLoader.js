@@ -46,18 +46,40 @@ var orgPageTypeTexts = [
     "مشاهده نظرات دیگران درباره خود"
 ];
 
+var adminPageTypes = [
+    "Dashboard",
+    "AccDeclineUsers",
+    "ManageSkills",
+    "ManageFeedbacks",
+    "ManageBenefactors",
+    "ManageOrgs",
+    "RegisterNewUser",
+    "GetLogReport"
+];
+
+var adminPageTypeTexts = [
+    "داشبورد",
+    "مشاهده کاربران منتظر تایید",
+    "مدیریت توانایی‌ها",
+    "مدیریت نظرات",
+    "مدیریت نیکوکاران",
+    "مدیریت موسسه‌ها",
+    "ثبت‌نام کاربر جدید",
+    "دریافت لاگ"
+];
 function loadSidebar(currentPage, userType="Benefactor"){
     var pageTypes = [];
     var pageTypeTexts = [];
     if (userType == "Benefactor") {
         pageTypes = benPageTypes;
         pageTypeTexts = benPageTypeTexts;
+    } else if (userType == "Admin") {
+        pageTypes = adminPageTypes;
+        pageTypeTexts = adminPageTypeTexts;
     } else {
         pageTypes = orgPageTypes;
         pageTypeTexts = orgPageTypeTexts;
     }
-    console.log(pageTypes);
-    console.log(pageTypeTexts);
     var sidebarTag = $("#sidebar_menu");
     for (var i = 0; i < pageTypes.length; i++) {
         var pageType = pageTypes[i];

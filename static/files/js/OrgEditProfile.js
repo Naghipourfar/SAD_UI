@@ -13,12 +13,13 @@ $(document).ready(function () {
     };
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/accounts/organization/profile/' + org.username + "/",
+        url: 'http://127.0.0.1:8000/accounts/organization/edit_profile/' + org.username + "/",
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
+                console.log()
                 fillOrganization(org, data.data);
                 fillProfileFields(org);
             } else {
@@ -67,6 +68,7 @@ function fillOrganization(org, data) {
     org.phone_number = data.phone_number;
     org.address = data.address;
     org.activities = data.activities;
+    org.city = data.city;
     return org;
 }
 

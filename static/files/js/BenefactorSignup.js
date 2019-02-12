@@ -1,4 +1,5 @@
 var lastSelectedSkill = "";
+var lastSelectedGender = "";
 var skillIDs = ["معلم-فیزیک"];
 $(function () {
     $("#new_skill").click(function () {
@@ -11,6 +12,7 @@ $(function () {
 
     setClickListenersForCurrentSkills();
     saveLastSkillSelected();
+    saveLastSelectedGender();
 });
 
 function sendBenefactorInformation() {
@@ -20,6 +22,8 @@ function sendBenefactorInformation() {
         last_name: $("#last_name").val(),
         username: $("#username").val(),
         email: $("#email").val(),
+        city: $("#city").val(),
+        gender: $("#gender").val(),
         password1: $("#password1").val(),
         password2: $("#password2").val(),
         age: $("#age").val(),
@@ -32,6 +36,7 @@ function sendBenefactorInformation() {
     };
 
     $.ajax({
+        async: true,
         url: 'http://127.0.0.1:8000/accounts/benefactor/signup/',
         type: 'POST',
         dataType: 'json',
@@ -42,7 +47,7 @@ function sendBenefactorInformation() {
                 window.location.replace("ThankYouForRegistration.html");
             } else if (data.status == -1) {
                 for (var key in data.message) {
-                    alert(data.message[key]);
+                    alert(key + ": " + data.message[key]);
                 }
             }
         }
@@ -105,4 +110,14 @@ function saveLastSkillSelected() {
     });
 }
 
+
+function saveLastSelectedGender() {
+    $("#gender_menu").find("div").each(function () {
+        var gender = $(this).text();
+        $(this).click(function () {
+            lastSelectedGender = gender;
+            $("#gender").text(lastSelectedGender);
+        });
+    });
+}
 

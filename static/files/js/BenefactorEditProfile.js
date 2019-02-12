@@ -1,13 +1,17 @@
 var lastSelectedSkill = "";
+var lastSelectedGender = "";
 var skillIDs = [];
 
 $(document).ready(function () {
+    saveLastSelectedGender();
     var currentUser = JSON.parse(localStorage.getItem('account'));
     var benefactor = {
         username: currentUser.username,
         password: currentUser.password,
         first_name: "",
         last_name: "",
+        gender: "",
+        city: "",
         tel_number: "",
         phone_number: "",
         address: "",
@@ -17,7 +21,7 @@ $(document).ready(function () {
     };
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/accounts/benefactor/profile/' + benefactor.username + "/",
+        url: 'http://127.0.0.1:8000/accounts/benefactor/edit_profile/' + benefactor.username + "/",
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
@@ -35,6 +39,8 @@ $(document).ready(function () {
     $("#save").click(function () {
         var newBenefactor = {
             password: $("#password").val(),
+            city: $("#city").val(),
+            gender: lastSelectedGender,
             age: $("#age").val(),
             phone_number: $("#phone_number").val(),
             tel_number: $("#tel_number").val(),
@@ -43,8 +49,9 @@ $(document).ready(function () {
             activities: $("#activities").val(),
             desires: $("#desires").val()
         };
+        console.log(newBenefactor);
         $.ajax({
-            url: 'http://127.0.0.1:8000/accounts/benefactor/profile/' + benefactor.username + "/",
+            url: 'http://127.0.0.1:8000/accounts/benefactor/edit_profile/' + benefactor.username + "/",
             type: 'POST',
             dataType: 'json',
             contentType: 'application/json',
@@ -92,6 +99,8 @@ function fillBenefactor(benefactor, data) {
     benefactor.first_name = data.first_name;
     benefactor.last_name = data.last_name;
     benefactor.age = data.age;
+    benefactor.city = data.city;
+    benefactor.gender = data.gender;
     benefactor.tel_number = data.tel_number;
     benefactor.phone_number = data.phone_number;
     benefactor.address = data.address;
@@ -111,6 +120,8 @@ function fillProfileFields(benefactor) {
             for (var i = 0; i < benefactor.skills.length; i ++){
                 addSkill(benefactor.skills[i]);
             }
+        } else if (key == "gender") {
+            $("#" + key.toString()).text(benefactor[key]);
         } else {
             $("#" + key.toString()).attr("value", benefactor[key]);
         }
@@ -158,3 +169,12 @@ function saveLastSkillSelected() {
     });
 }
 
+function saveLastSelectedGender() {
+    $("#gender_menu").find("div").each(function () {
+        var gender = $(this).text();
+        $(this).click(function () {
+            lastSelectedGender = gender;
+            $("#gender").text(lastSelectedGender);
+        });
+    });
+}

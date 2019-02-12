@@ -1,5 +1,5 @@
 var lastSelectedSkill = "";
-var lastSelecterdGender = "";
+var lastSelectedGender = "";
 
 $(document).ready(function () {
     saveLastSelectedGender();
@@ -16,7 +16,7 @@ function submitNewNonFinancialProject() {
         name: $("#name").val(),
         need: JSON.stringify(neededSkill),
         age: $("#age").val(),
-        gender: lastSelecterdGender,
+        gender: lastSelectedGender,
         location: $("#location").val()
     };
 
@@ -59,8 +59,8 @@ function saveLastSelectedGender() {
     $("#gender_menu").find("div").each(function () {
         var gender = $(this).text();
         $(this).click(function () {
-            lastSelecterdGender = gender;
-            $("#gender").text(lastSelecterdGender);
+            lastSelectedGender = gender;
+            $("#gender").text(lastSelectedGender);
         });
     });
 }

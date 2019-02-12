@@ -30,7 +30,7 @@
 <div w3-include-html="header.html" class="ui inverted huge borderless fixed fluid menu"></div>
 <div class="ui inverted huge borderless fixed fluid menu" id="header">
     <script>
-        loadHeader("Org")
+        loadHeader("Benefactor")
     </script>
 </div>
 <div class="ui grid">
@@ -65,6 +65,7 @@
                                 <div class="field">
                                     <label>سن</label><input id="age" placeholder="سن"/>
                                 </div>
+
                             </div>
                             <div class="field">
                                 <div class="required field">
@@ -80,7 +81,23 @@
                                 <div class="required field">
                                     <label>شماره ثابت</label><input id="tel_number" placeholder="شماره ثابت">
                                 </div>
-
+                                <div class="field">
+                                    <label>شهر محل سکونت</label><input id="city" placeholder="شهر محل سکونت"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <div class="ui compact menu">
+                                    <div class="ui simple dropdown item">
+                                        <label id="gender">جنسیت نیکوکار</label>
+                                        <i class="dropdown icon"></i>
+                                        <div class="menu" id="gender_menu">
+                                            <div class="item">مرد</div>
+                                            <div class="item">زن</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="field">
