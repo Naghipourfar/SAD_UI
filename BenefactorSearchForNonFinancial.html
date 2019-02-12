@@ -8,7 +8,7 @@
     <meta content="Semantic-UI, Theme, Design, Template" name="keywords"/>
     <meta content="PPType" name="author"/>
     <meta content="#ffffff" name="theme-color"/>
-
+    <title>مدیریت نیکوکار</title>
     <link href="./static/files/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/semantic/semantic.rtl.min.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
     <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="./static/files/js/BenefactorSearchForFinancial.js"></script>
+    <script type="text/javascript" src="./static/files/js/BenefactorSearchForNonFinancial.js"></script>
     <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/Skills.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu" id="header">
@@ -34,22 +35,14 @@
             <div class="ui form segment">
                 <div class="ui hidden divider"></div>
                 <div class="row" style="text-align: center">
+                    <div class="ui huge label button" onclick="window.location.replace('BenefactorDashboard.html')"> بازگشت به داشبورد </div>
+                </div>
+                <div class="row" style="text-align: center">
                     <div class="ui huge label">جست و جو</div>
                 </div>
                 <div class="ui hidden divider"></div>
                 <div class="row" style="text-align: center">
-                    <div class="ui compact menu">
-                        <div class="ui simple dropdown item">
-                            نوع جست‌و‌جو
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <div class="item">نیاز نقدی</div>
-                                <div class="item">نیاز غیر نقدی</div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="ui divider"></div>
-                    <div class="ui huge label">نیاز غیرنقدی</div>
                 </div>
                 <div class="row">
                     <h1 class="ui medium header">فیلترها</h1>
@@ -57,35 +50,38 @@
                 <div class="ui divider"></div>
                 <div class="two fields">
                     <div class="field">
-                        <input placeholder="شهر">
-                        <input placeholder="زمان">
+                        <input placeholder="شهر" id="city">
+                        <input placeholder="زمان" id="time">
+                        <input placeholder="شناسه موسسه" id="org_username">
+                        <input placeholder="نام پروژه" id="project_name">
                     </div>
                     <div class="field">
                         <div class="ui compact menu">
                             <div class="ui simple dropdown item">
-                                جنسیت
+                                <label id="gender">جنسیت</label>
                                 <i class="dropdown icon"></i>
-                                <div class="menu">
+                                <div class="menu" id="gender_menu">
                                     <div class="item">مرد</div>
                                     <div class="item">زن</div>
+                                    <div class="item">اهمیتی ندارد</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ui compact menu">
-                            <div class="ui simple dropdown item">
-                                زمان
-                                <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item">ساعت</div>
-                                    <div class="item">روز</div>
-                                    <div class="item">هفته</div>
-                                    <div class="item">ماه</div>
-                                    <div class="item">ساعت در هفته</div>
-                                    <div class="item">روز در هفته</div>
-                                    <div class="item">روز در ماه</div>
-                                </div>
-                            </div>
-                        </div>
+                        <!--<div class="ui compact menu">-->
+                            <!--<div class="ui simple dropdown item">-->
+                                <!--زمان-->
+                                <!--<i class="dropdown icon"></i>-->
+                                <!--<div class="menu">-->
+                                    <!--<div class="item">ساعت</div>-->
+                                    <!--<div class="item">روز</div>-->
+                                    <!--<div class="item">هفته</div>-->
+                                    <!--<div class="item">ماه</div>-->
+                                    <!--<div class="item">ساعت در هفته</div>-->
+                                    <!--<div class="item">روز در هفته</div>-->
+                                    <!--<div class="item">روز در ماه</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
                     </div>
                 </div>
                 <div class="field">
@@ -93,38 +89,26 @@
                         <h1 class="ui small header">توانایی‌ها</h1>
                     </div>
                     <div class="ui hidden divider"></div>
-                    <div class="two">
-                        <button class="ui icon button"><i class="x icon"></i></button>
-                        گلدوزی<br>
-                        <button class="ui icon button"><i class="x icon"></i></button>
-                        معلم فیزیک<br>
-                        <button class="ui icon button"><i class="x icon"></i></button>
-                        معلم ریاضی<br>
+                    <div class="two" id="skills">
                     </div>
                     <div class="ui hidden divider"></div>
                     <div class="two fields">
                         <div class="ui compact menu">
-                            <div class="ui simple dropdown item">
-                                توانایی‌
+                            <div class="ui simple dropdown item" id="skills_div">
+                                <label id="last_selected_skill">توانایی</label>
                                 <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item">گلدوزی</div>
-                                    <div class="item">معلم فیزیک</div>
-                                    <div class="item">پرستاری</div>
-                                    <div class="item">قالیبافی</div>
-                                    <div class="item">بازاریابی</div>
-                                    <div class="item">آشپزی</div>
-                                    <div class="item">معلم شیمی</div>
-                                    <div class="item">صنایع دستی</div>
-                                    <div class="item">معلم ریاضی</div>
+                                <div class="menu" id="skills_menu">
+                                    <script>
+                                        loadSkills();
+                                    </script>
                                 </div>
                             </div>
                         </div>
-                        <button class="ui icon button"><i class="plus icon"></i></button>
+                        <button class="ui icon button" id="new_skill"><i class="plus icon"></i></button>
                     </div>
                 </div>
                 <div class="row" style="text-align: center">
-                    <button class="ui black button">جست و جو</button>
+                    <button class="ui black button" id="search">جست و جو</button>
                 </div>
             </div>
         </div>
@@ -139,54 +123,17 @@
                         <thead>
                         <tr>
                             <th>شماره</th>
+                            <th>نام پروژه</th>
                             <th>موسسه</th>
                             <th>نیازمندی</th>
                             <th>محدوده</th>
                             <th>زمان</th>
+                            <th>جنسیت</th>
                             <th>توضیحات</th>
                             <th>درخواست</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>۱</td>
-                            <td>محک</td>
-                            <td>پرستاری</td>
-                            <td>آزادی</td>
-                            <td>شنبه ۸ تا ۲۰</td>
-                            <td>
-                                <button class="ui violet button">مشاهده پروفایل</button>
-                            </td>
-                            <td>
-                                <button class="ui green button">ارسال درخواست</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>۱</td>
-                            <td>محک</td>
-                            <td>پرستاری</td>
-                            <td>آزادی</td>
-                            <td>شنبه ۸ تا ۲۰</td>
-                            <td>
-                                <button class="ui violet button">مشاهده پروفایل</button>
-                            </td>
-                            <td>
-                                <button class="ui green button">ارسال درخواست</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>۱</td>
-                            <td>محک</td>
-                            <td>پرستاری</td>
-                            <td>آزادی</td>
-                            <td>شنبه ۸ تا ۲۰</td>
-                            <td>
-                                <button class="ui violet button">مشاهده پروفایل</button>
-                            </td>
-                            <td>
-                                <button class="ui green button">ارسال درخواست</button>
-                            </td>
-                        </tr>
+                        <tbody id="search_results">
                         </tbody>
                     </table>
                 </div>
