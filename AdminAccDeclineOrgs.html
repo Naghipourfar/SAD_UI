@@ -16,6 +16,7 @@
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
     <script src="./static/files/js/HeaderLoader.js"></script>
+    <script src="./static/files/js/AdminAccDeclineOrgs.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -39,46 +40,18 @@
                 <table class="ui fixed table">
                     <thead>
                     <tr>
-                        <th></th>
-                        <th> نوع کاربر</th>
-                        <th>نام کاربر</th>
-                        <th> مشخصات</th>
-                        <th>توضیحات</th>
+                        <th> شناسه کاربر</th>
+                        <th>نام</th>
+                        <th> ایمیل </th>
+                        <th>شماره‌ موبایل</th>
+                        <th>شماره‌ تلفن</th>
+                        <th>آدرس</th>
+                        <th>سن</th>
                         <th></th>
                         <th></th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td><img class="ui avatar image" src="static/files/pics/avatar.jpg"></td>
-                        <td> نیکوکار</td>
-                        <td>محسن</td>
-                        <td>
-                            <button class="ui violet button">مشاهده پروفایل</button>
-                        </td>
-                        <td>خوبه</td>
-                        <td>
-                            <button class="ui green button">تایید کاربر</button>
-                        </td>
-                        <td>
-                            <button class="ui red button">رد کاربر</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="ui avatar image" src="static/files/pics/Mahak.jpg"></td>
-                        <td> موسسه</td>
-                        <td>محک</td>
-                        <td>
-                            <button class="ui violet button">مشاهده پروفایل</button>
-                        </td>
-                        <td>خوب است</td>
-                        <td>
-                            <button class="ui green button">تایید کاربر</button>
-                        </td>
-                        <td>
-                            <button class="ui red button">رد کاربر</button>
-                        </td>
-                    </tr>
+                    <tbody id="orgs">
                     </tbody>
                 </table>
             </div>

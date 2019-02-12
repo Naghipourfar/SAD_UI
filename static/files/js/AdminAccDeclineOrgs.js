@@ -1,12 +1,12 @@
 $(function () {
     $.ajax({
-        url: 'http://127.0.0.1:8000/admin/view/pending_benefactors/',
+        url: 'http://127.0.0.1:8000/admin/view/pending_organizations/',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                fillBenefactorTable(data.list);
+                fillOrgTable(data.list);
             } else {
                 alert("not success");
             }
@@ -31,45 +31,38 @@ $(function () {
     });
 });
 
-function fillBenefactorTable(benefactors) {
-    for (var i = 0; i < benefactors.length; i++) {
-        var benefactor = benefactors[i];
-        addBenefactor(benefactor);
+function fillOrgTable(orgs) {
+    for (var i = 0; i < orgs.length; i++) {
+        var org = orgs[i];
+        addOrg(org);
     }
 }
 
-function addBenefactor(benefactor) {
+function addOrg(org) {
     var row = '<tr>';
-    row += '<td>' + benefactor.username + '</td>';
-    row += '<td>' + benefactor.first_name + '</td>';
-    row += '<td>' + benefactor.last_name + '</td>';
-    row += '<td>' + benefactor.email + '</td>';
-    row += '<td>' + benefactor.gender + '</td>';
-    row += '<td>' + benefactor.phone_number + '</td>';
-    row += '<td>' + benefactor.tel_number + '</td>';
-    row += '<td>' + benefactor.address + '</td>';
-    row += '<td>' + benefactor.age + '</td>';
-    var skillsStr = "";
-    for (var i = 0; i < benefactor.skills.length; i++) {
-        skillsStr += benefactor.skills[i].category + "-" + benefactor.skills[i].name;
-    }
-    row += '<td>' + skillsStr + '</td>';
+    row += '<td>' + org.username + '</td>';
+    row += '<td>' + org.name + '</td>';
+    row += '<td>' + org.email + '</td>';
+    row += '<td>' + org.phone_number + '</td>';
+    row += '<td>' + org.tel_number + '</td>';
+    row += '<td>' + org.address + '</td>';
+    row += '<td>' + org.age + '</td>';
     row += '<td><button class="ui red button" id="deny">رد کاربر</button></td>';
     row += '<td><button class="ui green button" id="verify">تایید کاربر</button></td>';
     row += '</tr>';
-    $('#benefactors').append(row);
+    $('#orgs').append(row);
     $("#verify").click(function () {
-        verifyUser(benefactor);
+        verifyUser(org);
     });
     $("#deny").click(function () {
-        denyUser(benefactor);
+        denyUser(org);
     });
 }
 
-function denyUser(benefactor) {
+function denyUser(org) {
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/admin/manage/users/remove/' + benefactor.username + "/",
+        url: 'http://127.0.0.1:8000/admin/manage/users/remove/' + org.username + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
@@ -101,10 +94,10 @@ function denyUser(benefactor) {
     });
 }
 
-function verifyUser(benefactor) {
+function verifyUser(org) {
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/admin/manage/users/verify/' + benefactor.username + "/",
+        url: 'http://127.0.0.1:8000/admin/manage/users/verify/' + org.username + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
