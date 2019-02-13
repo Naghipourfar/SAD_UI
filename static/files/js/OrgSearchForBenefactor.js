@@ -24,41 +24,33 @@ function search() {
         gender: lastSelectedGender,
         city: $("#city").val(),
         skills: getSelectedSkills(),
-        org_username: $("#org_username").val(),
-        project_name: $("#project_name").val()
+        benefactor_username: $("#benefactor_username").val(),
     };
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/search/benefactor/non_financial/',
+        url: 'http://127.0.0.1:8000/search/organization/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify(searchFilters),
         success: function (data) {
             if (data.status == 0) {
-                var projects = data.search;
-                for (var i = 0; i < projects.length; i++) {
-                    var project = projects[i];
+                var benefactors = data.search;
+
+                for (var i = 0; i < benefactors.length; i++) {
+                    var benefactor = benefactors[i];
                     var row = '<tr>';
                     row += '<td>' + String(i) + '</td>';
-                    row += '<td>' + project.name + '</td>';
-                    row += '<td>' + project.organization.name + '</td>';
-
-                    row += '<td>' + project.need_.category + "-" + project.need_.name + '</td>';
-
-                    row += '<td>' + project.location + '</td>';
+                    row += '<td>' + benefactor.username + '</td>';
+                    row += '<td>' + benefactor.gender + '</td>';
+                    row += '<td>' + benefactor.location + '</td>';
                     row += '<td>' + "خیلی زود!" + '</td>';
-
-                    row += '<td>' + project.gender + '</td>';
-
-                    row += '<td>' + '<button class="ui violet button" onclick="redirectToProfilePage()">مشاهده پروفایل موسسه</button>' + '</td>';
-
-                    row += '<td><button class="ui green button" id="' + project.id + '">ارسال درخواست</button></td>';
-
+                    row += '<td>' + '<button class="ui violet button" onclick="redirectToProfilePage()">مشاهده پروفایل نیکوکار</button>' + '</td>';
+                    row += '<td><button class="ui green button" id="' + benefactor.username + '">ارسال درخواست</button></td>';
                     row += '</tr>';
                     $('#search_results').append(row);
-                    $("#" + project.id).click(function () {
-                        sendRequest(project);
+                    $("#" + benefactor.username).click(function () {
+                        sendRequest(benefactor.username);
                     });
                 }
             } else {
@@ -85,15 +77,17 @@ function search() {
     });
 }
 
-function sendRequest(project) {
+function sendRequest(benefactor_username) {
     var username = JSON.parse(localStorage.getItem("account")).username;
+    var project_id = prompt("لطفا نشاسه پروژه خود را وارد کنید.");
     var request_desc = prompt("لطفا متن درخواست را وارد کنید.");
+
     var data = {
         request_desc: request_desc
     };
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/projects/requests/benefactor/' + username + "/" + project.id + "/",
+        url: 'http://127.0.0.1:8000/projects/requests/organization/' + benefactor_username + "/" + project_id + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
@@ -101,7 +95,7 @@ function sendRequest(project) {
         success: function (data) {
             if (data.status == 0) {
                 alert(data.message);
-                window.location.replace("BenefactorDashboard.html");
+                window.location.replace("OrgDashboard.html");
             } else {
                 alert("Not success!")
             }
@@ -126,8 +120,8 @@ function sendRequest(project) {
 }
 
 function redirectToProfilePage() {
-    localStorage.setItem("firstPlace", "BenefactorSearchForNonFinancial.html");
-    window.location.replace("BenefactorViewOrgProfile.html");
+    localStorage.setItem("firstPlace", "OrgSearchForBenefactor.html");
+    window.location.replace("OrgViewBenefactorProfile.html");
 }
 function getSelectedSkills() {
     var skills = [];

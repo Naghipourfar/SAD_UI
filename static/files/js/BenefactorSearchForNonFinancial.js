@@ -24,7 +24,7 @@ function search() {
         gender: lastSelectedGender,
         city: $("#city").val(),
         skills: getSelectedSkills(),
-        org_username: $("#org_username").val(),
+        benefactor_username: $("#benefactor_username").val(),
         project_name: $("#project_name").val()
     };
     $.ajax({

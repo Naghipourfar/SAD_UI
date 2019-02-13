@@ -23,6 +23,9 @@ $(function () {
 
                     row += '<td>' + request.username + '</td>';
 
+                    row += '<td>' + '<button class="ui violet button" id="' + request.username + '_profile' + '">مشاهده پروفایل</button>'
+                        + '</td>';
+
                     row += '<td>' + '<button class="ui green button" id="' + request.username + '_accept' + '">قبول درخواست</button>'
                         + '</td>';
 
@@ -36,6 +39,10 @@ $(function () {
                     });
                     $('#' + request.username + '_reject').click(function () {
                         rejectRequest(request.username, request.id);
+                    });
+                    $('#' + request.username + '_profile').click(function () {
+                        localStorage.setItem('org_profile_username', request.username);
+                        window.location.replace("BenefactorViewOrgProfile.html");
                     });
                 }
             }
