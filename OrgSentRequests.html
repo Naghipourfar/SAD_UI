@@ -21,6 +21,7 @@
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
     <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/OrgSentRequests.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu" id="header">
@@ -38,39 +39,41 @@
             </div>
         </div>
         <div class="column" id="content">
-            <div class="row">
-                <div class="ui menu">
-                    <div class="item">
-                        <a href="OrgIncomingRequests.html">
-                            <div class="ui button">درخواست‌های دریافتی</div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="OrgSentRequestsStatus.html">
-                            <div class="ui button">درخواست‌های ارسالی</div>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="OrgSendRequest.html">
-                            <div class="ui active button">ارسال درخواست</div>
-                        </a>
-                    </div>
+            <div class="ui menu">
+                <div class="item">
+                    <a href="OrgIncomingRequests.html">
+                        <div class="ui button">درخواست‌های دریافتی</div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="OrgSentRequests.html">
+                        <div class="ui active button">درخواست‌های ارسالی</div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="OrgSearchForBenefactor.html">
+                        <div class="ui button">ارسال درخواست</div>
+                    </a>
                 </div>
             </div>
-            <div class="ui divider"></div>
+            <div class="divider"></div>
             <div class="row">
-                <div class="ui grid">
-                    <div class="eight wide column">
-                        <a class="ui fluid wide submit primary button large" href="OrgSearchForBenefactor.html">
-                            کمک نقدی
-                        </a>
-                    </div>
-                    <div class="eight wide column">
-                        <a class="ui fluid wide submit primary button large " href="OrgSearchForBenefactor.html">
-                            کمک غیرنقدی
-                        </a>
-                    </div>
-                </div>
+                <table class="ui fixed table" id="sent_requests">
+                    <thead>
+                    <tr>
+                        <th> درخواست</th>
+                        <th>جواب نیکوکار</th>
+                        <th>نوع خدمت</th>
+                        <th>عنوان خدمت</th>
+                        <th>مکان </th>
+                        <th> نیکوکار</th>
+                        <th>وضعیت درخواست</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr></thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -89,23 +92,19 @@
         background-color: #f5f5f5;
         padding: 0px;
     }
-
     #sidebar .ui.menu {
         margin: 2em 0 0;
         font-size: 16px;
     }
-
     #sidebar .ui.menu > a.item {
         color: #337ab7;
         border-radius: 0 !important;
     }
-
     #sidebar .ui.menu > a.item.active {
         background-color: #337ab7;
         color: white;
         border: none !important;
     }
-
     #sidebar .ui.menu > a.item:hover {
         background-color: #4f93ce;
         color: white;
@@ -118,24 +117,19 @@
         padding-right: 3em;
         float: right;
     }
-
     #content > .ui.grid {
         padding-left: 4em;
         padding-bottom: 3em;
     }
-
     #content h1 {
         font-size: 36px;
     }
-
     #content .ui.divider:not(.hidden) {
         margin: 0;
     }
-
     #content table.ui.table {
         border: none;
     }
-
     #content table.ui.table thead th {
         border-bottom: 2px solid #eee !important;
     }
