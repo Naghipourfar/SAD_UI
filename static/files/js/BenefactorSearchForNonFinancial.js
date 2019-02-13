@@ -51,7 +51,7 @@ function search() {
 
                     row += '<td>' + project.gender + '</td>';
 
-                    row += '<td>' + '<button class="ui violet button" onclick="redirectToProfilePage()">مشاهده پروفایل موسسه</button>' + '</td>';
+                    row += '<td>' + '<button class="ui violet button" onclick="redirectToProfilePage(project.organization.username)">مشاهده پروفایل موسسه</button>' + '</td>';
 
                     row += '<td><button class="ui green button" id="' + project.id + '">ارسال درخواست</button></td>';
 
@@ -125,7 +125,8 @@ function sendRequest(project_id) {
     });
 }
 
-function redirectToProfilePage() {
+function redirectToProfilePage(org_username) {
+    localStorage.setItem('org_profile_username', org_username);
     localStorage.setItem("firstPlace", "BenefactorSearchForNonFinancial.html");
     window.location.replace("BenefactorViewOrgProfile.html");
 }
