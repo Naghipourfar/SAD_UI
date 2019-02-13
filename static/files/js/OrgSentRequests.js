@@ -1,7 +1,7 @@
 $(function () {
     var user_name = JSON.parse(localStorage.getItem('account')).username;
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/requests/benefactor/' + user_name + '/?type=send',
+        url: 'http://127.0.0.1:8000/projects/requests/organization/' + user_name + '/?type=send',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
@@ -10,6 +10,7 @@ $(function () {
                 var requests = data.requests;
                 for (var i = 0; i < requests.length; i++) {
                     var request = requests[i];
+
                     var row = '<tr>';
                     row += '<td>' + request.request_desc + '</td>';
 
@@ -39,6 +40,8 @@ $(function () {
                     row += '</tr>';
                     $('#sent_requests').append(row);
                 }
+            } else {
+                alert("not success");
             }
         },
         error: function (jqXHR, exception) {

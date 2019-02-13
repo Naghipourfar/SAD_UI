@@ -32,10 +32,10 @@ $(function () {
                     row += '</tr>';
                     $('#benefactor_incoming_requests').append(row)
                     $('#' + request.username + '_accept').click(function () {
-                        acceptRequest(request.username, request.project_id);
+                        acceptRequest(request.username, request.id);
                     });
                     $('#' + request.username + '_reject').click(function () {
-                        rejectRequest(request.username, request.project_id);
+                        rejectRequest(request.username, request.id);
                     });
                 }
             }
@@ -63,11 +63,15 @@ $(function () {
 });
 
 function acceptRequest(username, project_id) {
+    var data = {
+        reason: prompt("لطفا دلیل قبول درخواست خود را بنویسید:")
+    };
     $.ajax({
         url: 'http://127.0.0.1:8000/projects/requests/accept/' + username + '/' + project_id + '/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
+        data: JSON.stringify(data),
         success: function (data) {
             if (data.status == 0) {
                 alert(data.message);
@@ -96,11 +100,15 @@ function acceptRequest(username, project_id) {
 }
 
 function rejectRequest(username, project_id) {
+    var data = {
+        reason: prompt("لطفا دلیل رد درخواست خود را بنویسید:")
+    };
     $.ajax({
         url: 'http://127.0.0.1:8000/projects/requests/reject/' + username + '/' + project_id + '/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
+        data: JSON.stringify(data),
         success: function (data) {
             if (data.status == 0) {
                 alert(data.message);
