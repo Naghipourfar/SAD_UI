@@ -4,7 +4,7 @@ var benPageTypes = [
     "EditPassword",
     "DoneFinancial",
     "DoneNonFinancial",
-    "Calender",
+    "Calendar",
     "OnGoingNonFinancial",
     "IncomingRequests",
     "Feedbacks",
