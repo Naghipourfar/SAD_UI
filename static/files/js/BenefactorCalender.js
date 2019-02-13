@@ -5,7 +5,57 @@ full_work_hours = finish_hour-start_hour;
 
 $(function () {
     makeInitialTable();
+    var localData = JSON.parse(localStorage.getItem("account"));
+    var username = localData.username;
+    $.ajax({
+        url: 'http://127.0.0.1:8000/projects/benefactor/view_schedule/'+username+"/",
+        type: 'GET',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (data) {
+            if (data.status == 0) {
+                alert("success");
+                freeTimesList = data.list;
+                setFreeTimes(freeTimesList);
+            } else {
+                alert("not success");
+            }
+        },
+        error: function (jqXHR, exception) {
+            if (jqXHR.status === 0) {
+                msg = 'Not connect. Verify Network. [0]';
+            } else if (jqXHR.status === 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (jqXHR.status === 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + jqXHR.responseText;
+            }
+            alert(msg);
+        }
+
+    });
+
 });
+
+function setFreeTimes(list){
+    for (var i = 0; i < list.length; i++) {
+        free_time = list[i];
+        freeTime(free_time);
+    }
+}
+
+function freeTime(dayTime){
+    address_string = "#date_"+dayTime.day+"_"+((dayTime.time-start_hour)/2);
+    button = $(address_string)
+    button.css("background-color", "#9ECAD3");
+    button.attr("class", "ui huge button");
+    button.html("آزاد");
+}
 
 function sendSchedule() {
     var free_days = new Array(63);
