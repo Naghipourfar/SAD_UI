@@ -14,39 +14,31 @@
     <link href="./static/files/css/styles.css" rel="stylesheet" type="text/css"/>
     <link href="./static/files/css/pandoc-code-highlight.css" rel="stylesheet" type="text/css"/>
     <script src="./static/files/js/jquery.min.js"></script>
+    <script src="./static/files/js/SidebarLoader.js"></script>
+    <script src="./static/files/js/HeaderLoader.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
-    <a class="header item">مدیریت سایت</a>
-    <div class="left menu">
-        <div class="item">
-            <div class="ui small input">
-                <input placeholder="جست و جو..."/>
-            </div>
-        </div>
-        <!--<a class="item">Dashboard</a><a class="item">Settings</a><a class="item">Profile</a><a class="item">Help</a>-->
+    <div class="ui inverted huge borderless fixed fluid menu" id="header">
+        <script>
+            loadHeader("Admin")
+        </script>
     </div>
 </div>
 <div class="ui grid">
     <div class="row">
         <div class="column" id="sidebar">
-            <div class="ui secondary vertical fluid menu">
-                <a class="active item" href="AdminDashboard.html">داشبورد</a>
-                <a class="item" href="AdminAccDeclineUsers.html">مشاهده کاربران منتظر تایید</a>
-                <a class="item" href="AdminManageAbilities.html">مدیریت توانایی‌ها</a>
-                <a class="item" href="AdminManageFeedbacks.html">مدیریت نظرات</a>
-                <a class="item" href="AdminManageBenefactors.html">مدیریت نیکوکاران</a>
-                <a class="item" href="AdminManageOrgs.html">مدیریت موسسه‌ها</a>
-                <a class="item" href="AdminRegisterNewUser.html">ایجاد کاربر جدید</a>
-                <a class="item" href="AdminGetLogReport.html">دریافت لاگ</a>
-
+            <div class="ui secondary vertical fluid menu" id="sidebar_menu">
+                <script type="text/javascript">
+                    loadSidebar('Dashboard', 'Admin');
+                </script>
             </div>
         </div>
         <div class="column" id="content">
             <div class="ui three column grid">
                 <div class="column">
                     <div class="ui segment">
-                        <a href="" class="ui fluid medium image">
+                        <a href="AdminAccDeclineUsers.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
                                 مشاهده کاربران منتظر تایید
                             </div>
@@ -58,7 +50,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image">
+                        <a href="AdminManageSkills.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
                                 مدیریت توانایی‌ها
                             </div>
@@ -68,7 +60,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image">
+                        <a href="AdminManageFeedbacks.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
                                 مدیریت نظرات
                             </div>
@@ -78,7 +70,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image">
+                        <a href="AdminManageBenefactors.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
                                 مدیریت نیکوکاران
                             </div>
@@ -88,7 +80,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image">
+                        <a href="AdminManageOrgs.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
                                 مدیریت موسسه‌ها
                             </div>
@@ -98,7 +90,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image" href="AdminRegisterNewUser.html">
+                        <a href="AdminRegisterNewUser.html" class="ui fluid medium image" href="AdminRegisterNewUser.html">
                             <div class="ui blue ribbon label">
                                 ایجاد کاربر جدید
                             </div>
@@ -108,7 +100,7 @@
                 </div>
                 <div class="column">
                     <div class="ui segment">
-                        <a class="ui fluid medium image">
+                        <a href="AdminGetLogReport.html" class="ui fluid medium image">
                             <div class="ui blue ribbon label">
                                 دریافت لاگ
                             </div>

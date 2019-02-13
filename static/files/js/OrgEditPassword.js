@@ -16,7 +16,7 @@ $(document).ready(function () {
             success: function (data) {
                 if (data.status == 0) {
                     alert("The password has been changed Successfully.");
-                    window.location.replace("BenefactorDashboard.html");
+                    window.location.replace("OrgDashboard.html");
                     return true;
                 } else {
                     for (var key in data.message) {

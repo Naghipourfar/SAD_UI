@@ -7,6 +7,11 @@ function loadHeader(type){
         row += 'مدیریت نیکوکار';
         row += '</a>';
         $("#header").append(row)
+    } else if (type == "Admin") {
+        var row = '<a class="header item">';
+        row += 'مدیریت سایت';
+        row += '</a>';
+        $("#header").append(row)
     } else {
         var row = '<a class="header item">';
         row += 'مدیریت موسسه';

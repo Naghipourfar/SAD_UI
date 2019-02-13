@@ -1,7 +1,7 @@
 $(function () {
     $("#save").click(function () {
-        benefactor = JSON.parse(localStorage.getItem("account"));
-        benefactorPassword = {
+        var benefactor = JSON.parse(localStorage.getItem("account"));
+        var benefactorPassword = {
             old_password: $("#old_password").val(),
             new_password1: $("#new_password1").val(),
             new_password2: $("#new_password2").val()

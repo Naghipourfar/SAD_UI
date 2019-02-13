@@ -16,6 +16,7 @@
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
     <script src="./static/files/js/HeaderLoader.js"></script>
+    <script src="./static/files/js/AdminAccDeclineOrgs.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -30,31 +31,29 @@
         <div class="column" id="sidebar">
             <div class="ui secondary vertical fluid menu" id="sidebar_menu">
                 <script type="text/javascript">
-                    loadSidebar('ManageFeedbacks', 'Admin');
+                    loadSidebar('AccDeclineUsers', 'Admin');
                 </script>
             </div>
         </div>
         <div class="column" id="content">
-            <div class="ui grid">
-                <div class="row">
-                    <h1 class="ui huge header">نظرات درباره موسسات</h1>
-                </div>
-                <div class="ui divider"></div>
-                <div class="row">
-                    <table class="ui fixed table" id = "feedbacks_about_benefactors">
-                        <thead>
-                        <tr>
-                            <th>امتیاز</th>
-                            <th>نظر</th>
-                            <th>نوع خدمت</th>
-                            <th>عنوان خدمت</th>
-                            <th>صاحب نظر </th>
-                            <th>مشاهده پروفایل صاحب نظر </th>
-                        </tr></thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="row">
+                <table class="ui fixed table">
+                    <thead>
+                    <tr>
+                        <th> شناسه کاربر</th>
+                        <th>نام</th>
+                        <th> ایمیل </th>
+                        <th>شماره‌ موبایل</th>
+                        <th>شماره‌ تلفن</th>
+                        <th>آدرس</th>
+                        <th>سن</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="orgs">
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -62,7 +61,7 @@
 
 <style type="text/css">
     body {
-        /*display: relative;*/
+        display: relative;
     }
 
     #sidebar {
