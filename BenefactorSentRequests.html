@@ -19,8 +19,9 @@
     <script type="text/javascript" src="./static/files/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="./static/files/js/w3_include.js"></script>
     <script type="text/javascript" src="./static/files/js/fullcalendar.min.js"></script>
-    <script type="text/javascript" src="./static/files/js/BenefactorSearchForFinancial.js"></script>
+    <script type="text/javascript" src="./static/files/js/BenefactorSentRequest.js"></script>
     <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu" id="header">
@@ -46,75 +47,32 @@
                 </div>
                 <div class="item">
                     <a href="BenefactorSentRequests.html">
-                        <div class="ui button">درخواست‌های ارسالی</div>
+                        <div class="ui active button">درخواست‌های ارسالی</div>
                     </a>
                 </div>
                 <div class="item">
                     <a href="BenefactorSendRequest.html">
-                        <div class="ui active button">ارسال درخواست</div>
+                        <div class="ui button">ارسال درخواست</div>
                     </a>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="row">
-                <table class="ui fixed table">
+                <table class="ui fixed table" id="sent_requests">
                     <thead>
                     <tr>
-                        <th></th>
+                        <th> درخواست</th>
+                        <th>جواب موسسه</th>
+                        <th>نوع خدمت</th>
+                        <th>عنوان خدمت</th>
+                        <th>مکان </th>
                         <th> موسسه</th>
-                        <th>توانایی ارائه شده</th>
-                        <th>محدوده</th>
-                        <th>زمان</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>وضعیت درخواست</th>
+                        <th> </th>
+                        <th> </th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>محک</td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>
-                            <button class="ui violet button">مشاهده پروفایل</button>
-                        </td>
-                        <td>
-                            <button class="ui green disabled button">قبول شده</button>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>محک</td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>
-                            <button class="ui violet button">مشاهده پروفایل</button>
-                        </td>
-                        <td>
-                            <button class="ui red disabled button">رد شده</button>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>محک</td>
-                        <td>پرستاری</td>
-                        <td>آزادی</td>
-                        <td>آخر هفته</td>
-                        <td>
-                            <button class="ui violet button">مشاهده پروفایل</button>
-                        </td>
-                        <td>
-                            <button class="ui grey disabled button">درحال بررسی</button>
-                        </td>
-                        <td>
-                            <button class="ui orange button">انصراف</button>
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>

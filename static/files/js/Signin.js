@@ -24,9 +24,7 @@ function signin() {
                 changeWebpage("Homepage.html");
                 return true;
             } else {
-                for (var key in data.message) {
-                    alert(key + ": " + data.message[key]);
-                }
+                alert(data.message);
                 return false;
             }
         },
