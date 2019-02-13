@@ -16,6 +16,7 @@
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
     <script src="./static/files/js/HeaderLoader.js"></script>
+    <script src="./static/files/js/AdminGetLogReport.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -35,7 +36,19 @@
             </div>
         </div>
         <div class="column" id="content">
-
+            <div class="row">
+                <table class="ui fixed table">
+                    <thead>
+                    <tr>
+                        <th>زمان</th>
+                        <th>لاگ</th>
+                    </tr></thead>
+                    <tbody id="logs">
+                    <tr>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

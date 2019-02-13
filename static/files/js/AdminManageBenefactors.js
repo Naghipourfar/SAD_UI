@@ -1,32 +1,31 @@
 $(function () {
     $.ajax({
-        url: 'http://127.0.0.1:8000/admin/view/feedback_ben/',
+        url: 'http://127.0.0.1:8000/admin/view/benefactors/',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                var feedbacks = data.list;
-                for (var i = 0; i < feedbacks.length; i++) {
-                    var feedback = feedbacks[i];
+                var benefactors = data.list;
+                for (var i = 0; i < benefactors.length; i++) {
+                    var benefactor = benefactors[i];
                     var row = '<tr>';
-
-                    row += '<td>' + feedback.id + '</td>';
-                    row += '<td>' + feedback.rate + '</td>';
-                    row += '<td>' + feedback.feedback + '</td>';
-                    row += '<td>' + feedback.project.need_.category + '</td>';
-                    row += '<td>' + feedback.project.need_.name + '</td>';
-                    row += '<td>' + feedback.project.benefactor.username + '</td>';
-
-                    // row += '<td>' + '<button class="ui violet button">ویرایش نظر</button>' + '</td>';
-
-                    row += '<td>' + '<button class="ui red button" id=\" ' + feedback.id + '\">حذف نظر</button>' + '</td>';
-
+                    row += '<td>' + benefactor.username + '</td>';
+                    row += '<td>' + benefactor.first_name + '</td>';
+                    row += '<td>' + benefactor.last_name + '</td>';
+                    row += '<td>' + benefactor.email + '</td>';
+                    row += '<td>' + benefactor.phone_number + '</td>';
+                    row += '<td>' + '<button class="ui violet button"' + 'id = "' + benefactor.username + '_view" ' + '>مشاهده پروفایل</button>' + '</td>';
+                    row += '<td>' + '<button class="ui red button"' + 'id = "' + benefactor.username + '_remove" ' + '>حذف نیکوکار</button>' + '</td>';
                     row += '</tr>';
-                    $('#feedbacks_about_benefactors').append(row);
-                    $("#" + feedback.id).click(function () {
-                        removeFeedback(feedback);
+                    $('#benefactors').append(row);
+                    $("#" + benefactor.username + '_remove').click(function () {
+                        removeBenefactor(benefactor);
                     });
+                    $("#" + benefactor.username + '_view').click(function () {
+                        viewBenefactor(benefactor);
+                    });
+
                 }
             } else {
                 alert(data.message);
@@ -47,17 +46,16 @@ $(function () {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg)
-            // message_div.innerText = msg;
         }
 
     });
 
 });
 
-function removeFeedback(feedback) {
+function removeBenefactor(benefactor) {
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/admin/manage/feedback/remove/' + feedback.id + "/",
+        url: 'http://127.0.0.1:8000/admin/manage/users/remove/' + benefactor.username + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
@@ -84,7 +82,6 @@ function removeFeedback(feedback) {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg)
-            // message_div.innerText = msg;
         }
 
     });

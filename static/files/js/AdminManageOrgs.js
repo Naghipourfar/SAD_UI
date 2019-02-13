@@ -1,31 +1,29 @@
 $(function () {
     $.ajax({
-        url: 'http://127.0.0.1:8000/admin/view/feedback_ben/',
+        url: 'http://127.0.0.1:8000/admin/view/organizations/',
         type: 'GET',
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                var feedbacks = data.list;
-                for (var i = 0; i < feedbacks.length; i++) {
-                    var feedback = feedbacks[i];
+                var organizations = data.list;
+                for (var i = 0; i < organizations.length; i++) {
+                    var organization = organizations[i];
                     var row = '<tr>';
-
-                    row += '<td>' + feedback.id + '</td>';
-                    row += '<td>' + feedback.rate + '</td>';
-                    row += '<td>' + feedback.feedback + '</td>';
-                    row += '<td>' + feedback.project.need_.category + '</td>';
-                    row += '<td>' + feedback.project.need_.name + '</td>';
-                    row += '<td>' + feedback.project.benefactor.username + '</td>';
-
-                    // row += '<td>' + '<button class="ui violet button">ویرایش نظر</button>' + '</td>';
-
-                    row += '<td>' + '<button class="ui red button" id=\" ' + feedback.id + '\">حذف نظر</button>' + '</td>';
-
+                    row += '<td>' + organization.username + '</td>';
+                    row += '<td>' + organization.name + '</td>';
+                    row += '<td>' + organization.email + '</td>';
+                    row += '<td>' + organization.phone_number + '</td>';
+                    row += '<td>' + organization.tel_number + '</td>';
+                    row += '<td>' + '<button class="ui violet button"' + 'id = "' + organization.username + '_view" ' + '>مشاهده پروفایل</button>' + '</td>';
+                    row += '<td>' + '<button class="ui red button"' + 'id = "' + organization.username + '_remove" ' + '>حذف موسسه</button>' + '</td>';
                     row += '</tr>';
-                    $('#feedbacks_about_benefactors').append(row);
-                    $("#" + feedback.id).click(function () {
-                        removeFeedback(feedback);
+                    $('#organizations').append(row);
+                    $("#" + organization.username + '_remove').click(function () {
+                        removeOrg(organization);
+                    });
+                    $("#" + organization.username + '_view').click(function () {
+                        viewBenefactor(organization);
                     });
                 }
             } else {
@@ -47,17 +45,16 @@ $(function () {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg)
-            // message_div.innerText = msg;
         }
 
     });
 
 });
 
-function removeFeedback(feedback) {
+function removeOrg(organization) {
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/admin/manage/feedback/remove/' + feedback.id + "/",
+        url: 'http://127.0.0.1:8000/admin/manage/users/remove/' + organization.username + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
@@ -84,7 +81,6 @@ function removeFeedback(feedback) {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg)
-            // message_div.innerText = msg;
         }
 
     });

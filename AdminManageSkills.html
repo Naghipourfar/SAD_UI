@@ -16,6 +16,7 @@
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
     <script src="./static/files/js/HeaderLoader.js"></script>
+    <script src="./static/files/js/AdminManageSkills.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu">
@@ -41,33 +42,26 @@
             <div class="divider"></div>
             <div class="ui inverted content">
                 <div class="column">
-                    <div class="list">
-                        <button class="ui icon button"><i class="x icon"></i></button> گلدوزی<br>
-                        <button class="ui icon button"><i class="x icon"></i></button> معلم فیزیک<br>
-                        <button class="ui icon button"><i class="x icon"></i></button> معلم ریاضی<br>
+                    <div class="list" id="skills_menu">
+                        <script>
+                            loadSkillsForAdmin();
+                        </script>
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="column">
-                    <div class="two fields">
-                        <div class="ui compact menu">
-                            <div class="ui simple dropdown item">
-                                توانایی‌ها
-                                <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item">گلدوزی</div>
-                                    <div class="item">معلم فیزیک</div>
-                                    <div class="item">پرستاری</div>
-                                    <div class="item">قالیبافی</div>
-                                    <div class="item">بازاریابی</div>
-                                    <div class="item">آشپزی</div>
-                                    <div class="item">معلم شیمی</div>
-                                    <div class="item">صنایع دستی</div>
-                                    <div class="item">معلم ریاضی</div>
-                                </div>
+                    <div class="ui form">
+                        <div class="two fields">
+                            <div class="required field">
+                                <label>نوع توانایی</label><input class="required field" id="category">
+                            </div>
+                            <div class="required field">
+                                <label>نام توانایی</label><input class="required field" id="skill_name">
                             </div>
                         </div>
-                        <button class="ui icon button"><i class="plus icon"></i></button>
+                        <div class="ui button" id="save">
+                            ذخیره
+                        </div>
                     </div>
                 </div>
             </div>
