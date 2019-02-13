@@ -1,38 +1,35 @@
 $(function () {
-    alert("hi");
-    var user_name = "ehsan"; //TODO
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/feedbacks/benefactor/' + user_name + '/?type=receive',
-        // data: "type=financial" +
-        //     "&status=in_progress/",
+        url: 'http://127.0.0.1:8000/admin/view/feedback_org/',
         type: 'GET',
         dataType: 'json',
-        // jsonp: "callback",
         contentType: 'application/json',
         success: function (data) {
             if (data.status == 0) {
-                alert("success");
-                feedbacks = data.feedbacks;
-                for (var i = 0; i < feedbacks.length;i++) {
-                    feedback = feedbacks[i];
+                var feedbacks = data.list;
+                for (var i = 0; i < feedbacks.length; i++) {
+                    var feedback = feedbacks[i];
                     var row = '<tr>';
-                    row += '<td>' + feedback.rate + '/5' + '</td>';
 
+                    row += '<td>' + feedback.id + '</td>';
+                    row += '<td>' + feedback.rate + '</td>';
                     row += '<td>' + feedback.feedback + '</td>';
+                    row += '<td>' + feedback.project.need_.category + '</td>';
+                    row += '<td>' + feedback.project.need_.name + '</td>';
+                    row += '<td>' + feedback.project.organization.username + '</td>';
 
-                    row += '<td>' + feedback.category + '</td>';
+                    // row += '<td>' + '<button class="ui violet button">ویرایش نظر</button>' + '</td>';
 
-                    row += '<td>' + feedback.name + '</td>';
-
-                    row += '<td>' + feedback.username+ '</td>';
-
-                    row += '<td>' + '<button class="ui violet button">مشاهده پروفایل موسسه</button>' + '</td>'; //TODO
-
-                    row += '<td>' + '<button class="ui red button">حذف نظر</button>' + '</td>'; //TODO
+                    row += '<td>' + '<button class="ui red button" id=\" ' + feedback.id + '\">حذف نظر</button>' + '</td>';
 
                     row += '</tr>';
-                    $('#feedbacks_about_benefactors').append(row)
+                    $('#feedbacks_about_benefactors').append(row);
+                    $("#" + feedback.id).click(function () {
+                        removeFeedback(feedback);
+                    });
                 }
+            } else {
+                alert(data.message);
             }
         },
         error: function (jqXHR, exception) {
@@ -56,3 +53,39 @@ $(function () {
     });
 
 });
+
+function removeFeedback(feedback) {
+    $.ajax({
+        async: true,
+        url: 'http://127.0.0.1:8000/admin/manage/feedback/remove/' + feedback.id + "/",
+        type: 'POST',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (data) {
+            if (data.status == 0) {
+                alert(data.message);
+                window.location.replace("AdminDashboard.html");
+            } else {
+                alert(data.message);
+            }
+        },
+        error: function (jqXHR, exception) {
+            if (jqXHR.status === 0) {
+                msg = 'Not connect. Verify Network. [0]';
+            } else if (jqXHR.status === 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (jqXHR.status === 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + jqXHR.responseText;
+            }
+            alert(msg)
+            // message_div.innerText = msg;
+        }
+
+    });
+}

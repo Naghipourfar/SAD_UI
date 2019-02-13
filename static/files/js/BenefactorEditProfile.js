@@ -1,5 +1,5 @@
 var lastSelectedSkill = "";
-var lastSelectedGender = "";
+var lastSelectedGender = $("#gender").text();
 var skillIDs = [];
 
 $(document).ready(function () {

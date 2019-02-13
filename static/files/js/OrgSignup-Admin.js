@@ -1,31 +1,33 @@
-$(function () {
-    // $("#signin").onclick(function () {
-    //     signin();
-    // })
-});
+function sendOrgInformation() {
 
-function signin() {
-    var account = {
+    var organization = {
+        name: $("#name").val(),
         username: $("#username").val(),
-        password: $("#password").val(),
-        type: ""
+        city: $("#city").val(),
+        password1: $("#password1").val(),
+        password2: $("#password2").val(),
+        email: $("#email").val(),
+        age: $("#age").val(),
+        tel_number: $("#tel_number").val(),
+        phone_number: $("#phone_number").val(),
+        address: $("#address").val(),
+        activities: $("#activities").val(),
     };
 
+
     $.ajax({
-        async: false,
-        url: 'http://127.0.0.1:8000/accounts/login/',
+        url: 'http://127.0.0.1:8000/accounts/organization/signup/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
+        data: JSON.stringify(organization),
         success: function (data) {
             if (data.status == 0) {
-                account.type = data.user;
-                localStorage.setItem('account', JSON.stringify(account));
-                changeWebpage("Homepage.html");
-                return true;
-            } else {
-                alert(data.message);
-                return false;
+                window.location.replace("ThankYouForRegistration-Admin.html");
+            } else if (data.status == -1) {
+                for (var key in data.message) {
+                    alert(data.message[key]);
+                }
             }
         },
         error: function (jqXHR, exception) {
@@ -43,12 +45,6 @@ function signin() {
                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
             }
             alert(msg);
-        },
-        data: JSON.stringify(account)
+        }
     });
-}
-
-
-function changeWebpage(url_addr) {
-    window.location.href = 'http://localhost:63342/SAD_UI/' + url_addr;
 }
