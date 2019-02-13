@@ -59,19 +59,19 @@ function freeTime(dayTime){
 
 function sendSchedule() {
     var free_days = new Array(63);
-    var i = 0;
+    var cnt = 0;
     for (var i = 0; i < full_work_hours / split_hours; i++) {
         for (var j = 0; j < 7; j++) {
-            if ($("#date_" + j + "_" + (start_hour+2*i)).attr("class") == "ui button") {
-                free_days[i] = {
+            if ($("#date_" + j + "_" + (start_hour+2*i)).attr("class") == "ui huge button") {
+                free_days[cnt] = {
                     day: j,
                     time: (start_hour+2*i)
                 };
-                i += 1;
+                cnt += 1;
             }
         }
     }
-    sendScheduleAjax(free_days,i);
+    sendScheduleAjax(free_days,cnt);
 }
 
 function sendScheduleAjax(free_days, count) {
