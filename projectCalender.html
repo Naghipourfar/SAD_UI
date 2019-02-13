@@ -22,7 +22,7 @@
     <script type="text/javascript" src="./static/files/js/Skills.js"></script>
     <script type="text/javascript" src="./static/files/js/SidebarLoader.js"></script>
     <script type="text/javascript" src="./static/files/js/HeaderLoader.js"></script>
-
+    <script type="text/javascript" src="./static/files/js/projectCalender.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu" id="header">
@@ -47,11 +47,27 @@
                 </div>
                 <div class="ui divider"></div>
                 <div class="row">
-
+                    <table class="ui celled fluid table" id="project_calender_table">
+                        <thead>
+                        <th class="collapsing">ساعت </th>
+                        <th>شنبه </th>
+                        <th>یکشنبه </th>
+                        <th>دوشنبه </th>
+                        <th> سشنبه </th>
+                        <th> چهارشنبه </th>
+                        <th> پنجشنبه </th>
+                        <th> جمعه </th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="ui divider"></div>
                 <div class="row">
-                    <div class="ui huge button">تایید برنامه زمانی</div>
+                    <div class="ui huge button" onclick="goToProjectDef()">تایید برنامه زمانی</div>
+                    <script>function goToProjectDef() {
+                        changeWebpage("OrgNewNonFinancialProject.html");
+                    }</script>
                 </div>
             </div>
         </div>

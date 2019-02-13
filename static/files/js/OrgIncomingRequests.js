@@ -24,10 +24,10 @@ $(function () {
 
                     row += '<td>' + request.username + '</td>';
 
-                    row += '<td>' + '<button class="ui green button" id="' + request.username + '_accept' + '">قبول درخواست</button>'
+                    row += '<td>' + '<button class="ui green button" id="' + request.username + request.id + '_accept' + '">قبول درخواست</button>'
                         + '</td>';
 
-                    row += '<td>' + '<button class="ui red button" id="' + request.username + '_reject' + '">رد درخواست</button>'
+                    row += '<td>' + '<button class="ui red button" id="' + request.username + request.id + '_reject' + '">رد درخواست</button>'
                         + '</td>';
 
                     row += '</tr>';

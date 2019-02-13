@@ -58,7 +58,7 @@ function search() {
                     row += '</tr>';
                     $('#search_results').append(row);
                     $("#" + project.id).click(function () {
-                        sendRequest(project);
+                        sendRequest(project.id);
                     });
                 }
             } else {
@@ -85,7 +85,7 @@ function search() {
     });
 }
 
-function sendRequest(project) {
+function sendRequest(project_id) {
     var username = JSON.parse(localStorage.getItem("account")).username;
     var request_desc = prompt("لطفا متن درخواست را وارد کنید.");
     var data = {
@@ -93,7 +93,7 @@ function sendRequest(project) {
     };
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/projects/requests/benefactor/' + username + "/" + project.id + "/",
+        url: 'http://127.0.0.1:8000/projects/requests/benefactor/' + username + "/" + project_id + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
@@ -103,7 +103,7 @@ function sendRequest(project) {
                 alert(data.message);
                 window.location.replace("BenefactorDashboard.html");
             } else {
-                alert("Not success!")
+                alert(data.message);
             }
         },
         error: function (jqXHR, exception) {

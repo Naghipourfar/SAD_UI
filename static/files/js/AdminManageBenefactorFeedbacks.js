@@ -20,12 +20,12 @@ $(function () {
 
                     // row += '<td>' + '<button class="ui violet button">ویرایش نظر</button>' + '</td>';
 
-                    row += '<td>' + '<button class="ui red button" id=\" ' + feedback.id + '\">حذف نظر</button>' + '</td>';
+                    row += '<td>' + '<button class="ui red button" id=\"' + feedback.id + '\">حذف نظر</button>' + '</td>';
 
                     row += '</tr>';
                     $('#feedbacks_about_benefactors').append(row);
                     $("#" + feedback.id).click(function () {
-                        removeFeedback(feedback);
+                        removeFeedback(feedback.id);
                     });
                 }
             } else {
@@ -54,10 +54,10 @@ $(function () {
 
 });
 
-function removeFeedback(feedback) {
+function removeFeedback(feedback_id) {
     $.ajax({
         async: true,
-        url: 'http://127.0.0.1:8000/admin/manage/feedback/remove/' + feedback.id + "/",
+        url: 'http://127.0.0.1:8000/admin/manage/feedback/remove/' + feedback_id + "/",
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
