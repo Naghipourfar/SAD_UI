@@ -8,7 +8,6 @@ $(function () {
         dataType: 'json',
         contentType: 'application/json',
         success: function (data) {
-            alert("salam");
             if (data.status == 0) {
                 fillFinancialProjectTable(data.projects);
             } else {
@@ -37,7 +36,7 @@ $(function () {
 
 function fillFinancialProjectTable(projects) {
     for (var i = 0; i < projects.length;i++) {
-        project = projects[i];
+        var project = projects[i];
         addFinancialProject(project);
     }
 }

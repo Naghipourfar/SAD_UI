@@ -33,7 +33,7 @@ $(function () {
 
 function endProject(id) {
     $.ajax({
-        url: 'http://127.0.0.1:8000/projects/organization/' + id + '/',
+        url: 'http://127.0.0.1:8000/projects/done/' + id + '/',
         type: 'POST',
         dataType: 'json',
         contentType: 'application/json',
