@@ -16,6 +16,7 @@
     <script src="./static/files/js/jquery.min.js"></script>
     <script src="./static/files/js/SidebarLoader.js"></script>
     <script src="./static/files/js/HeaderLoader.js"></script>
+    <script type="text/javascript" src="./static/files/js/OrgViewBenefactorProfile.js"></script>
 </head>
 <body>
 <div class="ui inverted huge borderless fixed fluid menu" id="header">
@@ -44,6 +45,10 @@
                                 <label>شناسه کاربری</label><input disabled="disabled" placeholder="شناسه کاربری"
                                                                   type="text" id="username">
                             </div>
+                            <div class="field">
+                                <label>ایمیل</label><input placeholder="ایمیل"
+                                                                id="email" disabled="disabled">
+                            </div>
                         </div>
                         <div class="two fields">
                             <div class="field">
@@ -65,6 +70,20 @@
                                                                 id="tel_number" disabled="disabled">
                             </div>
 
+                        </div>
+                        <div class="two fields">
+                            <div class="field">
+                                <label>جنسیت</label>
+                                <input placeholder="جنسیت" disabled="disabled" id="gender"/>
+                            </div>
+                            <div class="field">
+                                <label>سن</label><input class="required" placeholder="سن"
+                                                                id="age" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="field">
+                                <label>آدرس</label>
+                                <input placeholder="آدرس" disabled="disabled" id="address"/>
                         </div>
                         <label><b> لیست توانایی‌ها</b></label>
                         <div id="skills">

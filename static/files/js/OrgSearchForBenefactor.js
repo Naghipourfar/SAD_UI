@@ -45,7 +45,7 @@ function search() {
                     row += '<td>' + benefactor.gender + '</td>';
                     row += '<td>' + benefactor.location + '</td>';
                     row += '<td>' + "خیلی زود!" + '</td>';
-                    row += '<td>' + '<button class="ui violet button" onclick="redirectToProfilePage()">مشاهده پروفایل نیکوکار</button>' + '</td>';
+                    row += '<td>' + '<button class="ui violet button" onclick="redirectToProfilePage(benefactor.username)">مشاهده پروفایل نیکوکار</button>' + '</td>';
                     row += '<td><button class="ui green button" id="' + benefactor.username + '">ارسال درخواست</button></td>';
                     row += '</tr>';
                     $('#search_results').append(row);
@@ -119,7 +119,8 @@ function sendRequest(benefactor_username) {
     });
 }
 
-function redirectToProfilePage() {
+function redirectToProfilePage(benefactor_username) {
+    localStorage.setItem('benefactor_profile_username', benefactor_username);
     localStorage.setItem("firstPlace", "OrgSearchForBenefactor.html");
     window.location.replace("OrgViewBenefactorProfile.html");
 }
